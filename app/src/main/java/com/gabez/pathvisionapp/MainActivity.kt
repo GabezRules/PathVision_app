@@ -1,12 +1,14 @@
 package com.gabez.pathvisionapp
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentStatePagerAdapter
 import androidx.viewpager.widget.ViewPager
+import com.gabez.pathvisionapp.app.MainFragment
+import com.gabez.pathvisionapp.app.SearchFragment
+import com.gabez.pathvisionapp.app.SettingsFragment
 import com.iammert.library.AnimatedTabLayout
 
 const val NUM_PAGES = 2
@@ -34,11 +36,18 @@ class MainActivity : FragmentActivity() {
 
     }
 
-    private inner class ScreenSlidePagerAdapter(fm: FragmentManager) : FragmentStatePagerAdapter(fm) {
+    private inner class ScreenSlidePagerAdapter(fm: FragmentManager) : FragmentStatePagerAdapter(fm, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT ) {
 
         override fun getCount(): Int = NUM_PAGES
 
-        override fun getItem(position: Int): Fragment = ScreenSlidePageFragment()
+        override fun getItem(position: Int): Fragment{
+            return when (position) {
+                0 -> return@getItem MainFragment.newInstance()
+                1 -> return@getItem SearchFragment.newInstance()
+                2 -> return@getItem SettingsFragment.newInstance()
+                else -> return@getItem MainFragment.newInstance()
+            }
+        }
     }
 
     override fun onBackPressed() {

@@ -15,7 +15,7 @@
     <com.iammert.library.AnimatedTabLayout
         android:id="@+id/bottomNav"
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_height="120dp"
         app:atl_tabs="@xml/tabs"
         android:layout_alignParentBottom="true"/>
 

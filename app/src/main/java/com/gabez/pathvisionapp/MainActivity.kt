@@ -7,7 +7,7 @@ import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentStatePagerAdapter
 import androidx.viewpager.widget.ViewPager
 import com.gabez.pathvisionapp.app.MainFragment
-import com.gabez.pathvisionapp.app.SearchFragment
+import com.gabez.pathvisionapp.app.search.SearchFragment
 import com.gabez.pathvisionapp.app.SettingsFragment
 import com.iammert.library.AnimatedTabLayout
 

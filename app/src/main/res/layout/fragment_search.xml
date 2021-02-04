@@ -22,7 +22,7 @@
         android:id="@+id/searchPathContainer"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="32dp"
 
         app:helperText="use minimum 2 characters"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -40,23 +40,30 @@
 
 
     <Button
-        android:background="@color/colorPrimary"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/res_btn_shape"
         android:id="@+id/buttonSearch"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:text="@string/search"
-        android:textColor="#FFF"
+        android:textColor="@android:color/white"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/searchPathContainer" />
 
-    <HorizontalScrollView
+    <NestedScrollView
+        android:layout_marginTop="12dp"
         android:id="@+id/searchCategoriesView"
         app:layout_constraintTop_toBottomOf="@id/buttonSearch"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-    </HorizontalScrollView>
+        <RecyclerView
+            android:id="@+id/searchCategoriesList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </NestedScrollView>
 
     <ScrollView
         android:id="@+id/searchListContainer"

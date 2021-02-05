@@ -14,7 +14,6 @@ class ExpandablePathListAdapter(groups: List<ExpandableGroup<*>?>?, private val 
     ExpandableRecyclerViewAdapter<PathViewHolder, SkillViewHolder>(groups) {
 
     override fun onCreateGroupViewHolder(parent: ViewGroup, viewType: Int): PathViewHolder {
-
         val view: View = LayoutInflater.from(parent.context).inflate(R.layout.item_path, parent, false)
         return PathViewHolder(view)
     }

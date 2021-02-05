@@ -11,12 +11,15 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp">
 
         <com.gabez.pathvisionapp.app.CircularCompletionView
             android:id="@+id/pathCompletionPercent"
             android:layout_width="52dp"
             android:layout_height="52dp"
+            android:layout_marginLeft="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -26,24 +29,24 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="24dp"
-            android:layout_marginTop="8dp"
+            android:maxWidth="150dp"
             android:text="job name"
-            android:textSize="20sp"
+            android:textSize="16sp"
             app:layout_constraintLeft_toRightOf="@+id/pathCompletionPercent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="@id/pathCompletionPercent" />
 
         <TextView
             android:id="@+id/pathAmountSkills"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="26dp"
-            android:layout_marginBottom="8dp"
 
             android:text="all skills: 12345"
             app:layout_constraintLeft_toRightOf="@+id/pathCompletionPercent"
             app:layout_constraintTop_toBottomOf="@id/pathJobName" />
 
         <ImageView
+            android:id="@+id/pathExpand"
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:padding="4dp"

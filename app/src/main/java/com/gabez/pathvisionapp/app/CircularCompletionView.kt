@@ -20,15 +20,15 @@ class CircularCompletionView : View {
     private var textSize: Float = 10F
     private var diameter = radius * 2
 
-    @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
-    constructor(context: Context?, attrs: AttributeSet?, defStyleAttr: Int, defStyleRes: Int) : super(context, attrs, defStyleAttr, defStyleRes)
+    private var TEXT_COLOR: String = "#282828"
+    private var STROKE_COLOR: String = "#dedede"
+    private var STROKE_FILL_COLOR: String = "#6200EE"
 
     constructor(context: Context?, attrs: AttributeSet?, defStyleAttr: Int) : super(context, attrs, defStyleAttr)
 
     constructor(context: Context?, attrs: AttributeSet?) : super(context, attrs)
 
-    constructor(context: Context?) : super(context) {
-    }
+    constructor(context: Context?) : super(context)
 
     fun setCompletionPercentage(completion: Int) {
         completionPercent = completion
@@ -45,7 +45,22 @@ class CircularCompletionView : View {
         invalidate()
     }
 
-    protected override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
+    fun setTextColor(color: String){
+        TEXT_COLOR = color
+        invalidate()
+    }
+
+    fun setStrokeColor(color: String){
+        STROKE_COLOR = color
+        invalidate()
+    }
+
+    fun setStrokeFillColor(color: String){
+        STROKE_FILL_COLOR = color
+        invalidate()
+    }
+
+    override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
         var width: Int = MeasureSpec.getSize(widthMeasureSpec)
         var height: Int = MeasureSpec.getSize(heightMeasureSpec)
 
@@ -59,14 +74,14 @@ class CircularCompletionView : View {
         super.onMeasure(newWidthMeasureSpec, newHeightMeasureSpec)
     }
 
-    protected override fun onDraw(canvas: Canvas) {
-        paint.color = Color.parseColor("#dedede") // circle stroke color- grey
+    override fun onDraw(canvas: Canvas) {
+        paint.color = Color.parseColor(STROKE_COLOR) // circle stroke color- grey
         paint.strokeWidth = strokeSize
         paint.isAntiAlias = true
         paint.style = Paint.Style.STROKE
 
         canvas.drawCircle(radius, radius, radius - 10, paint)
-        paint.color = Color.parseColor("#04B404") // circle stroke color(indicating completion Percentage) - green
+        paint.color = Color.parseColor(STROKE_FILL_COLOR) // circle stroke color(indicating completion Percentage) - green
         paint.strokeWidth = strokeSize
         paint.style = Paint.Style.FILL
 
@@ -78,7 +93,7 @@ class CircularCompletionView : View {
         canvas.drawArc(oval, 270F, (completionPercent * 360 / 100).toFloat(), false, paint)
 
         paint.textAlign = Align.CENTER
-        paint.color = Color.parseColor("#282828") // text color - dark grey
+        paint.color = Color.parseColor(TEXT_COLOR) // text color - dark grey
         paint.style = Paint.Style.FILL
 
         paint.textSize = textSize

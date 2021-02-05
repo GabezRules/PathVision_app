@@ -8,25 +8,25 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.gabez.pathvisionapp.R
-import com.gabez.pathvisionapp.app.paths.entities.mockData
-import com.gabez.pathvisionapp.app.paths.pathList.ExpandablePathListAdapter
+import com.gabez.pathvisionapp.app.paths.entities.mainMockData
+import com.gabez.pathvisionapp.app.paths.pathList.ExpandablePathListAdapterMain
 import org.koin.core.KoinComponent
 import org.koin.core.inject
 
 class MainFragment : Fragment(), KoinComponent {
 
     private val viewModel: MainViewModel by inject()
-    private lateinit var adapter: ExpandablePathListAdapter
+    private lateinit var adapterMain: ExpandablePathListAdapterMain
     private lateinit var pathList: RecyclerView
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.fragment_main, container, false)
 
 
-        adapter = ExpandablePathListAdapter(mockData, requireContext())
+        adapterMain = ExpandablePathListAdapterMain(mainMockData, requireContext())
 
         pathList = view.findViewById(R.id.yourPaths)
-        pathList.adapter = adapter
+        pathList.adapter = adapterMain
         pathList.layoutManager = LinearLayoutManager(requireContext())
 
         return view
@@ -34,12 +34,12 @@ class MainFragment : Fragment(), KoinComponent {
 
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
-        adapter.onSaveInstanceState(outState)
+        adapterMain.onSaveInstanceState(outState)
     }
 
     override fun onViewStateRestored(savedInstanceState: Bundle?) {
         super.onViewStateRestored(savedInstanceState)
-        adapter.onRestoreInstanceState(savedInstanceState)
+        adapterMain.onRestoreInstanceState(savedInstanceState)
     }
 
     companion object {

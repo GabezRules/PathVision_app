@@ -1,15 +1,12 @@
 package com.gabez.pathvisionapp.app
 
 import android.content.Context
-import android.graphics.Canvas
-import android.graphics.Color
-import android.graphics.Paint
+import android.graphics.*
 import android.graphics.Paint.Align
-import android.graphics.RectF
-import android.os.Build
 import android.util.AttributeSet
 import android.view.View
-import androidx.annotation.RequiresApi
+import androidx.core.content.res.ResourcesCompat
+import com.gabez.pathvisionapp.R
 
 
 class CircularCompletionView : View {
@@ -20,7 +17,7 @@ class CircularCompletionView : View {
     private var textSize: Float = 10F
     private var diameter = radius * 2
 
-    private var TEXT_COLOR: String = "#282828"
+    private var TEXT_COLOR: String = "#535353"
     private var STROKE_COLOR: String = "#dedede"
     private var STROKE_FILL_COLOR: String = "#6200EE"
 
@@ -75,13 +72,13 @@ class CircularCompletionView : View {
     }
 
     override fun onDraw(canvas: Canvas) {
-        paint.color = Color.parseColor(STROKE_COLOR) // circle stroke color- grey
+        paint.color = Color.parseColor(STROKE_COLOR)
         paint.strokeWidth = strokeSize
         paint.isAntiAlias = true
         paint.style = Paint.Style.STROKE
 
         canvas.drawCircle(radius, radius, radius - 10, paint)
-        paint.color = Color.parseColor(STROKE_FILL_COLOR) // circle stroke color(indicating completion Percentage) - green
+        paint.color = Color.parseColor(STROKE_FILL_COLOR)
         paint.strokeWidth = strokeSize
         paint.style = Paint.Style.FILL
 
@@ -93,10 +90,11 @@ class CircularCompletionView : View {
         canvas.drawArc(oval, 270F, (completionPercent * 360 / 100).toFloat(), false, paint)
 
         paint.textAlign = Align.CENTER
-        paint.color = Color.parseColor(TEXT_COLOR) // text color - dark grey
+        paint.color = Color.parseColor(TEXT_COLOR)
         paint.style = Paint.Style.FILL
-
         paint.textSize = textSize
+        paint.typeface = ResourcesCompat.getFont(context, R.font.montserrat_medium)!!
+
         canvas.drawText("$completionPercent%", radius, radius + paint.textSize / 2, paint)
     }
 }

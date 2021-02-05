@@ -5,14 +5,13 @@ import android.widget.ImageView
 import android.widget.TextView
 import com.gabez.pathvisionapp.R
 import com.gabez.pathvisionapp.app.CircularCompletionView
-import com.gabez.pathvisionapp.app.paths.entities.PathForView
 import com.gabez.pathvisionapp.app.paths.entities.SkillForView
 import com.gabez.pathvisionapp.app.paths.entities.SkillStatus
 import com.thoughtbot.expandablerecyclerview.models.ExpandableGroup
 import com.thoughtbot.expandablerecyclerview.viewholders.GroupViewHolder
 
 
-class PathViewHolder(itemView: View) : GroupViewHolder(itemView) {
+class PathViewHolderMain(itemView: View) : GroupViewHolder(itemView) {
     private val jobTitle: TextView = itemView.findViewById(R.id.pathJobName)
     private val amountSkills: TextView = itemView.findViewById(R.id.pathAmountSkills)
     private val completionPercent: CircularCompletionView = itemView.findViewById(R.id.pathCompletionPercent)

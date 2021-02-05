@@ -30,6 +30,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:fontFamily="@font/montserrat_medium"
             style="@style/EditTextTheme"
             android:background="@null"
             android:id="@+id/searchPath"
@@ -40,6 +41,7 @@
 
 
     <Button
+        android:fontFamily="@font/montserrat_bold"
         android:layout_marginTop="12dp"
         android:background="@drawable/res_btn_shape"
         android:id="@+id/buttonSearch"
@@ -65,7 +67,8 @@
 
     </androidx.core.widget.NestedScrollView>
 
-    <ScrollView
+    <androidx.core.widget.NestedScrollView
+        android:orientation="vertical"
         android:id="@+id/searchListContainer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -76,8 +79,10 @@
             android:id="@+id/searchListView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
-    </ScrollView>
 
+    </androidx.core.widget.NestedScrollView>
+
+    <!--
     <LinearLayout
         android:id="@+id/searchErrorContainer"
         android:layout_width="match_parent"
@@ -89,6 +94,7 @@
         app:layout_constraintTop_toBottomOf="@id/buttonSearch">
 
         <TextView
+            android:fontFamily="@font/montserrat_bold"
             android:id="@+id/errorText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -98,6 +104,7 @@
             android:textSize="24sp" />
 
         <TextView
+            android:fontFamily="@font/montserrat_medium_italic"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -107,5 +114,6 @@
             android:textSize="16sp" />
 
     </LinearLayout>
+    -->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

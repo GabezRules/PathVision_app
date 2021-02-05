@@ -5,4 +5,5 @@
     <color name="colorAccent">#03DAC5</color>
     <color name="searchBackgroundColor">#B49ED3</color>
     <color name="colorGray">#a2a2a2</color>
+    <color name="colorDarkGray">#535353</color>
 </resources>

@@ -13,7 +13,7 @@ import com.gabez.pathvisionapp.app.paths.entities.SkillStatus
 import com.thoughtbot.expandablerecyclerview.viewholders.ChildViewHolder
 
 
-class SkillViewHolder(private var itemViewSkill: View, var context: Context) : ChildViewHolder(itemViewSkill) {
+class SkillViewHolderMain(private var itemViewSkill: View, var context: Context) : ChildViewHolder(itemViewSkill) {
     private val skillName: TextView = itemViewSkill.findViewById(R.id.skillName)
     private val emptyBtn: ImageView = itemViewSkill.findViewById(R.id.skillPause)
     private val inProgressBtn: ImageView = itemViewSkill.findViewById(R.id.skillInProgress)
@@ -24,19 +24,25 @@ class SkillViewHolder(private var itemViewSkill: View, var context: Context) : C
 
         when(skill.status){
             SkillStatus.EMPTY -> {
+                emptyBtn.setImageResource(R.drawable.ic_pause_full)
                 emptyBtn.setColorFilter(ContextCompat.getColor(context, R.color.colorPrimary), android.graphics.PorterDuff.Mode.SRC_IN)
                 inProgressBtn.setColorFilter(ContextCompat.getColor(context, R.color.colorGray), android.graphics.PorterDuff.Mode.SRC_IN)
                 doneBtn.setColorFilter(ContextCompat.getColor(context, R.color.colorGray), android.graphics.PorterDuff.Mode.SRC_IN)
+                doneBtn.setImageResource(R.drawable.ic_done_empty)
             }
             SkillStatus.IN_PROGRESS -> {
+                emptyBtn.setImageResource(R.drawable.ic_pause_empty)
                 emptyBtn.setColorFilter(ContextCompat.getColor(context, R.color.colorGray), android.graphics.PorterDuff.Mode.SRC_IN)
                 inProgressBtn.setColorFilter(ContextCompat.getColor(context, R.color.colorPrimaryDark), android.graphics.PorterDuff.Mode.SRC_IN)
                 doneBtn.setColorFilter(ContextCompat.getColor(context, R.color.colorGray), android.graphics.PorterDuff.Mode.SRC_IN)
+                doneBtn.setImageResource(R.drawable.ic_done_empty)
             }
             SkillStatus.DONE -> {
+                emptyBtn.setImageResource(R.drawable.ic_pause_empty)
                 emptyBtn.setColorFilter(ContextCompat.getColor(context, R.color.colorGray), android.graphics.PorterDuff.Mode.SRC_IN)
                 inProgressBtn.setColorFilter(ContextCompat.getColor(context, R.color.colorGray), android.graphics.PorterDuff.Mode.SRC_IN)
                 doneBtn.setColorFilter(ContextCompat.getColor(context, R.color.colorAccent), android.graphics.PorterDuff.Mode.SRC_IN)
+                doneBtn.setImageResource(R.drawable.ic_done_full)
             }
         }
 

@@ -1,6 +1,6 @@
 package com.gabez.pathvisionapp.app.paths.entities
 
-val mockData = arrayListOf(
+val mainMockData = arrayListOf(
     PathForView(
         title = "Junior Android Developer",
         items = arrayListOf(

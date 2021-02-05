@@ -6,9 +6,9 @@ import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentStatePagerAdapter
 import androidx.viewpager.widget.ViewPager
-import com.gabez.pathvisionapp.app.MainFragment
+import com.gabez.pathvisionapp.app.paths.MainFragment
 import com.gabez.pathvisionapp.app.search.SearchFragment
-import com.gabez.pathvisionapp.app.SettingsFragment
+import com.gabez.pathvisionapp.app.settings.SettingsFragment
 import com.iammert.library.AnimatedTabLayout
 
 const val NUM_PAGES = 2

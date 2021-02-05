@@ -1,4 +1,4 @@
-package com.gabez.pathvisionapp.app
+package com.gabez.pathvisionapp.app.settings
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -16,6 +16,7 @@ class SettingsFragment : Fragment() {
 
     companion object {
         @JvmStatic
-        fun newInstance() = SettingsFragment()
+        fun newInstance() =
+            SettingsFragment()
     }
 }

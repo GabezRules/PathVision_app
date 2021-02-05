@@ -4,6 +4,16 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorPrimaryLight</item>
+        <item name="android:fontFamily">@font/montserrat_medium</item>
+
+        <!-- Material Dialog theme -->
+        <item name="material_dialog_background">#FFFFFF</item>
+        <item name="material_dialog_title_text_color">#2d2d2d</item>
+        <item name="material_dialog_message_text_color">#5F5F5F</item>
+        <item name="material_dialog_positive_button_color">@color/colorPrimary</item>
+        <item name="material_dialog_positive_button_text_color">#FFFFFF</item>
+        <item name="material_dialog_negative_button_text_color">@color/colorPrimary</item>
+
     </style>
 
     <style name="SearchBarTheme" parent="Widget.Design.TextInputLayout">
@@ -34,5 +44,7 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:fontFamily">@font/montserrat_bold</item>
     </style>
+
+
 
 </resources>

@@ -1,5 +1,6 @@
 package com.gabez.pathvisionapp
 
+import android.content.res.Resources
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
@@ -33,6 +34,8 @@ class MainActivity : FragmentActivity() {
         val pagerAdapter = ScreenSlidePagerAdapter(supportFragmentManager)
         viewPager.adapter = pagerAdapter
         viewPager.setPageTransformer(true, DepthPageTransformer())
+
+        //setTheme(android.R.style.Theme_Material_NoActionBar)
 
     }
 

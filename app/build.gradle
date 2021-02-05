@@ -68,5 +68,8 @@ dependencies {
     //expandable recyclerview
     implementation 'com.thoughtbot:expandablerecyclerview:1.4'
 
+    //cloud tag view
+    implementation 'com.github.greenfrvr:hashtag-view:1.3.1'
+
 
 }

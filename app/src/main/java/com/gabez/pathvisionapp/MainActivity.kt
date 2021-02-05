@@ -11,7 +11,7 @@ import com.gabez.pathvisionapp.app.search.SearchFragment
 import com.gabez.pathvisionapp.app.settings.SettingsFragment
 import com.iammert.library.AnimatedTabLayout
 
-const val NUM_PAGES = 2
+const val NUM_PAGES = 3
 
 class MainActivity : FragmentActivity() {
 

@@ -21,7 +21,7 @@
         style="@style/SearchBarTheme"
         android:id="@+id/searchPathContainer"
         android:layout_width="300dp"
-        android:layout_height="wrap_content"
+        android:layout_height="64dp"
         android:layout_marginTop="32dp"
 
         app:helperText="use minimum 2 characters"
@@ -46,7 +46,7 @@
         android:background="@drawable/res_btn_shape"
         android:id="@+id/buttonSearch"
         android:layout_width="300dp"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:text="@string/search"
         android:textColor="@android:color/white"
         app:layout_constraintLeft_toLeftOf="parent"

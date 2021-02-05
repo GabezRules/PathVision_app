@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabs size="@dimen/bottom_tabs_width"
+    space="@dimen/bottom_tabs_spacing">
+
+    <tab
+        inactiveColor="@color/colorGray"
+        activeColor="@color/colorPrimary"
+        drawable="@drawable/ic_paths"/>
+
+    <tab
+        inactiveColor="@color/colorGray"
+        activeColor="@color/colorPrimary"
+        drawable="@drawable/ic_search"/>
+
+    <tab
+        inactiveColor="@color/colorGray"
+        activeColor="@color/colorPrimary"
+        drawable="@drawable/ic_account"/>
+</tabs>

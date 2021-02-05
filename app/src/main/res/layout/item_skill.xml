@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="48dp"
+    android:layout_marginTop="6dp"
+    android:layout_marginEnd="48dp"
+    android:layout_marginBottom="4dp">
+
+    <TextView
+        android:fontFamily="@font/montserrat_medium"
+        android:maxWidth="150dp"
+        android:id="@+id/skillName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:text="skill name"
+        android:textSize="12sp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true">
+
+        <ImageView
+            android:id="@+id/skillPause"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="end"
+            android:padding="6dp"
+            android:src="@drawable/ic_pause_full" />
+
+        <ImageView
+            android:id="@+id/skillInProgress"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="end"
+            android:padding="6dp"
+            android:src="@drawable/ic_learn" />
+
+        <ImageView
+            android:id="@+id/skillDone"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="end"
+            android:padding="6dp"
+            android:src="@drawable/ic_done_empty" />
+
+    </LinearLayout>
+
+</RelativeLayout>

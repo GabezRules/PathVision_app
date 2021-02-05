@@ -1,3 +1,13 @@
 <resources>
-    <string name="app_name">PathVision app</string>
+    <string name="app_name">PathVision</string>
+
+    <string name="search_no_path_desc">Find interesting path by keyword or try our category search!</string>
+    <string name="search_no_path">No paths found</string>
+    <string name="search_by_keyword">Search by keyword…</string>
+    <string name="search">search</string>
+    <string name="observed_categories_desc">Observed categories</string>
+    <string name="dark_mode_desc">Dark mode enabled</string>
+    <string name="login_register_options">Login / Register options</string>
+    <string name="login">LOGIN</string>
+    <string name="register">REGISTER</string>
 </resources>

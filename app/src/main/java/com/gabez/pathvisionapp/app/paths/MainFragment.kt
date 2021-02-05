@@ -23,7 +23,7 @@ class MainFragment : Fragment(), KoinComponent {
         val view = inflater.inflate(R.layout.fragment_main, container, false)
 
 
-        adapterMain = ExpandablePathListAdapterMain(mainMockData, requireContext())
+        adapterMain = ExpandablePathListAdapterMain(mainMockData, this@MainFragment)
 
         pathList = view.findViewById(R.id.yourPaths)
         pathList.adapter = adapterMain

@@ -5,6 +5,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import com.airbnb.lottie.LottieAnimationView
 import com.gabez.pathvisionapp.R
 import com.gabez.pathvisionapp.app.CircularCompletionView
 import com.gabez.pathvisionapp.app.paths.MainFragment
@@ -46,11 +47,11 @@ class PathViewHolderMain(itemView: View, private val callback: MainFragment) : G
     }
 
     fun showDeleteDialog(){
+        //TODO: Scale trash can animation
         val mBottomSheetDialog = BottomSheetMaterialDialog.Builder((callback as Fragment).requireActivity())
             .setTitle("Delete?")
             .setMessage("You will loose your skill progress. Are you sure you want to delete this path? ")
             .setCancelable(false)
-            .setAnimation(R.raw.animation_delete)
             .setPositiveButton("Delete", R.drawable.ic_delete) { dialogInterface, _ ->
                 //TODO: delete item
                 Toast.makeText(callback.requireContext(), "Item deleted!", Toast.LENGTH_SHORT).show()
@@ -58,6 +59,8 @@ class PathViewHolderMain(itemView: View, private val callback: MainFragment) : G
             }
             .setNegativeButton("Cancel") { dialogInterface, _ -> dialogInterface.dismiss() }
             .build()
+
+
 
         mBottomSheetDialog.show()
     }

@@ -41,7 +41,7 @@ class SkillViewHolderMain(private var itemViewSkill: View, var context: Context)
                 emptyBtn.setImageResource(R.drawable.ic_pause_empty)
                 emptyBtn.setColorFilter(ContextCompat.getColor(context, R.color.colorGray), android.graphics.PorterDuff.Mode.SRC_IN)
                 inProgressBtn.setColorFilter(ContextCompat.getColor(context, R.color.colorGray), android.graphics.PorterDuff.Mode.SRC_IN)
-                doneBtn.setColorFilter(ContextCompat.getColor(context, R.color.colorAccent), android.graphics.PorterDuff.Mode.SRC_IN)
+                doneBtn.setColorFilter(ContextCompat.getColor(context, R.color.colorPrimaryLight), android.graphics.PorterDuff.Mode.SRC_IN)
                 doneBtn.setImageResource(R.drawable.ic_done_full)
             }
         }

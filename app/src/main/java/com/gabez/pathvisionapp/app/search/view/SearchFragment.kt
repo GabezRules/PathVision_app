@@ -102,8 +102,6 @@ class SearchFragment : Fragment(), KoinComponent {
             .setNegativeButton("Cancel") { dialogInterface, _ -> dialogInterface.dismiss() }
             .build()
 
-
-
         mBottomSheetDialog.show()
     }
 }

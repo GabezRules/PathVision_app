@@ -33,7 +33,8 @@ class PathViewHolderSearch(itemView: View, val callback: SearchFragment) : Group
 
     override fun expand() {
         super.expand()
-        expandBtn.animate().rotation(180F).start()
+        //TODO: Fix animation on expand (do not animate when icon clicked)
+        //expandBtn.animate().rotation(180F).start()
     }
 
     fun setIconEmpty(group: ExpandableGroup<*>){
@@ -42,7 +43,6 @@ class PathViewHolderSearch(itemView: View, val callback: SearchFragment) : Group
 
         isAdded.setOnClickListener {
             callback.addPath(group as PathForSearch)
-            //setIconSaved(group)
         }
     }
 
@@ -52,7 +52,6 @@ class PathViewHolderSearch(itemView: View, val callback: SearchFragment) : Group
 
         isAdded.setOnClickListener {
             callback.deletePath(group as PathForSearch)
-            //setIconEmpty(group)
         }
     }
 }

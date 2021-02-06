@@ -13,7 +13,14 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.airbnb.lottie.LottieAnimationView
 import com.gabez.pathvisionapp.R
+import com.gabez.pathvisionapp.app.paths.entities.PathForView
+import com.gabez.pathvisionapp.app.paths.entities.SkillForView
+import com.gabez.pathvisionapp.app.paths.entities.SkillStatus
 import com.gabez.pathvisionapp.app.paths.view.pathList.ExpandablePathListAdapterMain
+import com.gabez.pathvisionapp.app.search.entities.PathForSearch
+import com.gabez.pathvisionapp.app.search.entities.PathStatus
+import com.gabez.pathvisionapp.app.search.view.pathList.ExpandablePathListAdapterSearch
+import com.shreyaspatil.MaterialDialog.BottomSheetMaterialDialog
 import org.koin.core.KoinComponent
 import org.koin.core.inject
 
@@ -48,7 +55,6 @@ class MainFragment : Fragment(), KoinComponent {
                 hidePathAlert()
                 adapterMain = ExpandablePathListAdapterMain(pathList, this@MainFragment)
                 pathListView.adapter = adapterMain
-                //Toast.makeText(requireContext(), pathList.size.toString(), Toast.LENGTH_LONG).show()
             }
         })
 
@@ -60,10 +66,10 @@ class MainFragment : Fragment(), KoinComponent {
         pathListView.adapter = adapterMain
         pathListView.layoutManager = LinearLayoutManager(requireContext())
 
-        viewModel.getAllPaths()
-
         return view
     }
+
+    fun changeSkillStatus(skill: SkillForView, newStatus: SkillStatus) = viewModel.updateSkillStatus(skill, newStatus)
 
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
@@ -73,11 +79,6 @@ class MainFragment : Fragment(), KoinComponent {
     override fun onViewStateRestored(savedInstanceState: Bundle?) {
         super.onViewStateRestored(savedInstanceState)
         adapterMain.onRestoreInstanceState(savedInstanceState)
-    }
-
-    companion object {
-        @JvmStatic
-        fun newInstance() = MainFragment()
     }
 
     private fun showEmptyPathAlert(){
@@ -99,5 +100,30 @@ class MainFragment : Fragment(), KoinComponent {
 
         pathListView.visibility = View.GONE
         pathAlertContainer.visibility = View.VISIBLE
+    }
+
+    fun deletePath(path: PathForView){
+        val mBottomSheetDialog = BottomSheetMaterialDialog.Builder(requireActivity())
+            .setTitle("Delete?")
+            .setMessage("You will loose your skill progress. Are you sure you want to delete this path? ")
+            .setCancelable(false)
+            .setPositiveButton("Delete", R.drawable.ic_delete) { dialogInterface, _ ->
+                viewModel.deletePath(path)
+
+                val itemPosition = adapterMain.groups.indexOf(path)
+                (pathListView.adapter as ExpandablePathListAdapterMain).groups.removeAt(itemPosition)
+                (pathListView.adapter as ExpandablePathListAdapterMain).notifyItemRemoved(itemPosition)
+
+                dialogInterface.dismiss()
+            }
+            .setNegativeButton("Cancel") { dialogInterface, _ -> dialogInterface.dismiss() }
+            .build()
+
+        mBottomSheetDialog.show()
+    }
+
+    companion object {
+        @JvmStatic
+        fun newInstance() = MainFragment()
     }
 }

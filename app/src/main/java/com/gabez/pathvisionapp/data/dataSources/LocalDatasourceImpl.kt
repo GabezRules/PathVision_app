@@ -1,11 +1,10 @@
 package com.gabez.pathvisionapp.data.dataSources
 
+import com.gabez.pathvisionapp.app.paths.entities.SkillStatus
 import com.gabez.pathvisionapp.data.localDatabase.DbSkillHolder
 import com.gabez.pathvisionapp.data.localDatabase.dbLogic.LocalDatabase
 import com.gabez.pathvisionapp.data.localDatabase.entities.PathEntity
 import com.gabez.pathvisionapp.data.localDatabase.entities.SkillEntity
-import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.collect
 
 class LocalDatasourceImpl(private val db: LocalDatabase): LocalDatasource {
 
@@ -34,10 +33,29 @@ class LocalDatasourceImpl(private val db: LocalDatabase): LocalDatasource {
         skillHolder.refreshSkillHolder(db.dao().getAllPaths())
     }
 
-    override suspend fun getAllPaths(): List<PathEntity> {
-        skillHolder.refreshSkillHolder(db.dao().getAllPaths())
+    override suspend fun updateSkillStatus(skill: String, newStatus: SkillStatus): List<PathEntity> {
+        val intStatus = when(newStatus){
+            SkillStatus.EMPTY -> 0
+            SkillStatus.IN_PROGRESS -> 1
+            SkillStatus.DONE -> 2
+        }
 
-        return db.dao().getAllPaths()
+
+        //TODO: Fix async
+
+        db.dao().updateSkill(skill, intStatus)
+
+        val allPaths = db.dao().getAllPaths()
+        skillHolder.refreshSkillHolder(allPaths)
+
+        return allPaths
+    }
+
+    override suspend fun getAllPaths(): List<PathEntity> {
+        val allPaths = db.dao().getAllPaths()
+        skillHolder.refreshSkillHolder(allPaths)
+
+        return allPaths
     }
 
     override suspend fun getAllSkills(): List<SkillEntity> = db.dao().getAllSkills()

@@ -24,6 +24,6 @@ interface LocalDao {
     @Query("SELECT * FROM skill")
     suspend fun getAllSkills(): List<SkillEntity>
 
-    @Update
-    suspend fun updateSkill(nSkill: SkillEntity)
+    @Query("UPDATE skill SET status=:newStatus WHERE name = :skillName")
+    suspend fun updateSkill(skillName: String, newStatus: Int)
 }

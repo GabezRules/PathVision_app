@@ -1,6 +1,5 @@
-package com.gabez.pathvisionapp.app.search.pathList
+package com.gabez.pathvisionapp.app.search.view.pathList
 
-import android.content.Context
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
@@ -8,11 +7,12 @@ import androidx.core.content.ContextCompat
 import com.gabez.pathvisionapp.R
 import com.gabez.pathvisionapp.app.search.entities.PathForSearch
 import com.gabez.pathvisionapp.app.search.entities.PathStatus
+import com.gabez.pathvisionapp.app.search.view.SearchFragment
 import com.thoughtbot.expandablerecyclerview.models.ExpandableGroup
 import com.thoughtbot.expandablerecyclerview.viewholders.GroupViewHolder
 
 
-class PathViewHolderSearch(itemView: View, val context: Context) : GroupViewHolder(itemView) {
+class PathViewHolderSearch(itemView: View, val callback: SearchFragment) : GroupViewHolder(itemView) {
     private val jobTitle: TextView = itemView.findViewById(R.id.pathJobName)
     private val amountSkills: TextView = itemView.findViewById(R.id.pathAmountSkills)
     private val isAdded: ImageView = itemView.findViewById(R.id.pathAddBtn)
@@ -25,12 +25,14 @@ class PathViewHolderSearch(itemView: View, val context: Context) : GroupViewHold
         when((group as PathForSearch).status){
             PathStatus.ADDED -> {
                 isAdded.setImageResource(R.drawable.ic_add_full)
-                isAdded.setColorFilter(ContextCompat.getColor(context, R.color.colorPrimary), android.graphics.PorterDuff.Mode.SRC_IN)
+                isAdded.setColorFilter(ContextCompat.getColor(callback.requireContext(), R.color.colorPrimary), android.graphics.PorterDuff.Mode.SRC_IN)
+                isAdded.setOnClickListener { callback.deletePath(group) }
             }
 
             PathStatus.NOT_ADDED -> {
                 isAdded.setImageResource(R.drawable.ic_add_empty)
-                isAdded.setColorFilter(ContextCompat.getColor(context, R.color.colorGray), android.graphics.PorterDuff.Mode.SRC_IN)
+                isAdded.setColorFilter(ContextCompat.getColor(callback.requireContext(), R.color.colorGray), android.graphics.PorterDuff.Mode.SRC_IN)
+                isAdded.setOnClickListener { callback.addPath(group) }
             }
         }
     }

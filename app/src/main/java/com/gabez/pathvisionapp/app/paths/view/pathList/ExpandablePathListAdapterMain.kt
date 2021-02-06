@@ -1,10 +1,10 @@
-package com.gabez.pathvisionapp.app.paths.pathList
+package com.gabez.pathvisionapp.app.paths.view.pathList
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.gabez.pathvisionapp.R
-import com.gabez.pathvisionapp.app.paths.MainFragment
+import com.gabez.pathvisionapp.app.paths.view.MainFragment
 import com.gabez.pathvisionapp.app.paths.entities.PathForView
 import com.thoughtbot.expandablerecyclerview.ExpandableRecyclerViewAdapter
 import com.thoughtbot.expandablerecyclerview.models.ExpandableGroup

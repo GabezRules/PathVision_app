@@ -1,4 +1,4 @@
-package com.gabez.pathvisionapp.app.paths
+package com.gabez.pathvisionapp.app.paths.view
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.gabez.pathvisionapp.R
 import com.gabez.pathvisionapp.app.paths.entities.mainMockData
-import com.gabez.pathvisionapp.app.paths.pathList.ExpandablePathListAdapterMain
+import com.gabez.pathvisionapp.app.paths.view.pathList.ExpandablePathListAdapterMain
 import org.koin.core.KoinComponent
 import org.koin.core.inject
 

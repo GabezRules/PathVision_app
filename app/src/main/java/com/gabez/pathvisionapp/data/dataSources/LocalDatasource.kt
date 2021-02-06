@@ -1,10 +1,10 @@
-package com.gabez.pathvisionapp.domain
+package com.gabez.pathvisionapp.data.dataSources
 
 import com.gabez.pathvisionapp.data.localDatabase.entities.PathEntity
 import kotlinx.coroutines.flow.Flow
 
-interface AppRepository {
+interface LocalDatasource {
     suspend fun addPath(path: PathEntity)
     suspend fun deletePath(path: PathEntity)
-    suspend fun getLocalPaths(): List<PathEntity>
+    suspend fun getAllPaths(): List<PathEntity>
 }

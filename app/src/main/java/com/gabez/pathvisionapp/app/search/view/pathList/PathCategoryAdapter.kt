@@ -1,4 +1,4 @@
-package com.gabez.pathvisionapp.app.search
+package com.gabez.pathvisionapp.app.search.view.pathList
 
 import android.view.LayoutInflater
 import android.view.View
@@ -14,7 +14,9 @@ class PathCategoryAdapter(val list: List<String>): RecyclerView.Adapter<PathCate
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PathCategoryViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_category, parent, false)
-        return PathCategoryViewHolder(view)
+        return PathCategoryViewHolder(
+            view
+        )
     }
 
     override fun onBindViewHolder(holder: PathCategoryViewHolder, position: Int) {

@@ -16,14 +16,14 @@ interface LocalDao {
     @Delete
     suspend fun deletePath(path: PathEntity)
 
-    @Delete
-    suspend fun deleteSkill(skill: SkillEntity)
+    @Query("DELETE FROM skill WHERE name = :skill")
+    suspend fun deleteSkill(skill: String)
 
     @Query("SELECT * FROM path")
-    suspend fun getAllPaths(): Flow<List<PathEntity>>
+    suspend fun getAllPaths(): List<PathEntity>
 
     @Query("SELECT * FROM skill")
-    suspend fun getAllSkills(): Flow<List<SkillEntity>>
+    suspend fun getAllSkills(): List<SkillEntity>
 
     @Update
     suspend fun updateSkill(nSkill: SkillEntity)

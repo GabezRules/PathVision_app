@@ -1,9 +1,5 @@
 package com.gabez.pathvisionapp.app.search.entities
 
-import com.gabez.pathvisionapp.app.paths.entities.PathForView
-import com.gabez.pathvisionapp.app.paths.entities.SkillForView
-import com.gabez.pathvisionapp.app.paths.entities.SkillStatus
-
 val searchMockData = arrayListOf(
     PathForSearch(
         title = "Junior Android Developer",

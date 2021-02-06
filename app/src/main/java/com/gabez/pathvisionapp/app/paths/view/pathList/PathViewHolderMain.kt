@@ -1,14 +1,13 @@
-package com.gabez.pathvisionapp.app.paths.pathList
+package com.gabez.pathvisionapp.app.paths.view.pathList
 
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import com.airbnb.lottie.LottieAnimationView
 import com.gabez.pathvisionapp.R
 import com.gabez.pathvisionapp.app.CircularCompletionView
-import com.gabez.pathvisionapp.app.paths.MainFragment
+import com.gabez.pathvisionapp.app.paths.view.MainFragment
 import com.gabez.pathvisionapp.app.paths.entities.SkillForView
 import com.gabez.pathvisionapp.app.paths.entities.SkillStatus
 import com.shreyaspatil.MaterialDialog.BottomSheetMaterialDialog

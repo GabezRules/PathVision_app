@@ -3,7 +3,6 @@ package com.gabez.pathvisionapp.data.localDatabase.dbLogic
 import androidx.room.*
 import com.gabez.pathvisionapp.data.localDatabase.entities.PathEntity
 import com.gabez.pathvisionapp.data.localDatabase.entities.SkillEntity
-import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface LocalDao {

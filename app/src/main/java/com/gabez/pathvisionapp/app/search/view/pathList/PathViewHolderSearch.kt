@@ -24,15 +24,19 @@ class PathViewHolderSearch(itemView: View, val callback: SearchFragment) : Group
 
         when((group as PathForSearch).status){
             PathStatus.ADDED -> {
-                isAdded.setImageResource(R.drawable.ic_add_full)
-                isAdded.setColorFilter(ContextCompat.getColor(callback.requireContext(), R.color.colorPrimary), android.graphics.PorterDuff.Mode.SRC_IN)
-                isAdded.setOnClickListener { callback.deletePath(group) }
+                setIconSaved()
+                isAdded.setOnClickListener {
+                    callback.deletePath(group)
+                    setIconEmpty()
+                }
             }
 
             PathStatus.NOT_ADDED -> {
-                isAdded.setImageResource(R.drawable.ic_add_empty)
-                isAdded.setColorFilter(ContextCompat.getColor(callback.requireContext(), R.color.colorGray), android.graphics.PorterDuff.Mode.SRC_IN)
-                isAdded.setOnClickListener { callback.addPath(group) }
+                setIconEmpty()
+                isAdded.setOnClickListener {
+                    callback.addPath(group)
+                    setIconSaved()
+                }
             }
         }
     }
@@ -40,5 +44,15 @@ class PathViewHolderSearch(itemView: View, val callback: SearchFragment) : Group
     override fun expand() {
         super.expand()
         expandBtn.animate().rotation(180F).start()
+    }
+
+    fun setIconEmpty(){
+        isAdded.setImageResource(R.drawable.ic_add_empty)
+        isAdded.setColorFilter(ContextCompat.getColor(callback.requireContext(), R.color.colorGray), android.graphics.PorterDuff.Mode.SRC_IN)
+    }
+
+    fun setIconSaved(){
+        isAdded.setImageResource(R.drawable.ic_add_full)
+        isAdded.setColorFilter(ContextCompat.getColor(callback.requireContext(), R.color.colorPrimary), android.graphics.PorterDuff.Mode.SRC_IN)
     }
 }

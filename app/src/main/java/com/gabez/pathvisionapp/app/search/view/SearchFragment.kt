@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.gabez.pathvisionapp.R
@@ -20,7 +21,7 @@ class SearchFragment : Fragment(), KoinComponent {
     private lateinit var searchCategoriesList: RecyclerView
 
     private lateinit var adapterSearch: ExpandablePathListAdapterSearch
-    private lateinit var pathList: RecyclerView
+    private lateinit var pathListView: RecyclerView
 
     private val viewModel: SearchViewModel by inject()
 
@@ -44,9 +45,15 @@ class SearchFragment : Fragment(), KoinComponent {
 
         adapterSearch = ExpandablePathListAdapterSearch(searchMockData, this@SearchFragment)
 
-        pathList = view.findViewById(R.id.searchListView)
-        pathList.adapter = adapterSearch
-        pathList.layoutManager = LinearLayoutManager(requireContext())
+        pathListView = view.findViewById(R.id.searchListView)
+        pathListView.adapter = adapterSearch
+        pathListView.layoutManager = LinearLayoutManager(requireContext())
+
+        viewModel.searchData.observe(viewLifecycleOwner, Observer{ pathList ->
+            adapterSearch = ExpandablePathListAdapterSearch(pathList, this@SearchFragment)
+            pathListView.adapter = adapterSearch
+            (pathListView.adapter as ExpandablePathListAdapterSearch).notifyDataSetChanged()
+        })
 
         return view
     }

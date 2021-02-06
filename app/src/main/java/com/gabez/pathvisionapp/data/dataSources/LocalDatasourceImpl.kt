@@ -21,6 +21,8 @@ class LocalDatasourceImpl(private val db: LocalDatabase): LocalDatasource {
                 )
             )
         }
+
+        skillHolder.refreshSkillHolder(db.dao().getAllPaths())
     }
 
     override suspend fun deletePath(path: PathEntity){
@@ -28,6 +30,8 @@ class LocalDatasourceImpl(private val db: LocalDatabase): LocalDatasource {
         for(skill in path.relatedSkills.split(";;")){
             if(!skillHolder.isInOtherPath(skill)) db.dao().deleteSkill(skill)
         }
+
+        skillHolder.refreshSkillHolder(db.dao().getAllPaths())
     }
 
     override suspend fun getAllPaths(): List<PathEntity> {

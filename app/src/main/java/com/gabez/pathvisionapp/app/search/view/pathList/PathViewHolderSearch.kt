@@ -13,6 +13,7 @@ import com.thoughtbot.expandablerecyclerview.viewholders.GroupViewHolder
 
 
 class PathViewHolderSearch(itemView: View, val callback: SearchFragment) : GroupViewHolder(itemView) {
+
     private val jobTitle: TextView = itemView.findViewById(R.id.pathJobName)
     private val amountSkills: TextView = itemView.findViewById(R.id.pathAmountSkills)
     private val isAdded: ImageView = itemView.findViewById(R.id.pathAddBtn)
@@ -23,21 +24,10 @@ class PathViewHolderSearch(itemView: View, val callback: SearchFragment) : Group
         amountSkills.text = "${group.itemCount} skills"
 
         when((group as PathForSearch).status){
-            PathStatus.ADDED -> {
-                setIconSaved()
-                isAdded.setOnClickListener {
-                    callback.deletePath(group)
-                    setIconEmpty()
-                }
-            }
 
-            PathStatus.NOT_ADDED -> {
-                setIconEmpty()
-                isAdded.setOnClickListener {
-                    callback.addPath(group)
-                    setIconSaved()
-                }
-            }
+            PathStatus.ADDED -> setIconSaved(group)
+
+            PathStatus.NOT_ADDED -> setIconEmpty(group)
         }
     }
 
@@ -46,13 +36,23 @@ class PathViewHolderSearch(itemView: View, val callback: SearchFragment) : Group
         expandBtn.animate().rotation(180F).start()
     }
 
-    fun setIconEmpty(){
+    fun setIconEmpty(group: ExpandableGroup<*>){
         isAdded.setImageResource(R.drawable.ic_add_empty)
         isAdded.setColorFilter(ContextCompat.getColor(callback.requireContext(), R.color.colorGray), android.graphics.PorterDuff.Mode.SRC_IN)
+
+        isAdded.setOnClickListener {
+            callback.addPath(group as PathForSearch)
+            //setIconSaved(group)
+        }
     }
 
-    fun setIconSaved(){
+    fun setIconSaved(group: ExpandableGroup<*>){
         isAdded.setImageResource(R.drawable.ic_add_full)
         isAdded.setColorFilter(ContextCompat.getColor(callback.requireContext(), R.color.colorPrimary), android.graphics.PorterDuff.Mode.SRC_IN)
+
+        isAdded.setOnClickListener {
+            callback.deletePath(group as PathForSearch)
+            //setIconEmpty(group)
+        }
     }
 }

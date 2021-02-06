@@ -4,15 +4,18 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.gabez.pathvisionapp.R
 import com.gabez.pathvisionapp.app.search.entities.PathForSearch
+import com.gabez.pathvisionapp.app.search.entities.PathStatus
 import com.gabez.pathvisionapp.app.search.entities.searchMockData
 import com.gabez.pathvisionapp.app.search.view.pathList.ExpandablePathListAdapterSearch
 import com.gabez.pathvisionapp.app.search.view.pathList.PathCategoryAdapter
+import com.shreyaspatil.MaterialDialog.BottomSheetMaterialDialog
 import org.koin.core.KoinComponent
 import org.koin.core.inject
 
@@ -52,7 +55,7 @@ class SearchFragment : Fragment(), KoinComponent {
         viewModel.searchData.observe(viewLifecycleOwner, Observer{ pathList ->
             adapterSearch = ExpandablePathListAdapterSearch(pathList, this@SearchFragment)
             pathListView.adapter = adapterSearch
-            (pathListView.adapter as ExpandablePathListAdapterSearch).notifyDataSetChanged()
+            pathListView.invalidate()
         })
 
         return view
@@ -74,8 +77,33 @@ class SearchFragment : Fragment(), KoinComponent {
             SearchFragment()
     }
 
-    fun addPath(path: PathForSearch) = viewModel.addPath(path)
+    fun addPath(path: PathForSearch){
+        viewModel.addPath(path)
 
-    //TODO: Add popup with delete path
-    fun deletePath(path: PathForSearch) = viewModel.deletePath(path)
+        val itemPosition = adapterSearch.groups.indexOf(path)
+        (adapterSearch.groups[itemPosition] as PathForSearch).status = PathStatus.ADDED
+        (pathListView.adapter as ExpandablePathListAdapterSearch).notifyItemChanged(itemPosition)
+    }
+
+    fun deletePath(path: PathForSearch){
+        val mBottomSheetDialog = BottomSheetMaterialDialog.Builder(requireActivity())
+            .setTitle("Delete?")
+            .setMessage("You will loose your skill progress. Are you sure you want to delete this path? ")
+            .setCancelable(false)
+            .setPositiveButton("Delete", R.drawable.ic_delete) { dialogInterface, _ ->
+                viewModel.deletePath(path)
+
+                val itemPosition = adapterSearch.groups.indexOf(path)
+                (adapterSearch.groups[itemPosition] as PathForSearch).status = PathStatus.NOT_ADDED
+                (pathListView.adapter as ExpandablePathListAdapterSearch).notifyItemChanged(itemPosition)
+
+                dialogInterface.dismiss()
+            }
+            .setNegativeButton("Cancel") { dialogInterface, _ -> dialogInterface.dismiss() }
+            .build()
+
+
+
+        mBottomSheetDialog.show()
+    }
 }

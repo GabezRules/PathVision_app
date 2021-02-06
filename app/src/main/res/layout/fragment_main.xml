@@ -12,14 +12,14 @@
         android:layout_height="wrap_content" />
 
     <LinearLayout
-        android:id="@+id/emptyPathAlert"
+        android:id="@+id/pathAlert"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:orientation="vertical">
 
         <com.airbnb.lottie.LottieAnimationView
-            android:id="@+id/emptyPathAnimation"
+            android:id="@+id/pathAlertAnimation"
             android:layout_width="200dp"
             android:layout_height="200dp"
             android:layout_gravity="center"
@@ -28,6 +28,7 @@
             app:lottie_loop="true" />
 
         <TextView
+            android:id="@+id/pathAlertTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -37,6 +38,7 @@
             android:textSize="18sp" />
 
         <TextView
+            android:id="@+id/pathAlertDesc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"

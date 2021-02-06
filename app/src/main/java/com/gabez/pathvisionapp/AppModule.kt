@@ -12,11 +12,12 @@ import com.gabez.pathvisionapp.domain.AppRepository
 import com.gabez.pathvisionapp.domain.usecases.AddPathUsecase
 import com.gabez.pathvisionapp.domain.usecases.DeletePathUsecase
 import com.gabez.pathvisionapp.domain.usecases.GetLocalPathsUsecase
+import com.gabez.pathvisionapp.domain.usecases.GetLocalSkillsUsecase
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 
 val appModule = module {
-    viewModel { MainViewModel() }
+    viewModel { MainViewModel(get(), get()) }
     viewModel { SearchViewModel(get(), get(), get()) }
 
     single { LocalDatabase.getInstance(get()) }
@@ -29,4 +30,5 @@ val appModule = module {
     single { DeletePathUsecase(get()) }
     single { AddPathUsecase(get()) }
     single { GetLocalPathsUsecase(get()) }
+    single { GetLocalSkillsUsecase(get()) }
 }

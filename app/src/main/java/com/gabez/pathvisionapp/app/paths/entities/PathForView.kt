@@ -4,7 +4,7 @@ import com.gabez.pathvisionapp.data.localDatabase.entities.PathEntity
 import com.thoughtbot.expandablerecyclerview.models.ExpandableGroup
 
 
-class PathForView(title: String?, items: List<SkillForView?>?, var category: String = "") : ExpandableGroup<SkillForView?>(title, items){
+class PathForView(title: String?, items: List<SkillForView?>? = ArrayList(), var category: String = "") : ExpandableGroup<SkillForView?>(title, items){
     fun toPathEntity(): PathEntity {
         return PathEntity(
             name = title,

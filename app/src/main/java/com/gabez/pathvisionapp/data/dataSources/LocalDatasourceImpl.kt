@@ -39,4 +39,6 @@ class LocalDatasourceImpl(private val db: LocalDatabase): LocalDatasource {
 
         return db.dao().getAllPaths()
     }
+
+    override suspend fun getAllSkills(): List<SkillEntity> = db.dao().getAllSkills()
 }

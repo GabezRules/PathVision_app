@@ -14,4 +14,6 @@
     <string name="no_paths_added_desc">Add your career paths and feel free to continue :)</string>
     <string name="loading">Loading…</string>
     <string name="empty_string"> </string>
+    <string name="cancel">CANCEL</string>
+    <string name="authentication_description">With set up account you can save your data and restore it on any mobile device with PathVision App after you log in!</string>
 </resources>

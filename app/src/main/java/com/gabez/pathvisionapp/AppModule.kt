@@ -2,6 +2,9 @@ package com.gabez.pathvisionapp
 
 import com.gabez.pathvisionapp.app.paths.view.MainViewModel
 import com.gabez.pathvisionapp.app.search.view.SearchViewModel
+import com.gabez.pathvisionapp.authentication.AuthErrorHolder
+import com.gabez.pathvisionapp.authentication.AuthenticationAdapter
+import com.gabez.pathvisionapp.authentication.CurrentUserHolder
 import com.gabez.pathvisionapp.data.dataSources.ApiDatasource
 import com.gabez.pathvisionapp.data.dataSources.ApiDatasourceImpl
 import com.gabez.pathvisionapp.data.dataSources.LocalDatasource
@@ -11,6 +14,7 @@ import com.gabez.pathvisionapp.data.localDatabase.dbLogic.LocalDatabase
 import com.gabez.pathvisionapp.data.repo.AppRepositoryImpl
 import com.gabez.pathvisionapp.domain.AppRepository
 import com.gabez.pathvisionapp.domain.usecases.*
+import com.google.firebase.database.FirebaseDatabase
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 
@@ -32,4 +36,10 @@ val appModule = module {
     single { UpdateSkillStatusUsecase(get()) }
 
     single { DbPathsHolder() }
+
+    single{ AuthenticationAdapter(get(), get(), get()) }
+    single{ CurrentUserHolder() }
+    single{ AuthErrorHolder() }
+
+    single{ FirebaseDatabase.getInstance() }
 }

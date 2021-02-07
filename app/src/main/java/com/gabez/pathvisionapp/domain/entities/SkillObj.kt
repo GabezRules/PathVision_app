@@ -1,3 +1,5 @@
 package com.gabez.pathvisionapp.domain.entities
 
-data class SkillObj(var name: String = "")
+import com.gabez.pathvisionapp.app.paths.entities.SkillStatus
+
+data class SkillObj(var name: String = "", var status: SkillStatus = SkillStatus.EMPTY)

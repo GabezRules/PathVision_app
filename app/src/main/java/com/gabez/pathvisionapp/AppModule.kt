@@ -16,7 +16,7 @@ import org.koin.dsl.module
 
 val appModule = module {
     viewModel { MainViewModel(get(), get(), get(), get(), get(), get()) }
-    viewModel { SearchViewModel(get(), get(), get()) }
+    viewModel { SearchViewModel(get(), get(), get(), get()) }
 
     single { LocalDatabase.getInstance(get()) }
 

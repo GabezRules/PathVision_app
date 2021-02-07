@@ -102,7 +102,7 @@ class MainViewModel(
         return pathObjectList
     }
 
-    fun deletePath(path: PathForView) = viewModelScope.launch{ deletePathUsecase.invoke(path) }.invokeOnCompletion {
+    fun deletePath(path: PathForView) = viewModelScope.launch{ deletePathUsecase.invoke(path.toPathEntity()) }.invokeOnCompletion {
         _savedPaths.value!!.remove(path)
         Toast.makeText(context, "Item deleted!", Toast.LENGTH_SHORT).show()
     }

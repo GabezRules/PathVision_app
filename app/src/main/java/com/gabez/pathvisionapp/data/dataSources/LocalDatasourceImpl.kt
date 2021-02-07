@@ -6,10 +6,17 @@ import com.gabez.pathvisionapp.data.localDatabase.DbSkillHolder
 import com.gabez.pathvisionapp.data.localDatabase.dbLogic.LocalDatabase
 import com.gabez.pathvisionapp.data.localDatabase.entities.PathEntity
 import com.gabez.pathvisionapp.data.localDatabase.entities.SkillEntity
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 
 class LocalDatasourceImpl(private val db: LocalDatabase, private val pathsHolder: DbPathsHolder): LocalDatasource {
 
     var skillHolder = DbSkillHolder()
+
+    init {
+        GlobalScope.launch(Dispatchers.IO) { refreshPaths() }
+    }
 
     override suspend fun addPath(path: PathEntity){
         db.dao().savePath(path)
@@ -42,13 +49,9 @@ class LocalDatasourceImpl(private val db: LocalDatabase, private val pathsHolder
             SkillStatus.DONE -> 2
         }
 
-        //TODO: Fix async
-
         db.dao().updateSkill(skill, intStatus)
 
         refreshPaths()
-
-        //return allPaths
     }
 
     override suspend fun getAllPaths(): List<PathEntity> {

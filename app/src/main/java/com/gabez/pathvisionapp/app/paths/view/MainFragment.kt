@@ -107,7 +107,12 @@ class MainFragment : Fragment(), KoinComponent {
 
                 val itemPosition = adapterMain.groups.indexOf(path)
                 (pathListView.adapter as ExpandablePathListAdapterMain).groups.removeAt(itemPosition)
+                (pathListView.adapter as ExpandablePathListAdapterMain).groups.remove(path)
                 (pathListView.adapter as ExpandablePathListAdapterMain).notifyItemRemoved(itemPosition)
+
+
+                pathListView.invalidate()
+                pathListView.invalidateItemDecorations()
 
                 dialogInterface.dismiss()
             }

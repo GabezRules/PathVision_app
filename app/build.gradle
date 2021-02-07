@@ -86,4 +86,9 @@ dependencies {
 
     //coroutines
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0"
+
+    //gson for json
+    implementation 'com.google.code.gson:gson:2.8.6'
+
 }
+

@@ -21,8 +21,6 @@ import org.koin.core.inject
 
 class SearchFragment : Fragment(), KoinComponent {
 
-    private lateinit var searchCategoriesList: RecyclerView
-
     private lateinit var adapterSearch: ExpandablePathListAdapterSearch
     private lateinit var pathListView: RecyclerView
 
@@ -30,21 +28,6 @@ class SearchFragment : Fragment(), KoinComponent {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.fragment_search, container, false)
-
-        searchCategoriesList = view.findViewById(R.id.searchCategoriesList)
-        searchCategoriesList.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
-        searchCategoriesList.adapter =
-            PathCategoryAdapter(
-                arrayListOf(
-                    "mobile apps",
-                    "backend",
-                    "UI/UX design",
-                    "project management",
-                    "devops",
-                    "game development",
-                    "other"
-                )
-            )
 
         adapterSearch = ExpandablePathListAdapterSearch(searchMockData, this@SearchFragment)
 

@@ -10,4 +10,8 @@
     <string name="login_register_options">Login / Register options</string>
     <string name="login">LOGIN</string>
     <string name="register">REGISTER</string>
+    <string name="no_paths_added">No paths added!</string>
+    <string name="no_paths_added_desc">Add your career paths and feel free to continue :)</string>
+    <string name="loading">Loading…</string>
+    <string name="empty_string"> </string>
 </resources>

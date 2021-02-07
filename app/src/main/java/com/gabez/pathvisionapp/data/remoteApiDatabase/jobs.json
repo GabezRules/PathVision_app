@@ -1,0 +1,2422 @@
+[
+  {
+    "job_name": "Behavior Therapist",
+    "required_skills": "['Cardiopulmonary Resuscitation', 'Spanish Portuguese', 'BCBA', 'Filing', 'Degree IN Psychology', 'Rendering', 'Enthusiasm', 'VERBAL Communication']"
+  },
+  {
+    "job_name": "Academic Counselor",
+    "required_skills": "['Public Speaking', 'Effective Communication', 'Microsoft Office Suite', 'Microsoft Outlook', 'Decision Making', 'Meet Deadlines', 'Excellent Customer', 'Leadership']"
+  },
+  {
+    "job_name": "Account Executive",
+    "required_skills": []
+  },
+  {
+    "job_name": "Loan Officer",
+    "required_skills": "['BS Degree', 'Negotiation', 'Business Writing', 'VERBAL Communication', 'Interpersonal and Communication', 'Excellent Customer Service', 'Written Communication', 'Spreadsheets']"
+  },
+  {
+    "job_name": "Accountant",
+    "required_skills": "['Excellent Communication', 'General Ledger', 'Microsoft Office Suite', 'Microsoft EXCEL', 'GAAP', 'Audit', 'Powerpoint', 'Attention To Detail']"
+  },
+  {
+    "job_name": "Accounting Analyst",
+    "required_skills": "['Microsoft EXCEL', 'Powerpoint', 'Microsoft Office Suite', 'Pivot Tables', 'Excellent Communication', 'Estimates', 'Programmatic', 'Statistical Inference']"
+  },
+  {
+    "job_name": "Assistant Accountant",
+    "required_skills": "['Microsoft Office Suite', 'Excellent Customer Service', 'Excellent Communication', 'Attention To Detail', 'Outlook', 'General Ledger', 'Meet Deadlines', 'Computer Literacy']"
+  },
+  {
+    "job_name": "Accountant",
+    "required_skills": "['Excellent Communication', 'General Ledger', 'Microsoft Office Suite', 'Microsoft EXCEL', 'GAAP', 'Audit', 'Powerpoint', 'Attention To Detail']"
+  },
+  {
+    "job_name": "Accounting Manager",
+    "required_skills": []
+  },
+  {
+    "job_name": "Accountant",
+    "required_skills": "['Excellent Communication', 'General Ledger', 'Microsoft Office Suite', 'Microsoft EXCEL', 'GAAP', 'Audit', 'Powerpoint', 'Attention To Detail']"
+  },
+  {
+    "job_name": "Accounts Payable Specialist",
+    "required_skills": "['Excellent Customer Service', 'ERP System', 'Microsoft Office Suite', 'Attention To Detail', 'Excellent Communication', 'Spreadsheets', 'Microsoft EXCEL', 'General Ledger']"
+  },
+  {
+    "job_name": "Accounts Payable Specialist",
+    "required_skills": "['Excellent Customer Service', 'ERP System', 'Microsoft Office Suite', 'Attention To Detail', 'Excellent Communication', 'Spreadsheets', 'Microsoft EXCEL', 'General Ledger']"
+  },
+  {
+    "job_name": "Accounts Receivable Specialist",
+    "required_skills": "['Excellent Customer Service', 'ERP System', 'Microsoft Office Suite', 'Attention To Detail', 'Excellent Communication', 'Microsoft EXCEL', 'Outlook', 'Written Communication']"
+  },
+  {
+    "job_name": "Accounts Receivable Specialist",
+    "required_skills": "['Excellent Customer Service', 'ERP System', 'Microsoft Office Suite', 'Attention To Detail', 'Excellent Communication', 'Microsoft EXCEL', 'Outlook', 'Written Communication']"
+  },
+  {
+    "job_name": "Actor",
+    "required_skills": "['Elicitation', 'Editing', 'Exercises', 'Excellent Communication', 'Fluent IN Spanish', 'Content Management Systems', 'Security Clearance', 'Secret Clearance']"
+  },
+  {
+    "job_name": "Actuary",
+    "required_skills": "['SQL SAS', 'CDL', 'FCAS', 'Statistics', 'Reserving', 'EXCEL VBA', 'Forming', 'Interpersonal and Communication']"
+  },
+  {
+    "job_name": "Administrative Assistant",
+    "required_skills": "['Office 365', 'Excellent Customer Service', 'Written Communication', 'Microsoft Office Suite', 'Active Directory', 'Attention To Detail', 'Exchange Online', 'PowerShell']"
+  },
+  {
+    "job_name": "Mail Processing Clerk",
+    "required_skills": "['Microsoft Office Suite', 'Excellent Communication', 'Problem Solving Ability', 'Attention To Detail', 'Outlook', 'Responses', 'Faxing', 'English']"
+  },
+  {
+    "job_name": "Administrative Assistant",
+    "required_skills": "['Office 365', 'Excellent Customer Service', 'Written Communication', 'Microsoft Office Suite', 'Active Directory', 'Attention To Detail', 'Exchange Online', 'PowerShell']"
+  },
+  {
+    "job_name": "Administrative Manager",
+    "required_skills": []
+  },
+  {
+    "job_name": "Administrative Assistant",
+    "required_skills": "['Office 365', 'Excellent Customer Service', 'Written Communication', 'Microsoft Office Suite', 'Active Directory', 'Attention To Detail', 'Exchange Online', 'PowerShell']"
+  },
+  {
+    "job_name": "Administrative Assistant",
+    "required_skills": "['Office 365', 'Excellent Customer Service', 'Written Communication', 'Microsoft Office Suite', 'Active Directory', 'Attention To Detail', 'Exchange Online', 'PowerShell']"
+  },
+  {
+    "job_name": "Admissions Counselor",
+    "required_skills": "['Microsoft Office Suite', 'Excellent Customer Service', 'Negotiation', 'Prospects', 'Outstanding Communication', 'Incorporation', 'Microsoft Outlook', 'Traditional']"
+  },
+  {
+    "job_name": "Advertising Manager",
+    "required_skills": []
+  },
+  {
+    "job_name": "Aerospace Engineer",
+    "required_skills": "['Written Communication', 'MATLAB', 'Security Clearance', 'Problem Solving', 'Systems Development', 'Flight Simulation', 'Python MATLAB', 'Scripting Languages']"
+  },
+  {
+    "job_name": "Analyst",
+    "required_skills": "['Excellent Communication', 'Microsoft Office Suite', 'SQL Tableau', 'Statistics', 'Written Communication', 'Microsoft EXCEL', 'Database', 'Python']"
+  },
+  {
+    "job_name": "Data Manager",
+    "required_skills": "['Taxonomy', 'Configuration', 'Ontologies', 'Excellent Communication', 'Agile Methodologies', 'SQL', 'Frameworks', 'Database']"
+  },
+  {
+    "job_name": "Animator",
+    "required_skills": "['Maya', 'Illustration', 'Zbrush', 'Autodesk 3ds Max', 'Rendering', 'Windows Os', 'Photoshop', 'Adobe Creative Suite']"
+  },
+  {
+    "job_name": "Applications Engineer",
+    "required_skills": "['MS SQL Server', 'Javascript', 'Agile Software Development', 'Relational Database', 'API', '.NET', 'Cloud', 'Frameworks']"
+  },
+  {
+    "job_name": "Architectural Designer",
+    "required_skills": "['CAD Software', 'Revit', 'AutoCAD', 'Adobe Creative Suite', 'Adobe Photoshop', 'Indesign', 'Microsoft Office Suite', 'LEED']"
+  },
+  {
+    "job_name": "Area Manager",
+    "required_skills": "['English Language', 'Microsoft Office Suite', 'Pathogens', 'Notices', 'Effective Communication', 'Grooming', 'CDL', 'Load Unload']"
+  },
+  {
+    "job_name": "Territory Sales Manager",
+    "required_skills": []
+  },
+  {
+    "job_name": "Art Manager",
+    "required_skills": []
+  },
+  {
+    "job_name": "Assembler",
+    "required_skills": "['Disassembly', 'Work Instructions', 'Dexterity', 'Attention To Detail', 'English Language', 'Written Communication', 'Harnesses', 'Printed Circuit']"
+  },
+  {
+    "job_name": "Asset Manager",
+    "required_skills": "['Work Management', 'Microsoft EXCEL', 'Relational Database Design', 'Written Communication', 'PMP', 'GIS', 'Adobe Photoshop', 'Adobe Creative Suite']"
+  },
+  {
+    "job_name": "Assistant Accountant",
+    "required_skills": "['Microsoft Office Suite', 'Excellent Organizational', 'GAAP', 'General Ledger Reconciliation', 'Microsoft EXCEL', 'ERP System', 'General Ledger', 'Spreadsheets']"
+  },
+  {
+    "job_name": "Assistant Manager",
+    "required_skills": "['Excellent Communication', 'Oracle Identity Management', 'Configuration', 'Microsoft Office Suite', 'CISSP CISM', 'Leadership', 'Powerpoint', 'Cloud']"
+  },
+  {
+    "job_name": "Assistant Project Manager",
+    "required_skills": "['Microsoft Office Suite', 'Excellent Communication', 'Written Communication', 'Change Orders', 'Outlook', 'Powerpoint', 'Microsoft Project', 'Attention To Detail']"
+  },
+  {
+    "job_name": "Assistant Property Manager",
+    "required_skills": "['Excellent Customer Service', 'Microsoft Office Suite', 'Effective Communication', 'Outlook', 'Attention To Detail', 'Requests', 'MS Word', 'Powerpoint']"
+  },
+  {
+    "job_name": "Assistant Store Manager",
+    "required_skills": "['Critical Thinking', 'Written Communication', 'VERBAL Communication', 'Excellent Organizational', 'MS Word', 'Manage Multiple Projects', 'WORKING Relationships', 'Negotiation']"
+  },
+  {
+    "job_name": "Assistant Teacher",
+    "required_skills": "['CPR First Aid', 'English Language', 'CDA', 'Interpersonal and Communication', 'Teaching Experience', 'Leadership', 'Bilingual', 'Spanish Speaking']"
+  },
+  {
+    "job_name": "Audits Manager",
+    "required_skills": "['Audit', 'AML', 'Project Leadership', 'CISA', 'Microsoft Office Suite', 'Microsoft EXCEL', 'Written Communication', 'Bachelor Degree Required']"
+  },
+  {
+    "job_name": "Auditor",
+    "required_skills": "['Audit', 'Coding', 'Written Communication', 'Microsoft EXCEL', 'Microsoft Office Suite', 'CISA', 'Microsoft Powerpoint', 'Calculations']"
+  },
+  {
+    "job_name": "Mechanic",
+    "required_skills": "['Exhaust Systems', 'Aircraft Systems', 'Views', 'Aircraft Avionics', 'CDL', 'Disassembly', 'Air Induction', 'ASE Certified']"
+  },
+  {
+    "job_name": "Automotive Technician",
+    "required_skills": "['Estimates', 'Diagnosis', 'Exhaust', 'Dexterity', 'eNGINE Repair', 'Excellent Communication', 'Strong WORK Ethic', 'ASE Certified']"
+  },
+  {
+    "job_name": "Automotive Technician",
+    "required_skills": "['Estimates', 'Diagnosis', 'Exhaust', 'Dexterity', 'eNGINE Repair', 'Excellent Communication', 'Strong WORK Ethic', 'ASE Certified']"
+  },
+  {
+    "job_name": "Nanny",
+    "required_skills": "['Excellent Communication', 'Computer Literacy', 'English Language', 'Positive Attitude', 'CPR', 'Leadership', 'CDL', 'Strong WORK Ethic']"
+  },
+  {
+    "job_name": "Back End Engineer",
+    "required_skills": "['UI UX', 'Restful APIS', 'Back End', 'Programming Languages', 'Flask', 'RAILS', 'Javascript', 'PHP']"
+  },
+  {
+    "job_name": "Baker",
+    "required_skills": []
+  },
+  {
+    "job_name": "Teller",
+    "required_skills": "['Military Experience', 'Professionalism', 'Multilingual', 'Leadership', 'Fluent English', 'IN Spanish', 'Relationship-building', 'Effective Communication']"
+  },
+  {
+    "job_name": "Banker Associate",
+    "required_skills": []
+  },
+  {
+    "job_name": "Server",
+    "required_skills": "['VERBAL Communication', 'Writing', 'Excellent Communication', 'Modifications', 'Requests', 'English Language', 'Excellent Customer Service', 'Positive Attitude']"
+  },
+  {
+    "job_name": "Store Manager",
+    "required_skills": "['Leadership', 'Good Time Management', 'Solution Selling', 'Excellent Communication', 'Selecting', 'Excellent Organizational', 'Job Descriptions', 'MS Office']"
+  },
+  {
+    "job_name": "Barista",
+    "required_skills": "['Excellent Customer Service', 'Well Organized', 'Excellent Communication', 'IN Spanish', 'Positive Attitude', 'Work Ethic', 'Urgency', 'VERBAL Communication']"
+  },
+  {
+    "job_name": "Bartender",
+    "required_skills": "['VERBAL Communication', 'Writing', 'Excellent Communication', 'Excellent Customer Service', 'Requests', 'Italian', 'Positive Attitude', 'Attention To Detail']"
+  },
+  {
+    "job_name": "Beauty Consultant",
+    "required_skills": "['Ability to Collaborate', 'Urgency', 'Escalation', 'Speaking', 'Time Management', 'VERBAL Communication', 'Product Knowledge', 'Written Communication']"
+  },
+  {
+    "job_name": "Benefits Coordinator",
+    "required_skills": "['Excellent Customer Service', 'Microsoft Office Suite', 'Written Communication', 'Attention To Detail', 'Excellent Communication', 'Sensitive', 'Microsoft Outlook', 'IN Spanish']"
+  },
+  {
+    "job_name": "Billing Specialist",
+    "required_skills": "['Coding', 'Written Communication', 'Microsoft Office Suite', 'Excellent Customer', 'Spreadsheets', 'MS Office Applications', 'Attention To Detail', 'Problem Solving']"
+  },
+  {
+    "job_name": "Billing Specialist",
+    "required_skills": "['Coding', 'Written Communication', 'Microsoft Office Suite', 'Excellent Customer', 'Spreadsheets', 'MS Office Applications', 'Attention To Detail', 'Problem Solving']"
+  },
+  {
+    "job_name": "Biochemist",
+    "required_skills": "['CRCST', 'Pipeline', 'VFX', 'Maya', 'Agile Scrum', 'Oracle ERP', 'Slides', 'API Design']"
+  },
+  {
+    "job_name": "Biologist",
+    "required_skills": "['Biology Degree', 'Conducting', 'Consulting', 'Flowjo', 'Responses', 'Hplc', 'Excellent Communication', 'Optimization']"
+  },
+  {
+    "job_name": "Equipment Technician",
+    "required_skills": "['Portable', 'Gaskets', 'Regulators', 'Views', 'Disassembly', 'eNGINE Maintenance', 'Fixing', 'Test Equipment']"
+  },
+  {
+    "job_name": "Bookkeeper",
+    "required_skills": "['Excellent Organizational', 'Microsoft Office Suite', 'Attention To Detail', 'Microsoft EXCEL', 'General Ledger', 'GAAP', 'Excellent Communication', 'Spreadsheets']"
+  },
+  {
+    "job_name": "Branch Manager",
+    "required_skills": "['Graduate Level', 'Graduate Degree', 'Microsoft Office Suite', 'Interpersonal and Communication', 'CSM', 'Windows Office', 'Attention To Detail', 'Faxing']"
+  },
+  {
+    "job_name": "Brand Ambassador",
+    "required_skills": "['Demonstrations', 'Interpersonal and Communication', 'Expense Reporting', 'Written Communication', 'Team Management', 'VERBAL Communication', 'SUPPLIERS', 'Banking Experience']"
+  },
+  {
+    "job_name": "Brand Manager",
+    "required_skills": "['Microsoft Office Suite', 'Microsoft EXCEL', 'Consulting', 'Powerpoint', 'Tablets', 'Attention To Detail', 'Outlook', 'Customer Focus']"
+  },
+  {
+    "job_name": "Budget Analyst",
+    "required_skills": "['Budgetary', 'Responses', 'Security Clearance', 'Estimates', 'Microsoft EXCEL', 'Dd', 'Writing', 'Formulate']"
+  },
+  {
+    "job_name": "Maintenance Manager",
+    "required_skills": "['Effective Communication', 'Aircraft Systems', 'Time Management', 'Outlook', 'Decision Making', 'Excellent Customer Service', 'FAST Learner', 'Problem Solving']"
+  },
+  {
+    "job_name": "Bus Driver",
+    "required_skills": "['CDL', 'CPR First Aid', 'CPR Certified', 'English Language', 'Excellent Communication', 'Excellent Customer Service', 'Load Unload', 'GOOD Communication']"
+  },
+  {
+    "job_name": "Business Administrator",
+    "required_skills": "['Microsoft Office Suite', 'Leadership', 'Powerpoint', 'Outlook', 'Written Communication', 'Interpersonal and Communication', 'Microsoft SQL Server', 'Budget Analysis']"
+  },
+  {
+    "job_name": "Business Consultant",
+    "required_skills": "['Consulting Experience', 'Influencing', 'Leadership', 'Solution Selling', 'Analytical Thinking', 'Oracle Essbase', 'Cognos TM1', 'Effective Communication']"
+  },
+  {
+    "job_name": "Business Developer",
+    "required_skills": "['Excellent Organizational', 'Excellent Communication', 'Microsoft Office Suite', 'VERBAL Communication', 'CRM', 'Powerpoint', 'Negotiation', 'Written Communication']"
+  },
+  {
+    "job_name": "Business Development Executive",
+    "required_skills": []
+  },
+  {
+    "job_name": "Business Developer",
+    "required_skills": "['Excellent Organizational', 'Excellent Communication', 'Microsoft Office Suite', 'VERBAL Communication', 'CRM', 'Powerpoint', 'Negotiation', 'Written Communication']"
+  },
+  {
+    "job_name": "Business Development Associate",
+    "required_skills": "['Excellent Communication', 'Microsoft Office Suite', 'Prospects', 'CRM', 'Time Management', 'Negotiation', 'Powerpoint', 'Written Communication']"
+  },
+  {
+    "job_name": "BI Analyst",
+    "required_skills": "['Microsoft SQL Server', 'Dashboarding', 'Power BI', 'Relational Database', 'Ssis ETL', 'SAP HANA', 'SSRS', 'Statistics']"
+  },
+  {
+    "job_name": "Business Operations Manager",
+    "required_skills": "['CSS', 'Cloud Computing', 'Controls Systems', 'Segments', 'Effective Communication', 'Hybrid Cloud', 'Networking Software', 'Highly Organized']"
+  },
+  {
+    "job_name": "Business Analyst",
+    "required_skills": "['Requirements Gathering', 'Agile Methodologies', 'Excellent Communication', 'Systems Development', 'Business Processes', 'Powerpoint', 'SQL', 'Use Cases']"
+  },
+  {
+    "job_name": "Busser",
+    "required_skills": "['English', 'Interpersonal and Communication', 'Strong WORK Ethic', 'Job Descriptions', 'Confidence', 'Team Work', 'Excellent Customer Service', 'VERBAL Communication']"
+  },
+  {
+    "job_name": "Cable Technician",
+    "required_skills": "['Terminations', 'Critical Thinking', 'Problem Solving', 'Advocacy', 'Work Ethic', 'Test Equipment', 'Splicing', 'Schedules']"
+  },
+  {
+    "job_name": "CAD Designer",
+    "required_skills": "['CAD Drafting', 'AutoCAD', 'Revit', 'MEP AutoCAD', 'Microsoft Office Suite', 'Drawing', 'Surveying', 'BIM']"
+  },
+  {
+    "job_name": "Call Center Representative",
+    "required_skills": "['Typing', 'Excellent Customer Service', 'Written Communication', 'Excellent Communication', 'Bilingual', 'IN Spanish', 'Microsoft Office Suite', 'Windows Operating Systems']"
+  },
+  {
+    "job_name": "Camp Counselor",
+    "required_skills": "['CPR First Aid', 'English Language', 'Evacuation', 'Dexterity', 'Strengthening', 'Composure', 'Tournaments', 'Spanish Speaking']"
+  },
+  {
+    "job_name": "Campaign Manager",
+    "required_skills": "['Adobe Campaign', 'HTML', 'CRM', 'Relational Database', 'SQL', 'CSS', 'Optimization', 'Microsoft EXCEL']"
+  },
+  {
+    "job_name": "Sales Representative",
+    "required_skills": "['Interpersonal and Communication', 'Excellent Customer Service', 'Good Time Management', 'Microsoft Office Suite', 'Negotiation', 'Motivated', 'Strong WORK Ethic', 'CRM']"
+  },
+  {
+    "job_name": "Sales Representative",
+    "required_skills": "['Interpersonal and Communication', 'Excellent Customer Service', 'Good Time Management', 'Microsoft Office Suite', 'Negotiation', 'Motivated', 'Strong WORK Ethic', 'CRM']"
+  },
+  {
+    "job_name": "Cardiologist",
+    "required_skills": "['MD PhD', 'English', 'Onboarding', 'Echocardiogram', 'Vad', 'Spanish Speaking', 'Leadership', 'VERBAL Communication']"
+  },
+  {
+    "job_name": "Assistant Caregiver",
+    "required_skills": "['CPR First Aid', 'PCA', 'English Language', 'Interpersonal and Communication', 'Dressing', 'Alzheimer', 'Team Work', 'Great Work Ethic']"
+  },
+  {
+    "job_name": "Care Manager",
+    "required_skills": "['Attention To Detail', 'Reviews', 'Traditional', 'Graduate Medical Education', 'Leadership', 'MS Office Applications', 'Dexterity', 'Written Communication']"
+  },
+  {
+    "job_name": "Caregiver",
+    "required_skills": "['CPR First Aid', 'Bathing', 'Dressing', 'Excellent Customer Service', 'Effective Communication', 'English Language', 'Positive Attitude', 'Toileting']"
+  },
+  {
+    "job_name": "Carpenter",
+    "required_skills": "['Strong WORK Ethic', 'Professionalism', 'Roofs', 'Well Organized', 'Written Communication', 'Finish Carpentry', 'Frameworks', 'OSHA 10']"
+  },
+  {
+    "job_name": "Case Manager",
+    "required_skills": "['Excellent Communication', 'Critical Thinking', 'IN Spanish', 'Computer Literacy', 'Microsoft Office Suite', 'Time Management', 'Bilingual', 'WORKING Relationships']"
+  },
+  {
+    "job_name": "Social Worker",
+    "required_skills": "['Effective Communication', 'English Language', 'IN Spanish', 'Computer Literate', 'Excellent Communication', 'Report Writing', 'Leadership', 'Written Communication']"
+  },
+  {
+    "job_name": "Cashier",
+    "required_skills": []
+  },
+  {
+    "job_name": "Catering Coordinator",
+    "required_skills": "['Microsoft Outlook', 'Excellent Customer Service', 'Time Management', 'Excellent Communication', 'Microsoft Office', 'MS Office', 'Powerpoint', 'Enthusiasm']"
+  },
+  {
+    "job_name": "Catering Coordinator Manager",
+    "required_skills": "['Budgetary', 'MS Office', 'Outlook', 'Excellent Communication', 'Hospitality Degree', 'Powerpoint', 'Computer Literate', 'Leadership']"
+  },
+  {
+    "job_name": "Certified Nursing Assistant",
+    "required_skills": []
+  },
+  {
+    "job_name": "Registered Nurse",
+    "required_skills": "['CCRN', 'Critical Thinking', 'CPR Certified', 'Excellent Communication', 'Written Communication', 'ICU', 'BLS Certification', 'Cardiopulmonary Resuscitation']"
+  },
+  {
+    "job_name": "Chef",
+    "required_skills": "['Effective Communication', 'Excellent Communication', 'Ability to Multitask', 'Time Management', 'Team Leadership', 'English Language', 'HACCP', 'GXP']"
+  },
+  {
+    "job_name": "Chemist",
+    "required_skills": "['Hplc', 'Written Communication', 'FTIR', 'Calculus', 'Microsoft Office Suite', 'Calibration', 'UV-VIS', 'Attention To Detail']"
+  },
+  {
+    "job_name": "Staff Chief Operating Officer",
+    "required_skills": "['Leadership', 'Excellent Communication', 'Attention To Detail', 'Consulting', 'Microsoft Office Suite', 'Collaboration', 'Exceptional Communication', 'Top Secret Clearance']"
+  },
+  {
+    "job_name": "Daycare Teacher",
+    "required_skills": "['CPR First Aid', 'English', 'CDA', 'Teaching Experience', 'Written Communication', 'Bilingual', 'Disclosures', 'VERBAL Communication']"
+  },
+  {
+    "job_name": "Chiropractor",
+    "required_skills": "['Good Time Management', 'Team Work', 'Public Speaking', 'Disassembly', 'Indian', 'Leadership', 'Dexterity', 'Writing']"
+  },
+  {
+    "job_name": "Claims Adjuster",
+    "required_skills": "['Business Writing', 'Roofs', 'Negotiation', 'Estimates', 'Investigating', 'Written Communication', 'Microsoft Office Suite', 'Excellent Communication']"
+  },
+  {
+    "job_name": "Janitor",
+    "required_skills": "['Positive Attitude', 'Strong WORK Ethic', 'English Language', 'Computer Literate', 'Windows', 'Polish', 'Effective Communication', 'IN Spanish']"
+  },
+  {
+    "job_name": "Clerk",
+    "required_skills": "['Excellent Customer Service', 'Effective Communication', 'Computer Literacy', 'Microsoft Office Software', 'Attention To Detail', 'English', 'Filing', 'Written Communication']"
+  },
+  {
+    "job_name": "Customer Relations Manager",
+    "required_skills": "['CRM', 'Excellent Communication', 'Exceptional Communication', 'Microsoft Office Suite', 'Professionalism', 'Leadership', 'Analytical Thinking', 'Powerpoint']"
+  },
+  {
+    "job_name": "Clinic Manager",
+    "required_skills": "['BCLS', 'Interpersonal and Communication', 'Leadership', 'Critical Thinking', 'Microsoft Outlook', 'Excellent Customer Service', 'CPR', 'Sensitive']"
+  },
+  {
+    "job_name": "Clinical Coordinator",
+    "required_skills": "['Excellent Customer Service', 'CPR', 'Leadership', 'Microsoft Office Suite', 'Interpersonal and Communication', 'Written Communication', 'Critical Thinking', 'MS Word']"
+  },
+  {
+    "job_name": "Clinical Research Associate",
+    "required_skills": "['Pox', 'Leadership', 'Team Work', 'Hepatitis', 'Excellent Communication', 'PharmD', 'Clarify', 'Word Processing']"
+  },
+  {
+    "job_name": "Clinical Research Associate",
+    "required_skills": "['Pox', 'Leadership', 'Team Work', 'Hepatitis', 'Excellent Communication', 'PharmD', 'Clarify', 'Word Processing']"
+  },
+  {
+    "job_name": "CNC Programmer",
+    "required_skills": "['CNC Programming', 'CAD Software', 'CAD/CAM', 'Report Writing', 'Geometry', 'Trigonometry', 'NX', 'GOOD Communication']"
+  },
+  {
+    "job_name": "Commercial Manager",
+    "required_skills": []
+  },
+  {
+    "job_name": "Communications Coordinator",
+    "required_skills": "['Microsoft Office Suite', 'Editing', 'Public Speaking', 'Writing', 'Written Communication', 'Excellent Communication', 'Powerpoint', 'Interpersonal and Communication']"
+  },
+  {
+    "job_name": "Communications Manager",
+    "required_skills": "['Writing', 'Editing', 'Microsoft Powerpoint', 'Excellent Communication', 'Microsoft Office Suite', 'Written Communication', 'Collaboration', 'Leadership']"
+  },
+  {
+    "job_name": "Communications Associate",
+    "required_skills": "['User Interface', 'Adobe CS', 'Effective Communication', 'Coding', 'Writing', 'Microsoft Office Suite', 'Editing', 'Microsoft Powerpoint']"
+  },
+  {
+    "job_name": "Compliance Officer",
+    "required_skills": "['Leadership', 'Security Clearance', 'Excellent Communication', 'Audit', 'Attention To Detail', 'Writing', 'Time Management', 'Collaboration']"
+  },
+  {
+    "job_name": "Software Engineer",
+    "required_skills": "['Javascript', 'HTML AND CSS', 'Node.js', 'Agile Software Development', 'Programming Languages', 'SQL Server', 'NoSQL', '.NET']"
+  },
+  {
+    "job_name": "Computer Technician",
+    "required_skills": "['Excellent Customer Service', 'Attention To Detail', 'Windows 10', 'Interpersonal and Communication', 'Operating Systems', 'Excellent Communication', 'Strong WORK Ethic', 'Written Communication']"
+  },
+  {
+    "job_name": "Software Developer",
+    "required_skills": "['Javascript', 'SQL Server', 'Restful APIS', 'Relational Database', 'Frameworks', '.NET', 'Python', 'Programming Languages']"
+  },
+  {
+    "job_name": "Computer Systems Analyst",
+    "required_skills": "['Linux Kernel', 'Operating Systems', 'Programming Languages', 'Linux Ubuntu', 'Microsoft Windows', 'Rhel', 'Configuration', 'Scripting Languages']"
+  },
+  {
+    "job_name": "Computer Technician",
+    "required_skills": "['Excellent Customer Service', 'Attention To Detail', 'Windows 10', 'Interpersonal and Communication', 'Operating Systems', 'Excellent Communication', 'Strong WORK Ethic', 'Written Communication']"
+  },
+  {
+    "job_name": "Concierge",
+    "required_skills": "['Excellent Customer Service', 'Microsoft Outlook', 'Excellent Communication', 'Requests', 'English Language', 'Microsoft Office Suite', 'Attention To Detail', 'Problem Solving']"
+  },
+  {
+    "job_name": "Construction Project Manager",
+    "required_skills": []
+  },
+  {
+    "job_name": "Construction Superintendent",
+    "required_skills": []
+  },
+  {
+    "job_name": "Construction Worker",
+    "required_skills": "['Alternators', 'Schedules', 'Strong WORK Ethic', 'Mechanical Drawing', 'Written Communication', 'Weight Lifting', 'Views', 'CDL']"
+  },
+  {
+    "job_name": "Content Manager",
+    "required_skills": "['Morphology', 'GMAIL', 'Google DOCS', 'Writing', 'Excellent Communication', 'Editing', 'Speaking', 'Adobe Photoshop']"
+  },
+  {
+    "job_name": "Content Writer",
+    "required_skills": "['Writing', 'Editing', 'Degree IN English', 'Microsoft Office Suite', 'UX Design', 'Content Management Systems', 'Excellent Communication', 'Adobe Creative Suite']"
+  },
+  {
+    "job_name": "Contract Administrator",
+    "required_skills": "['Microsoft Office Suite', 'Excellent Organizational', 'Fluent English', 'Powerpoint', 'Negotiation', 'Problem Solving', 'Written Communication', 'Time Management']"
+  },
+  {
+    "job_name": "Contracts Manager",
+    "required_skills": "['Negotiation', 'Written Communication', 'Kafka', 'PHD', 'Drupal', 'Commercial Contract', 'Schedules', 'NoSQL']"
+  },
+  {
+    "job_name": "Contract Specialist",
+    "required_skills": "['24 Hour', 'Compiling', 'Negotiation', 'Beans', 'Highly Organized', 'Cost Analysis', 'Responses', 'Modifications']"
+  },
+  {
+    "job_name": "Controls Technician",
+    "required_skills": "['PLC Programming', 'Controls Systems', 'Excellent Communication', 'Microsoft Office Software', 'HMI', 'Excellent Customer Service', 'Programmable Logic', 'English Language']"
+  },
+  {
+    "job_name": "Cook",
+    "required_skills": "['Effective Communication', 'English Language', 'Positive Work Ethic', 'Grooming', 'Positive Attitude', 'Time Management', 'Urgency', 'Sanitize']"
+  },
+  {
+    "job_name": "Coordinator",
+    "required_skills": "['Microsoft Office Suite', 'Excellent Customer Service', 'Computer Literate', 'Excellent Communication', 'Microsoft Outlook', 'Written Communication', 'Attention To Detail', 'Powerpoint']"
+  },
+  {
+    "job_name": "Copy Editor",
+    "required_skills": "['Editing', 'Degree IN English', 'English Language Grammar', 'Microsoft Office Suite', 'Writing', 'Adobe Acrobat', 'Professional Writing', 'Written Communication']"
+  },
+  {
+    "job_name": "Copywriter",
+    "required_skills": "['Writing', 'Degree IN English', 'Editing', 'Attention To Detail', 'Written Communication', 'Adobe Creative Suite', 'Strategic Thinking', 'Content Management Systems']"
+  },
+  {
+    "job_name": "Corporate Recruiter",
+    "required_skills": "['Microsoft Office Suite', 'Applicant Tracking System', 'Interpersonal and Communication', 'Onboarding', 'Written Communication', 'Excellent Communication', 'Outlook', 'Attention To Detail']"
+  },
+  {
+    "job_name": "Correctional Officer",
+    "required_skills": "['24 Hour', 'Responses', 'Tolerance', 'Report Writing', 'English Language', 'Confidence', 'Releases', 'Written Communication']"
+  },
+  {
+    "job_name": "Cost Accountant",
+    "required_skills": "['Microsoft EXCEL', 'General Ledger', 'Microsoft Office Suite', 'Powerpoint', 'GAAP', 'Written Communication', 'MS Windows', 'Pivot Tables']"
+  },
+  {
+    "job_name": "Courtesy Clerk",
+    "required_skills": "['Positive Attitude', 'English Language', 'Schedules', 'Requests', 'Spanish Language', 'Copying', 'Writing', 'Speaking']"
+  },
+  {
+    "job_name": "Creative Manager",
+    "required_skills": "['Indesign Photoshop', 'EXCEL Access', 'AV', 'Web Optimization', 'Microsoft Word', 'Sketch UP', 'Keynote', 'Adobe Suite']"
+  },
+  {
+    "job_name": "Credit Manager",
+    "required_skills": "['CDL', 'Releases', 'Traditional', 'Excellent Customer Service', 'Written Communication', 'Attention To Detail', 'Regulators', 'Tablets']"
+  },
+  {
+    "job_name": "Team Member",
+    "required_skills": "['Excellent Communication', 'Strong WORK Ethic', 'Urgency', 'Time Management', 'English Language', 'Excellent Customer Service', 'Effective Communication', 'Positive Attitude']"
+  },
+  {
+    "job_name": "Custodian",
+    "required_skills": "['Windows', 'English Language', 'Buffing', 'Bathrooms', 'Work Ethic', 'Effective Communication', 'WORKING Relationships', 'CPR First Aid']"
+  },
+  {
+    "job_name": "Customer Relations",
+    "required_skills": "['Excellent Customer Service', 'Excellent Communication', 'VERBAL Communication', 'Microsoft Office Suite', 'MS OUTLOOK', 'Critical Thinking', 'History Major', 'ERP System']"
+  },
+  {
+    "job_name": "Customer Relations",
+    "required_skills": "['VERBAL Communication', 'Willingness to LEARN', 'Product Knowledge', 'Excellent Communication', 'Needs Analysis', 'Positive Attitude', 'Critical Thinking', 'Problem Solving']"
+  },
+  {
+    "job_name": "Associate Customer Relations",
+    "required_skills": "['Excellent Customer Service', 'Excellent Communication', 'VERBAL Communication', 'Microsoft Office Suite', 'MS OUTLOOK', 'Critical Thinking', 'History Major', 'ERP System']"
+  },
+  {
+    "job_name": "Customer Relations",
+    "required_skills": "['Excellent Customer Service', 'Excellent Communication', 'VERBAL Communication', 'Microsoft Office Suite', 'MS OUTLOOK', 'Critical Thinking', 'History Major', 'ERP System']"
+  },
+  {
+    "job_name": "Sales Representative",
+    "required_skills": "['Microsoft Office Suite', 'Excellent Customer Service', 'Powerpoint', 'Interpersonal and Communication', 'Outlook', 'Attention To Detail', 'Excellent Communication', 'Time Management']"
+  },
+  {
+    "job_name": "Customer Success Manager",
+    "required_skills": "['SaaS', 'Excellent Communication', 'Excellent Customer Service', 'Written Communication', 'Critical Thinking', 'Problem Solving', 'CRM', 'MS Office Applications']"
+  },
+  {
+    "job_name": "Database Architect",
+    "required_skills": "['Database Architecture', 'MS SQL Server', 'ETL', 'Azure Data', 'Big Data', 'Cloud', 'AWS', 'Hadoop']"
+  },
+  {
+    "job_name": "Data Engineer",
+    "required_skills": "['Hadoop SPARK', 'Azure Data', 'SQL Server', 'Big Data', 'Python', 'JAVA Scala', 'ETL', 'AWS']"
+  },
+  {
+    "job_name": "Data Entry Clerk",
+    "required_skills": "['Typing', 'Excellent Communication', 'Microsoft Office Suite', 'Word Processing', 'Attention To Detail', 'Time Management', 'Spreadsheets', 'Database']"
+  },
+  {
+    "job_name": "Data Entry Clerk",
+    "required_skills": "['Typing', 'Excellent Communication', 'Microsoft Office Suite', 'Word Processing', 'Attention To Detail', 'Time Management', 'Spreadsheets', 'Database']"
+  },
+  {
+    "job_name": "Data Manager",
+    "required_skills": "['Taxonomy', 'Configuration', 'Ontologies', 'Excellent Communication', 'Agile Methodologies', 'SQL', 'Frameworks', 'Database']"
+  },
+  {
+    "job_name": "Data Scientist",
+    "required_skills": "['Machine Learning', 'Statistics', 'Python', 'Natural Language Processing', 'Hadoop SPARK', 'Algorithms', 'SQL', 'Programming Languages']"
+  },
+  {
+    "job_name": "Daycare Teacher",
+    "required_skills": "['CPR First Aid', 'English', 'CDA', 'Teaching Experience', 'Written Communication', 'Bilingual', 'Disclosures', 'VERBAL Communication']"
+  },
+  {
+    "job_name": "Dean",
+    "required_skills": "['Microsoft Office Suite', 'Public Speaking', 'Advocacy', 'Oral and Maxillofacial', 'Composure', 'Team Work', 'Excellent Communication', 'Work Under Pressure']"
+  },
+  {
+    "job_name": "Collector",
+    "required_skills": "['Excellent Customer Service', 'Gathering', 'Written Communication', 'Microsoft Office Suite', 'Attention To Detail', 'Excellent Communication', 'Negotiation', 'English']"
+  },
+  {
+    "job_name": "Deli Clerk",
+    "required_skills": "['.NET', 'Sanitize', 'Dexterity', 'GOOD Communication', 'Positive Attitude', 'Schedules', 'English', 'Excellent Communication']"
+  },
+  {
+    "job_name": "Dental Assistant",
+    "required_skills": "['Suturing', 'Cardiopulmonary Resuscitation', 'Administering', 'Reviews', 'Customer Focus', 'General Medical', 'Excellent Communication', 'Filing']"
+  },
+  {
+    "job_name": "Dental Hygienist",
+    "required_skills": "['Sealants', 'Dentrix', 'Excellent Communication', 'CPR Certified', 'HIPAA', 'Cardiopulmonary Resuscitation', 'Written Communication', 'Protocols']"
+  },
+  {
+    "job_name": "Office Manager",
+    "required_skills": []
+  },
+  {
+    "job_name": "Dentist",
+    "required_skills": "['Diagnosis', 'CPR', 'Written Communication', 'Strong VERBAL', 'Interpersonal and Communication', 'Extractions', 'Sedation', 'Treating']"
+  },
+  {
+    "job_name": "Department Manager",
+    "required_skills": "['Six Sigma Methodologies', 'RFP', 'HTML AND CSS', 'Microsoft Powerpoint', 'Prioritization', 'UI UX', 'Negotiation', 'Positive Attitude']"
+  },
+  {
+    "job_name": "Design Engineer",
+    "required_skills": "['FPGA Design', 'AutoCAD', 'Adaptability', 'CAD Software', 'VERBAL Communication', 'Interface', 'Debugging', 'Written Communication']"
+  },
+  {
+    "job_name": "Support Specialist",
+    "required_skills": "['Calculations', 'Ability to Multitask', 'Operating Systems', 'Microsoft Office Suite', 'Excellent Communication', 'Written Communication', 'Microsoft Windows', 'Configuration']"
+  },
+  {
+    "job_name": "Development Coordinator",
+    "required_skills": "['Microsoft Office Suite', 'Excellent Organizational', 'Microsoft Outlook', 'Database', 'Writing', 'Effective Communication', 'Meet Deadlines', 'Attention To Detail']"
+  },
+  {
+    "job_name": "Director of Business Development",
+    "required_skills": "['Excellent Communication', 'Negotiation', 'Microsoft Office Suite', 'Team Leadership', 'Consulting', 'Pipeline', 'CRM', 'Prospects']"
+  },
+  {
+    "job_name": "Business Development Manager",
+    "required_skills": "['Integrator', 'AWS', 'Cloud Computing', 'Consulting', 'Business Units', 'CRM', 'Leadership', 'Exceptional Communication']"
+  },
+  {
+    "job_name": "Development Specialist",
+    "required_skills": "['Excellent Customer Service', 'Self Motivated', 'Computer Literate', 'Collaboration', 'Sensitive', 'Positive Learning', 'Excellent Communication', 'Dissemination']"
+  },
+  {
+    "job_name": "Devops Engineer",
+    "required_skills": "['Cloudformation', 'AWS', 'Scripting Languages', 'Kubernetes', 'Devops Azure', 'Linux System', 'Python', 'Terraform']"
+  },
+  {
+    "job_name": "Dietitian",
+    "required_skills": "['Microsoft Office Suite', 'Interpersonal and Communication', 'Parenteral Nutrition', 'Cardiopulmonary Resuscitation', 'Responses', 'Positive Attitude', 'Leadership', 'Filing']"
+  },
+  {
+    "job_name": "Digital Marketing",
+    "required_skills": "['Google Analytics', 'AdWords', 'Written Communication', 'HTML AND CSS', 'Optimization', 'Adobe Creative Suite', 'Adobe Photoshop', 'CRM']"
+  },
+  {
+    "job_name": "Digital Marketing",
+    "required_skills": "['Google Analytics', 'AdWords', 'Written Communication', 'HTML AND CSS', 'Optimization', 'Adobe Creative Suite', 'Adobe Photoshop', 'CRM']"
+  },
+  {
+    "job_name": "Direct Healthcare Support Professional",
+    "required_skills": []
+  },
+  {
+    "job_name": "Director of Finance",
+    "required_skills": "['Excellent Communication', 'Degree IN Finance', 'Leadership', 'GAAP', 'Audit', 'Enterprise APPLICATION Integration', 'Strategic Thinking', 'Microsoft EXCEL']"
+  },
+  {
+    "job_name": "Director Marketing",
+    "required_skills": "['Microsoft Office Suite', 'AML', 'Leadership', 'Powerpoint', 'Outlook', 'EXCEL', 'Sales Channels', 'Written Communication']"
+  },
+  {
+    "job_name": "Director of Operations",
+    "required_skills": "['Leadership', 'Excellent Communication', 'Microsoft Office Suite', 'Excellent Organizational', 'Cross Dock', 'Written Communication', 'Collaboration', 'Powerpoint']"
+  },
+  {
+    "job_name": "Director of Sales",
+    "required_skills": "['Negotiation', 'Leadership', 'Prospects', 'Creative Problem Solving', 'Exceptional Communication', 'CRM', 'SaaS Software', 'Critical Thinking']"
+  },
+  {
+    "job_name": "Dishwasher",
+    "required_skills": "['Time Management', 'Excellent Communication', 'Strong WORK Ethic', 'Urgency', 'English Language', 'Problem Solving', 'Effective Communication', 'Decision Making']"
+  },
+  {
+    "job_name": "Dispatcher",
+    "required_skills": "['Excellent Customer Service', 'Excellent Communication', 'Computer Literate', 'Microsoft Office Suite', 'Typing', 'Spanish Speaking', 'English', 'Outlook']"
+  },
+  {
+    "job_name": "Sales Manager",
+    "required_skills": []
+  },
+  {
+    "job_name": "Physician",
+    "required_skills": "['Graduate Medical Education', 'Treating', 'Diagnosis', 'English', 'Injections', 'Leadership', 'Interpersonal and Communication', 'Collaboration']"
+  },
+  {
+    "job_name": "Controller",
+    "required_skills": "['Microsoft Office Suite', 'GAAP', 'Powerpoint', 'Windows Operating Systems', 'Excellent Customer Service', 'Written Communication', 'Audit', 'MS Office']"
+  },
+  {
+    "job_name": "Pet Groomer",
+    "required_skills": []
+  },
+  {
+    "job_name": "Pet Trainer",
+    "required_skills": []
+  },
+  {
+    "job_name": "Drafter",
+    "required_skills": "['AutoCAD Drafting', 'Drawing', 'Revit MEP', 'Microsoft Office Suite', 'Excellent Communication', 'Attention To Detail', 'Annotation', '3D CAD']"
+  },
+  {
+    "job_name": "Driver",
+    "required_skills": "['English Language', 'CDL Hazmat', 'Dedicated CDL', 'Drop and Hook', 'Excellent Customer Service', 'Box Truck', 'Load Unload', 'Excellent Communication']"
+  },
+  {
+    "job_name": "Economist",
+    "required_skills": "['Statistics', 'Calculus', 'Responses', 'Conducting', 'PHD IN Economics', 'Methodology', 'Selecting', 'Written Communication']"
+  },
+  {
+    "job_name": "Editor",
+    "required_skills": "['Editing', 'Writing', 'English Language Grammar', 'Written Communication', 'Microsoft Office Suite', 'Content Management Systems', 'Degree IN English', 'Critical Thinking']"
+  },
+  {
+    "job_name": "Electrician",
+    "required_skills": "['Highschool Diploma', 'Test Equipment', 'Requests', 'Strong WORK Ethic', 'Professionalism', 'Programmable Logic', 'Views', 'PLC']"
+  },
+  {
+    "job_name": "Elementary School Teacher",
+    "required_skills": "['Teaching Experience', 'CPR First Aid', 'English Language', 'Degree IN Education', 'Bilingual', 'ESL', 'IN Spanish', 'CDA']"
+  },
+  {
+    "job_name": "Employment Specialist",
+    "required_skills": "['Excellent Communication', 'Microsoft Office Suite', 'Written Communication', 'Urgency', 'Microsoft Outlook', 'Time Management', 'Multitasking', 'CPR First Aid']"
+  },
+  {
+    "job_name": "Emergency Medical Tech",
+    "required_skills": []
+  },
+  {
+    "job_name": "Energy Consultant",
+    "required_skills": "['Excellent Customer Service', 'Strong VERBAL', 'Good Time Management', 'Written Communication', 'Microsoft Office Suite', 'Interpersonal and Communication', 'Consulting', 'Collaboration']"
+  },
+  {
+    "job_name": "Engagement Manager",
+    "required_skills": "['Bridging', 'Interpersonal and Communication', 'Excellent Communication', 'Acceptance Testing', 'Compiling', 'Use Cases', 'Microsoft Office Suite', 'Dashboarding']"
+  },
+  {
+    "job_name": "Engineering Manager",
+    "required_skills": []
+  },
+  {
+    "job_name": "English Teacher",
+    "required_skills": "['Native English Speaker', 'Foreign Language', 'Teaching Experience', 'Degree IN English', 'Teach English', 'Mandarin Chinese', 'English Speaker', 'Written Communication']"
+  },
+  {
+    "job_name": "Enterprise Architect",
+    "required_skills": "['Cloud', 'Cloud Computing', 'AWS', 'API Management', 'Azure Data', 'Javascript', 'Agile Scrum', 'Consulting']"
+  },
+  {
+    "job_name": "Environmental Engineer",
+    "required_skills": "['Microsoft Office Suite', 'Hazwoper', 'Critical Thinking', 'Responses', 'Written Communication', 'Reviews', 'Consulting Experience', 'Collaboration']"
+  },
+  {
+    "job_name": "Environmental Scientist",
+    "required_skills": "['Attention To Detail', 'Wetland Delineation', 'Windows', 'Report Writing', 'Powerpoint', 'Hazwoper', 'Consulting Experience', 'EXCEL']"
+  },
+  {
+    "job_name": "Epidemiologist",
+    "required_skills": "['Trigonometry', 'Calibration', 'Disassembly', 'SAS GRID', 'Effective Communication', 'Microsoft Office Suite', 'Statistics', 'Good Time Management']"
+  },
+  {
+    "job_name": "Emergency Room Nurse",
+    "required_skills": []
+  },
+  {
+    "job_name": "ESL Teacher",
+    "required_skills": "['ESL English', 'Teaching Experience', 'Degree IN English', 'Chinese Language', 'Intensive English Program', 'Speaking', 'Mandarin Chinese', 'Teach English']"
+  },
+  {
+    "job_name": "Makeup Artist",
+    "required_skills": "['Excellent Customer Service', 'Positive Work Ethic', 'Protocols', 'Epdm', 'Interpersonal and Communication', 'Spanish Speaking', 'French', 'Extensions']"
+  },
+  {
+    "job_name": "Construction Estimator",
+    "required_skills": "['Cost Estimates', 'Microsoft EXCEL', 'Microsoft Access', 'Takeoffs', 'Interpersonal and Communication', 'Microsoft Office Software', 'Outlook', 'Written Communication']"
+  },
+  {
+    "job_name": "Events Manager",
+    "required_skills": "['Microsoft Office Suite', 'Excellent Communication', 'VERBAL Communication', 'Excellent Organizational', 'Leadership', 'Attention To Detail', 'Powerpoint', 'Excellent Customer Service']"
+  },
+  {
+    "job_name": "Event Planner",
+    "required_skills": "['Urgency', 'Excellent Customer Service', 'Written Communication', 'Excellent Communication', 'MS Powerpoint', 'Attention To Detail', 'Demonstrations', 'HTML/Css']"
+  },
+  {
+    "job_name": "Event Coordinator",
+    "required_skills": "['Demonstrations', 'Relationship-building', 'Microsoft Office Suite', 'Excellent Customer Service', 'Excellent Communication', 'Written Communication', 'Attention To Detail', 'Strong WORK Ethic']"
+  },
+  {
+    "job_name": "Executive Assistant",
+    "required_skills": []
+  },
+  {
+    "job_name": "Executive Chef",
+    "required_skills": "['Microsoft Office Suite', 'Outlook', 'Powerpoint', 'Leadership', 'EXCEL', 'Operating Systems', 'POS Systems', 'HACCP']"
+  },
+  {
+    "job_name": "Director Executive",
+    "required_skills": []
+  },
+  {
+    "job_name": "Executive Manager",
+    "required_skills": []
+  },
+  {
+    "job_name": "Executive Producer",
+    "required_skills": "['Editing', 'Writing', 'Adobe Creative Cloud', 'Adobe Creative Suite', 'Scripting', 'Requests', 'Content Management Systems', 'Optimization']"
+  },
+  {
+    "job_name": "Executive Secretary",
+    "required_skills": "['Adobe Indesign', 'Typing', 'English Grammar', 'Responses', 'Shorthand', 'Microsoft Office Suite', 'Schedules', 'Weight Lifting']"
+  },
+  {
+    "job_name": "Exercise Physiologist",
+    "required_skills": "['EEG', 'Microsoft Windows', 'Pathogens', 'Excellent Communication', 'CPR', 'Word Processing', 'Typing', 'Critical Thinking']"
+  },
+  {
+    "job_name": "Server",
+    "required_skills": "['VERBAL Communication', 'Writing', 'Excellent Communication', 'Modifications', 'Requests', 'English Language', 'Excellent Customer Service', 'Positive Attitude']"
+  },
+  {
+    "job_name": "Facilities Manager",
+    "required_skills": "['Excellent Customer Service', 'Microsoft Office Suite', 'Microsoft Office Software', 'Excellent Communication', 'Outlook', 'Work Instructions', 'English', 'MS Office']"
+  },
+  {
+    "job_name": "Fashion Designer",
+    "required_skills": "['Adobe Photoshop', 'Indesign', 'Excellent Communication', 'Pattern Making', 'Project Design', 'Creative Problem Solving', 'MS Word', 'Microsoft Office Suite']"
+  },
+  {
+    "job_name": "Field Service Engineer",
+    "required_skills": "['Operating Systems', 'Written Communication', 'Microsoft Office Suite', 'Windows', 'PLC', 'GERMAN Dutch', 'Test Equipment', 'Time Management']"
+  },
+  {
+    "job_name": "Field Service Technician",
+    "required_skills": "['Windows Operating Systems', 'T1', 'DSL', 'TCP/IP', 'Excellent Customer Service', 'Laptops', 'Desktops', 'Microsoft Office Suite']"
+  },
+  {
+    "job_name": "File Clerk",
+    "required_skills": "['Excellent Customer Service', 'Microsoft Office Suite', 'Excellent Communication', 'Filing', 'Ability to Multitask', 'Attention To Detail', 'Filing Copying', 'Outlook']"
+  },
+  {
+    "job_name": "Film Crew Member",
+    "required_skills": "['Editing', 'Adobe Photoshop', 'Adobe Premiere Pro', 'Adobe After Effects', 'Adobe Creative Suite', 'Excellent Communication', 'Meet Deadlines', 'Machine Operating']"
+  },
+  {
+    "job_name": "Assistant Finance Associate",
+    "required_skills": "['Excellent Organizational', 'Attention To Detail', 'Professional Writing', 'Microsoft Office Suite', 'Outstanding Communication', 'Filing', 'MS Word', 'Degree IN Finance']"
+  },
+  {
+    "job_name": "Finance Manager",
+    "required_skills": []
+  },
+  {
+    "job_name": "Financial Analyst",
+    "required_skills": "['Excellent Communication', 'Degree IN Finance', 'Microsoft EXCEL', 'Powerpoint', 'Application Analysis', 'Microsoft Office Suite', 'SSRS', 'Written Communication']"
+  },
+  {
+    "job_name": "Financial Consultant",
+    "required_skills": "['Excellent Communication', 'Credibility', '.NET', 'Series 63', 'Computer Literacy', 'Series 65', 'Oracle ERP Cloud', 'Attention To Detail']"
+  },
+  {
+    "job_name": "Firefighter",
+    "required_skills": "['Reviews', 'Leadership', 'First Aid', 'Operational Excellence', 'Customer Focus', 'WORKING Relationships', 'Adherence', 'Written Communication']"
+  },
+  {
+    "job_name": "Fleet Manager",
+    "required_skills": "['Microsoft Office Software', 'Excellent Customer', 'Written Communication', 'Powerpoint', 'Windows Applications', 'Load Unload', 'CDL', 'Attention To Detail']"
+  },
+  {
+    "job_name": "Flight Attendant",
+    "required_skills": "['Fluent English', 'ReACT', 'Judgement', 'Excellent Communication', 'Strong WORK Ethic', 'Decision Making', 'Lithuanian', 'Georgian']"
+  },
+  {
+    "job_name": "Food and Beverage Manager",
+    "required_skills": "['Public Speaking', 'Excellent Communication', 'Composure', 'Positive Attitude', 'Leadership', 'English Language', 'Team Work', 'Creative Thinking']"
+  },
+  {
+    "job_name": "Server",
+    "required_skills": "['VERBAL Communication', 'Writing', 'Excellent Communication', 'Modifications', 'Requests', 'English Language', 'Excellent Customer Service', 'Positive Attitude']"
+  },
+  {
+    "job_name": "Server",
+    "required_skills": "['VERBAL Communication', 'Writing', 'Excellent Communication', 'Modifications', 'Requests', 'English Language', 'Excellent Customer Service', 'Positive Attitude']"
+  },
+  {
+    "job_name": "Food Service Manager",
+    "required_skills": "['Positive Attitude', 'English', 'Attention To Detail', 'Program Design', 'Project Design', 'Effective Communication', 'Team Work', 'Leadership']"
+  },
+  {
+    "job_name": "Food Service Worker",
+    "required_skills": "['English Language', 'Excellent Communication', 'Excellent Customer Service', 'Positive Attitude', 'Schedules', 'Written Communication', 'Security Clearance', 'GOOD Communication']"
+  },
+  {
+    "job_name": "Foreman",
+    "required_skills": "['Diagnosis', 'CDL', 'Leadership', 'Computer Literate', 'CPR First Aid', 'Written Communication', 'Onboarding', 'Wireless Telecommunication']"
+  },
+  {
+    "job_name": "Forensic Scientist",
+    "required_skills": "['Incident Response', 'FTK', 'Conducting', 'Report Writing', 'SIEM', 'Operating Systems', 'GCIA', 'Written Communication']"
+  },
+  {
+    "job_name": "Forklift Operator",
+    "required_skills": "['English Language', 'Load Unload', 'Strong WORK Ethic', 'Attention To Detail', 'Urgency', 'Written Communication', 'Fork Lift', 'Excellent Communication']"
+  },
+  {
+    "job_name": "Front Desk Agent",
+    "required_skills": "['Excellent Customer Service', 'English Language', 'Anger', 'Interpersonal and Communication', 'Calculations', 'WORKING Relationships', 'Microsoft Office', 'Written Communication']"
+  },
+  {
+    "job_name": "Front Desk Clerk",
+    "required_skills": "['English Language', 'Spanish', 'Excellent Communication', 'WORKS Well Independently', 'Requests', 'Urgency', 'Excellent Customer Service', 'Business Writing']"
+  },
+  {
+    "job_name": "Front Desk Manager",
+    "required_skills": "['Microsoft Office Suite', 'Faxing', 'Excellent Organizational', 'Written Communication', 'Microsoft Word', 'Multitasking', 'Screenings', 'Attention To Detail']"
+  },
+  {
+    "job_name": "Front End Engineer",
+    "required_skills": "['HTML AND CSS', 'javascript/jquery', 'angular.js', 'Frameworks', 'ReactJS', 'Restful APIS', 'Redux', 'UI UX']"
+  },
+  {
+    "job_name": "Bookkeeper",
+    "required_skills": "['Excellent Organizational', 'Microsoft Office Suite', 'Attention To Detail', 'Microsoft EXCEL', 'General Ledger', 'GAAP', 'Excellent Communication', 'Spreadsheets']"
+  },
+  {
+    "job_name": "Game Designer",
+    "required_skills": "['Dashboarding', 'Power BI', 'Scripting', 'Requirements Gathering', 'Written Communication', 'Unreal Engine', 'Writing', 'Photoshop']"
+  },
+  {
+    "job_name": "General Manager",
+    "required_skills": "['Microsoft Office Suite', 'MS Office', 'Outlook', 'POS Systems', 'Operational Excellence', 'Leadership', 'Adherence', 'Bilingual']"
+  },
+  {
+    "job_name": "General Surgeon",
+    "required_skills": "['Graduate Medical Education', 'Oral and Maxillofacial', '24 Hour', 'Problem Analysis', 'Critical Thinking', 'Vad', 'Written Communication', 'H1b']"
+  },
+  {
+    "job_name": "Geologist",
+    "required_skills": "['Effective Communication', 'Disassembly', 'Active Directory', 'Azure IaaS', 'Microsoft Office', 'Google Suite', 'Hazwoper', 'Good Time Management']"
+  },
+  {
+    "job_name": "Graphic Designer",
+    "required_skills": "['Indesign Photoshop', 'Adobe Creative Suite', 'Adobe Creative Cloud', 'HTML AND CSS', 'Microsoft Office Suite', 'Excellent Communication', 'Editing', 'Powerpoint']"
+  },
+  {
+    "job_name": "Grocery Clerk",
+    "required_skills": "['Excellent Customer Service', 'GOOD Communication', 'Positive Attitude', 'No High School', 'Time Management', 'Effective Communication', 'Schedules', 'Attention To Detail']"
+  },
+  {
+    "job_name": "Landscaper",
+    "required_skills": "['Disassembly', 'Logical Thinking', 'English Language', 'Mowing', 'Effective Communication', 'Pruning', 'Good Time Management', 'Digging']"
+  },
+  {
+    "job_name": "Guest Services Specialist",
+    "required_skills": "['English Language', 'Excellent Customer Service', 'Computer Literate', 'Excellent Communication', 'Requests', 'Attention To Detail', 'Written Communication', 'VERBAL Communication']"
+  },
+  {
+    "job_name": "School Counselor",
+    "required_skills": "['CPR First Aid', 'English Speaking', 'Written Communication', 'MS EXCEL', 'MS Powerpoint', 'Bilingual', 'Microsoft Office Software', 'MS OUTLOOK']"
+  },
+  {
+    "job_name": "Hair Stylist",
+    "required_skills": "['Firing', 'Test Equipment', 'Attention To Detail', 'Schedules', 'Microsoft Office Suite', 'Effective Communication', 'Reviews', 'CDL']"
+  },
+  {
+    "job_name": "Carpenter",
+    "required_skills": "['Strong WORK Ethic', 'Professionalism', 'Roofs', 'Well Organized', 'Written Communication', 'Finish Carpentry', 'Frameworks', 'OSHA 10']"
+  },
+  {
+    "job_name": "Head Cashier",
+    "required_skills": []
+  },
+  {
+    "job_name": "Administrative Assistant",
+    "required_skills": "['Office 365', 'Excellent Customer Service', 'Written Communication', 'Microsoft Office Suite', 'Active Directory', 'Attention To Detail', 'Exchange Online', 'PowerShell']"
+  },
+  {
+    "job_name": "Health Educator",
+    "required_skills": "['Critical Thinking', 'Excellent Communication', 'English Language', 'CPR', 'Leadership', 'Professionalism', 'Microsoft Outlook', 'Indian']"
+  },
+  {
+    "job_name": "Healthcare Consultant",
+    "required_skills": "['Client Interaction', 'Excellent Communication', 'EBS R12', 'Consulting Experience', 'Development Methodology', 'Cloud', 'Written Communication', 'Test Plans']"
+  },
+  {
+    "job_name": "Heavy Equipment Operator",
+    "required_skills": "['Firing', 'CDL', 'Fork Lift', 'English', 'Test Equipment', 'Excellent Communication', 'Resistors', 'Circuit Boards']"
+  },
+  {
+    "job_name": "Helpdesk Technician",
+    "required_skills": "['Windows Operating Systems', 'Active Directory', 'Windows 10', 'Microsoft Office Suite', 'Office 365', 'Microsoft Windows', 'Report Writing', 'Laptops']"
+  },
+  {
+    "job_name": "Caregiver",
+    "required_skills": "['CPR First Aid', 'Bathing', 'Dressing', 'Excellent Customer Service', 'Effective Communication', 'English Language', 'Positive Attitude', 'Toileting']"
+  },
+  {
+    "job_name": "Home Health Nurse",
+    "required_skills": []
+  },
+  {
+    "job_name": "Physician",
+    "required_skills": "['Graduate Medical Education', 'Treating', 'Diagnosis', 'English', 'Injections', 'Leadership', 'Interpersonal and Communication', 'Collaboration']"
+  },
+  {
+    "job_name": "Host",
+    "required_skills": "['VERBAL Communication', 'Writing', 'Excellent Communication', 'Reviews', 'Excellent Customer Service', 'English Language', 'Schedules', 'Requests']"
+  },
+  {
+    "job_name": "Front Desk Clerk",
+    "required_skills": "['English Language', 'Spanish', 'Excellent Communication', 'WORKS Well Independently', 'Requests', 'Urgency', 'Excellent Customer Service', 'Business Writing']"
+  },
+  {
+    "job_name": "Hotel Manager",
+    "required_skills": "['Fluent IN Spanish', 'Excellent Communication', 'WORKING Relationships', 'Written Communication', 'Good Time Management', 'Excellent Customer Service', 'Public Speaking', 'Requests']"
+  },
+  {
+    "job_name": "HR Administrator",
+    "required_skills": "['Excellent Communication', 'Microsoft Office Suite', 'Written Communication', 'MS Office', 'Outlook', 'Powerpoint', 'Time Management', 'Attention To Detail']"
+  },
+  {
+    "job_name": "HR Analyst",
+    "required_skills": "['Microsoft Office Suite', 'Excellent Customer Service', 'Critical Thinking', 'Effective Communication', 'Pivot Tables', 'Mandarin', 'Writing', 'Powerpoint']"
+  },
+  {
+    "job_name": "HR Business Partner",
+    "required_skills": "['HRBP', 'Excellent Communication', 'Microsoft Office Suite', 'Leadership', 'Critical Thinking', 'PHR', 'Powerpoint', 'Business Acumen']"
+  },
+  {
+    "job_name": "HR Manager",
+    "required_skills": "['Strategic Thinking', 'Leadership', 'Collaboration', 'Consulting', 'Influencing', 'Written Communication', 'Excellent Communication', 'HRBP']"
+  },
+  {
+    "job_name": "HR Specialist",
+    "required_skills": "['Requests', 'Sensitive', 'Filing', 'Typing', 'Reviews', 'Responses', 'Dd', 'Security Clearance']"
+  },
+  {
+    "job_name": "Industrial Engineer",
+    "required_skills": "['MS Office Applications', 'AutoCAD', 'English Language', 'Lean Six Sigma', 'BS Degree', 'Interface', 'Problem Solving', 'ERP System']"
+  },
+  {
+    "job_name": "Infant Teacher",
+    "required_skills": "['CPR First Aid', 'English', 'CDA', 'Interpersonal and Communication', 'Teaching Experience', 'MSDE', 'Professionalism', 'Excellent Communication']"
+  },
+  {
+    "job_name": "Information Security Analyst",
+    "required_skills": "['Operating Systems', 'Incident Response', 'Intrusion Detection System', 'CISSP', 'SIEM', 'Written Communication', 'Windows', 'Cloud']"
+  },
+  {
+    "job_name": "Inside Sales Representative",
+    "required_skills": "['Time Management', 'Pipeline', 'CRM', 'Interpersonal and Communication', 'Microsoft Office Suite', 'Prospects', 'Motivated', 'VERBAL Communication']"
+  },
+  {
+    "job_name": "Instructional Designer",
+    "required_skills": "['Microsoft Office Suite', 'Camtasia', 'Epic Certification', 'Articulate Storyline', 'Deliverables', 'Writing', 'Degree IN Education', 'Editing']"
+  },
+  {
+    "job_name": "Insurance Agent",
+    "required_skills": "['HIPAA', 'Excellent Communication', 'Negotiation', 'Motivated', 'Strong WORK Ethic', 'FAST Learner', 'VERBAL Communication', 'Written Communication']"
+  },
+  {
+    "job_name": "Intelligence Analyst",
+    "required_skills": "['Gathering', 'Critical Thinking', 'Views', 'Operating Systems', 'Written Communication', 'GIAC', 'Report Writing', 'Incident Response']"
+  },
+  {
+    "job_name": "Interior Designer",
+    "required_skills": "['AutoCAD', 'Indesign Photoshop', 'Revit', 'Microsoft Office Suite', 'Adobe Creative Suite', 'Exceptional Communication', 'Quick Learner', '3D Rendering']"
+  },
+  {
+    "job_name": "Internal Auditor",
+    "required_skills": "['Audit', 'Report Writing', 'Microsoft Office Suite', 'GAAP', 'SOX', 'CISA', 'French', 'Excellent Communication']"
+  },
+  {
+    "job_name": "Resident Physician",
+    "required_skills": []
+  },
+  {
+    "job_name": "Internal Medicine Physician",
+    "required_skills": "['Graduate Medical Education', 'Cardiopulmonary Resuscitation', 'BLS Certification', 'Leadership', 'Coconut', 'Treating', 'ICU', 'Written Communication']"
+  },
+  {
+    "job_name": "Inventory Control Specialist",
+    "required_skills": "['Database', 'Reviews', 'Audit', 'Microsoft Office Software', 'Ability to Multitask', 'Attention To Detail', 'Operational Excellence', 'Powerpoint']"
+  },
+  {
+    "job_name": "Inventory Manager",
+    "required_skills": "['Excellent Communication', 'MS Office Applications', 'MS EXCEL', 'Microsoft Office Suite', 'Reconcile', 'ERP System', 'Microsoft Office Software', 'Database']"
+  },
+  {
+    "job_name": "Inventory Control Specialist",
+    "required_skills": "['Database', 'Reviews', 'Audit', 'Microsoft Office Software', 'Ability to Multitask', 'Attention To Detail', 'Operational Excellence', 'Powerpoint']"
+  },
+  {
+    "job_name": "Investment Banking Analyst",
+    "required_skills": "['Leases', 'Degree IN Finance', 'Budgetary', 'Methodology', 'Written Communication', 'Administering', 'Schedules', '.NET']"
+  },
+  {
+    "job_name": "Mobile Engineer",
+    "required_skills": "['Ios Development', 'Android Studio', 'Javascript', 'Restful APIS', 'SWIFT', 'ReACT Native', 'Agile Software Development', 'Frameworks']"
+  },
+  {
+    "job_name": "IT Analyst",
+    "required_skills": "['Fluent IN Spanish', 'IAT Level II', 'Operating Systems', 'DOD 8570', 'PDF', 'Microsoft SQL Server', 'Collaboration', 'Windows Server 2008']"
+  },
+  {
+    "job_name": "It Auditor",
+    "required_skills": "['Audit', 'CISA', 'CISSP CISM', 'Systems Development', 'Cobit', 'SOX', 'Series 63', 'Business Processes']"
+  },
+  {
+    "job_name": "Business Analyst",
+    "required_skills": "['Requirements Gathering', 'Agile Methodologies', 'Excellent Communication', 'Systems Development', 'Business Processes', 'Powerpoint', 'SQL', 'Use Cases']"
+  },
+  {
+    "job_name": "IT Consultant",
+    "required_skills": "['Rhel', 'Agile Software Development', 'Business Case Development', 'Angular Javascript', 'Excellent Communication', 'Consulting', 'Linux', 'Leadership']"
+  },
+  {
+    "job_name": "Director of It",
+    "required_skills": "['Leadership', 'Content Management Systems', 'Excellent Communication', 'PDF', 'Critical Thinking', 'Cloud', 'Windows', 'Problem Solving']"
+  },
+  {
+    "job_name": "Information Technology Manager",
+    "required_skills": "['PMP', 'Graduate Degree', 'Agile Methodologies', 'Agile Scrum', 'Communications Management', 'Deliverables', 'Powerpoint', 'Methodology']"
+  },
+  {
+    "job_name": "Technical Project Manager",
+    "required_skills": "['Agile Methodologies', 'Agile Scrum', 'PMP', 'Excellent Communication', 'Deliverables', 'Leadership', 'Microsoft Office Suite', 'Written Communication']"
+  },
+  {
+    "job_name": "Information Technology Specialist",
+    "required_skills": "['Operating Systems', 'Attention To Detail', 'Responses', 'Security Clearance', 'Reviews', 'Sensitive', 'Adaptability', 'Problem Solving']"
+  },
+  {
+    "job_name": "IT Support Analyst",
+    "required_skills": "['Microsoft Windows', 'Operating Systems', 'Active Directory', 'Written Communication', 'Laptops', 'Network Troubleshooting', 'Microsoft Office Suite', 'Outlook']"
+  },
+  {
+    "job_name": "IT Technician",
+    "required_skills": "['Windows Operating Systems', 'Windows 10', 'Active Directory', 'TCP/IP', 'Laptops', 'Written Communication', 'Critical Thinking', 'Configuration']"
+  },
+  {
+    "job_name": "Janitor",
+    "required_skills": "['Positive Attitude', 'Strong WORK Ethic', 'English Language', 'Computer Literate', 'Windows', 'Polish', 'Effective Communication', 'IN Spanish']"
+  },
+  {
+    "job_name": "Java Developer",
+    "required_skills": "['Java Spring', 'Frameworks', 'NoSQL', 'Restful APIS', 'Spring BOOT', 'Agile Software Development', 'Full Stack JAVA', 'Spring MVC']"
+  },
+  {
+    "job_name": "Journalist",
+    "required_skills": "['Editing', 'Spanish Speaking', 'Writing', 'English', 'Content Management Systems', 'Shorthand', 'Adobe Creative Suite', 'Written Communication']"
+  },
+  {
+    "job_name": "Junior Accountant",
+    "required_skills": "['Excellent Communication', 'General Ledger', 'Microsoft Office Suite', 'Microsoft EXCEL', 'GAAP', 'Audit', 'Powerpoint', 'Attention To Detail']"
+  },
+  {
+    "job_name": "Key Holder",
+    "required_skills": "['Leadership', 'Creative Problem Solving', 'Product Knowledge', 'Effective Communication', 'Excellent Customer Service', 'Interpersonal and Communication', 'English', 'Microsoft Word']"
+  },
+  {
+    "job_name": "Kindergarten Teacher",
+    "required_skills": "['First Aid', 'English Speaker', 'CPR', 'Teaching Experience', 'Mandarin Chinese', 'Spanish Speaker', 'Degree IN Education', 'WORKING Relationships']"
+  },
+  {
+    "job_name": "Kitchen Manager",
+    "required_skills": "['Dexterity', 'Time Management', 'English Language', 'Positive Attitude', 'Irish', 'Exceptional Communication', 'Willingness to LEARN', 'Objection Handling']"
+  },
+  {
+    "job_name": "Lab Assistant",
+    "required_skills": "['Critical Thinking', 'Excellent Communication', 'CPR', 'Professionalism', 'Interpersonal and Communication', 'ASCP', 'Protocols', 'Effective Communication']"
+  },
+  {
+    "job_name": "Lab Technician",
+    "required_skills": "['ASCP', 'Interpersonal and Communication', 'Calculations', 'Laboratory Information Systems', 'Critical Thinking', 'Excellent Communication', 'Attention To Detail', 'WORKING Relationships']"
+  },
+  {
+    "job_name": "Laborer",
+    "required_skills": "['English', 'Strong WORK Ethic', 'Professionalism', 'Load Unload', 'Digging', 'Excellent Customer Service', 'OSHA 10', 'Roofs']"
+  },
+  {
+    "job_name": "Landscape Architect",
+    "required_skills": "['AutoCAD', 'Adobe Creative Suite', 'Rendering', 'Indesign', 'Photoshop', 'Arcview', 'Illustration', 'ARC GIS']"
+  },
+  {
+    "job_name": "Landscaper",
+    "required_skills": "['Disassembly', 'Logical Thinking', 'English Language', 'Mowing', 'Effective Communication', 'Pruning', 'Good Time Management', 'Digging']"
+  },
+  {
+    "job_name": "Attorney",
+    "required_skills": "['Writing', 'Law Degree', 'Excellent Communication', 'VERBAL Communication', 'IN Spanish', 'Confidence', 'juris Doctorate', 'juris Doctor Preferred']"
+  },
+  {
+    "job_name": "Lead Teacher",
+    "required_skills": []
+  },
+  {
+    "job_name": "Leasing Agent",
+    "required_skills": "['Prospects', 'Excellent Customer Service', 'Microsoft Office Suite', 'Excellent Communication', 'Renewal', 'Search Engine', 'Outlook', 'Word Processing']"
+  },
+  {
+    "job_name": "Legal Assistant",
+    "required_skills": "['Copying', 'Written Communication', 'Attention To Detail', 'Filing', 'Microsoft Office Suite', 'Sensitive', 'Schedules', 'Document Management System']"
+  },
+  {
+    "job_name": "Legal Secretary",
+    "required_skills": "['Filing', 'Microsoft Office Suite', 'Excellent Organizational', 'Typing', 'Outlook', 'MS Office Applications', 'Written Communication', 'Proofread']"
+  },
+  {
+    "job_name": "Librarian",
+    "required_skills": "['Evaluating', 'Conducting', 'Excellent Communication', 'Filing', 'Electronic Resources', 'MLIS', 'Taxonomy', 'Database']"
+  },
+  {
+    "job_name": "Library Assistant",
+    "required_skills": "['Teaching Experience', 'Interpersonal and Communication', 'Microsoft Office Software', 'Excellent Customer Service', 'Writing', 'Microsoft Office Suite', 'Professionalism', 'Search Engine']"
+  },
+  {
+    "job_name": "Licensed Practical Nurse",
+    "required_skills": "['CPR First Aid', 'English Language', 'Excellent Communication', 'Critical Thinking', 'BLS Certification', 'CPR Certified', 'CPT Coding', 'Cardiopulmonary Resuscitation']"
+  },
+  {
+    "job_name": "Licensed Practical Nurse",
+    "required_skills": "['CPR First Aid', 'English Language', 'Excellent Communication', 'Critical Thinking', 'BLS Certification', 'CPR Certified', 'CPT Coding', 'Cardiopulmonary Resuscitation']"
+  },
+  {
+    "job_name": "Lifeguard",
+    "required_skills": "['CPR First Aid', 'Guarding', 'Cardiopulmonary Resuscitation', 'Fluent IN Spanish', 'English Language', 'Pathogens', 'Excellent Communication', 'Job Descriptions']"
+  },
+  {
+    "job_name": "Line Cook",
+    "required_skills": "['Slicing', 'VERBAL Communication', 'Writing', 'Excellent Communication', 'Saute', 'Schedules', 'Salads', 'Italian']"
+  },
+  {
+    "job_name": "Lineman",
+    "required_skills": "['CDL', 'Operational Excellence', 'Investigating', 'English', 'Customer Focus', 'Portable', 'Schedules', 'Disassembly']"
+  },
+  {
+    "job_name": "Loan Officer",
+    "required_skills": "['BS Degree', 'Negotiation', 'Business Writing', 'VERBAL Communication', 'Interpersonal and Communication', 'Excellent Customer Service', 'Written Communication', 'Spreadsheets']"
+  },
+  {
+    "job_name": "Loan Processor",
+    "required_skills": "['Excellent Customer Service', 'Excellent Communication', 'Microsoft Office Suite', 'Written Communication', 'Attention To Detail', 'MS Office Applications', 'Microsoft Outlook', 'Time Management']"
+  },
+  {
+    "job_name": "Logistics Analyst",
+    "required_skills": "['Security Clearance', 'Excellent Communication', 'Programming Languages', 'Fortran', 'Powerpoint', 'Advanced Degree', 'Microsoft EXCEL', 'Outlook']"
+  },
+  {
+    "job_name": "Logistics Coordinator",
+    "required_skills": "['Inventorying', 'Responses', 'Microsoft Office Suite', 'Excellent Customer Service', 'Outlook', 'Powerpoint', 'Written Communication', 'Reviews']"
+  },
+  {
+    "job_name": "Logistics Manager",
+    "required_skills": "['Excellent Communication', 'IN Spanish', 'Powerpoint', 'Microsoft Office', 'Korean', 'English Language', 'Slides', 'Strong WORK Ethic']"
+  },
+  {
+    "job_name": "Logistics Associate",
+    "required_skills": "['Requests', 'Database', 'Computer Literate', 'Planning AND Organizing', 'Trigonometry', 'Configuration', 'Geometry', 'Written Communication']"
+  },
+  {
+    "job_name": "Loss Prevention Specialist",
+    "required_skills": "['Excellent Communication', 'Microsoft Outlook', 'Ability to Collaborate', 'Excellent Customer Service', 'Urgency', 'Powerpoint', 'Problem Solving', 'VERBAL Communication']"
+  },
+  {
+    "job_name": "Licensed Practical Nurse",
+    "required_skills": "['CPR First Aid', 'English Language', 'Excellent Communication', 'Critical Thinking', 'BLS Certification', 'CPR Certified', 'CPT Coding', 'Cardiopulmonary Resuscitation']"
+  },
+  {
+    "job_name": "Machine Operator",
+    "required_skills": "['CNC', 'Machine Operating', 'English Language', 'Attention To Detail', 'Critical Thinking', 'Excellent Communication', 'Work Instructions', 'Dexterity']"
+  },
+  {
+    "job_name": "Machinist",
+    "required_skills": "['CNC Programming', 'Mechanical Drawing', 'Gages', 'CAD/CAM', 'Tolerance', 'Attention To Detail', 'English Language', 'Feeds']"
+  },
+  {
+    "job_name": "Assistant Maintenance Technician",
+    "required_skills": "['English Language', 'Effective Communication', 'WORKING Relationships', 'Professionalism', 'Requests', 'GOOD Communication', 'Positive Attitude', 'Crimping']"
+  },
+  {
+    "job_name": "Maintenance Manager",
+    "required_skills": "['Effective Communication', 'Aircraft Systems', 'Time Management', 'Outlook', 'Decision Making', 'Excellent Customer Service', 'FAST Learner', 'Problem Solving']"
+  },
+  {
+    "job_name": "Maintenance Mechanic",
+    "required_skills": "['PLC Programming', 'MS Office Applications', 'Excellent Communication', 'Exhaust Systems', 'English Language', 'Ladder LOGIC', 'Diagnosis', 'Hydraulics Pneumatics']"
+  },
+  {
+    "job_name": "Maintenance Technician",
+    "required_skills": "['PLC', 'English Language', 'Exhaust Systems', 'Written Communication', 'Excellent Customer Service', 'Windows', 'Exhaust', 'Requests']"
+  },
+  {
+    "job_name": "Makeup Artist",
+    "required_skills": "['Excellent Customer Service', 'Positive Work Ethic', 'Protocols', 'Epdm', 'Interpersonal and Communication', 'Spanish Speaking', 'French', 'Extensions']"
+  },
+  {
+    "job_name": "Management Analyst",
+    "required_skills": "['Microsoft Office Suite', 'Configuration', 'MS EXCEL', 'Written Communication', 'Security Clearance', 'Powerpoint', 'Responses', 'Requests']"
+  },
+  {
+    "job_name": "Assistant Manager",
+    "required_skills": "['Spreadsheets', 'Microsoft Office Suite', 'Google Suite', 'EXCEL', 'Microsoft Windows', 'Word Processing', 'Highly Organized', 'Writing']"
+  },
+  {
+    "job_name": "Management Consultant",
+    "required_skills": "['Consulting Experience', 'Excellent Communication', 'Cloud', 'Powerpoint', 'Client Interaction', 'Leadership', 'Written Communication', 'Microsoft Office Suite']"
+  },
+  {
+    "job_name": "Market Manager",
+    "required_skills": []
+  },
+  {
+    "job_name": "Market Researcher",
+    "required_skills": "['Computer Literacy', 'MBA PHD', 'Powerpoint', 'EXCEL', 'Geometry', 'Relationship-building', 'MS Word', 'Statistics']"
+  },
+  {
+    "job_name": "Market Researcher",
+    "required_skills": "['Computer Literacy', 'MBA PHD', 'Powerpoint', 'EXCEL', 'Geometry', 'Relationship-building', 'MS Word', 'Statistics']"
+  },
+  {
+    "job_name": "Market Analyst",
+    "required_skills": "['Statistics', 'Digital Channel', 'Microsoft Office Suite', 'Google Analytics', 'Excellent Communication', 'Predictive Modeling', 'Critical Thinking', 'Adobe Analytics']"
+  },
+  {
+    "job_name": "Assistant Marketing Manager",
+    "required_skills": "['Excellent Communication', 'Microsoft Office Suite', 'Indesign Photoshop', 'Attention To Detail', 'Written Communication', 'Powerpoint', 'Adobe Creative Suite', 'Editing']"
+  },
+  {
+    "job_name": "Associate Marketing Manager",
+    "required_skills": "['Microsoft Office Suite', 'AML', 'Leadership', 'Powerpoint', 'Outlook', 'EXCEL', 'Sales Channels', 'Written Communication']"
+  },
+  {
+    "job_name": "Marketing Manager",
+    "required_skills": "['Excellent Communication', 'Microsoft Office Suite', 'Google Analytics', 'Adobe Creative Suite', 'CRM', 'Service Cloud', 'Writing', 'Editing']"
+  },
+  {
+    "job_name": "Marketing Coordinator",
+    "required_skills": "['Microsoft Office Suite', 'Indesign Photoshop', 'Adobe Creative Suite', 'Powerpoint', 'Excellent Communication', 'Editing', 'Writing', 'Interpersonal and Communication']"
+  },
+  {
+    "job_name": "Marketing Manager Intern",
+    "required_skills": "['Excellent Communication', 'Microsoft Office Suite', 'Powerpoint', 'Adobe Photoshop', 'Editing', 'Attention To Detail', 'Written Communication', 'Adobe Creative Suite']"
+  },
+  {
+    "job_name": "Marketing Manager",
+    "required_skills": "['Microsoft Office Suite', 'AML', 'Leadership', 'Powerpoint', 'Outlook', 'EXCEL', 'Sales Channels', 'Written Communication']"
+  },
+  {
+    "job_name": "Marketing Manager",
+    "required_skills": "['Excellent Communication', 'Microsoft Office Suite', 'Google Analytics', 'Adobe Creative Suite', 'CRM', 'Service Cloud', 'Writing', 'Editing']"
+  },
+  {
+    "job_name": "Massage Therapist",
+    "required_skills": "['Swedish', 'Excellent Customer Service', 'Work Ethic', 'Protocols', 'Android Mobile', 'Customizing', 'Schedules', 'Excellent Communication']"
+  },
+  {
+    "job_name": "Material Handler",
+    "required_skills": "['Load Unload', 'English Language', 'Computer Literacy', 'Attention To Detail', 'Written Communication', 'ERP System', 'Picking Packing', 'Willingness to LEARN']"
+  },
+  {
+    "job_name": "Materials Manager",
+    "required_skills": "['SAP Materials', 'Tool Control', 'Microsoft Office Suite', 'SAP MM', 'APQP', 'Subcontracting', 'Powerpoint', 'Microsoft EXCEL']"
+  },
+  {
+    "job_name": "Minimum Data Set Coordinator",
+    "required_skills": "['RAPS', 'Alzheimer', 'English Language', 'Coding', 'Vad', 'Collaboration', 'CPR Certified', 'Excellent Communication']"
+  },
+  {
+    "job_name": "Mechanical Engineer",
+    "required_skills": "['CAD Software', 'Siemens NX', 'AutoCAD', 'Security Clearance', 'Revit', 'Written Communication', '3D CAD', 'Dimensioning']"
+  },
+  {
+    "job_name": "Mechanical Engineer",
+    "required_skills": "['CAD Software', 'Siemens NX', 'AutoCAD', 'Security Clearance', 'Revit', 'Written Communication', '3D CAD', 'Dimensioning']"
+  },
+  {
+    "job_name": "Mechanical Engineer",
+    "required_skills": "['CAD Software', 'Siemens NX', 'AutoCAD', 'Security Clearance', 'Revit', 'Written Communication', '3D CAD', 'Dimensioning']"
+  },
+  {
+    "job_name": "Media Planner",
+    "required_skills": "['Microsoft Office Suite', 'VERBAL Communication', 'Excellent Organizational', 'Written Communication', 'Powerpoint', 'Strategic Thinking', 'Programmatic', 'Motivated']"
+  },
+  {
+    "job_name": "Medical Assistant",
+    "required_skills": "['CPR First Aid', 'English Language', 'CMA', 'Alzheimer', 'Strong WORK Ethic', 'VERBAL Communication', 'Microsoft Word', 'WORKING Relationships']"
+  },
+  {
+    "job_name": "Medical Coder",
+    "required_skills": "['CPT Coding', 'HCPCS', 'Excellent Organizational', 'Releases', 'HIPAA', 'Excellent Communication', 'Microsoft Word', 'Written Communication']"
+  },
+  {
+    "job_name": "Director Medical Management",
+    "required_skills": "['PharmD PHD', 'Project Leadership', 'Microsoft Office Suite', 'EXCEL Access', 'HIPAA', 'Conducting', 'Written Communication', 'Fluent English']"
+  },
+  {
+    "job_name": "Administrative Assistant",
+    "required_skills": "['Office 365', 'Excellent Customer Service', 'Written Communication', 'Microsoft Office Suite', 'Active Directory', 'Attention To Detail', 'Exchange Online', 'PowerShell']"
+  },
+  {
+    "job_name": "Receptionist",
+    "required_skills": "['Excellent Customer Service', 'Confidence', 'Microsoft Office Software', 'Windows', 'Faxing', 'Microsoft Office Suite', 'Excellent Communication', 'Computer Literate']"
+  },
+  {
+    "job_name": "Medical Coder",
+    "required_skills": "['CPT Coding', 'HCPCS', 'Excellent Organizational', 'Releases', 'HIPAA', 'Excellent Communication', 'Microsoft Word', 'Written Communication']"
+  },
+  {
+    "job_name": "Medical Sales Representative",
+    "required_skills": "['CPT Coding', 'HIPAA', 'Sensitive', 'HRBP', 'Latin', 'Arrangements', 'Written Communication', 'Thinking']"
+  },
+  {
+    "job_name": "Social Worker",
+    "required_skills": "['Effective Communication', 'English Language', 'IN Spanish', 'Computer Literate', 'Excellent Communication', 'Report Writing', 'Leadership', 'Written Communication']"
+  },
+  {
+    "job_name": "Medical Technologist",
+    "required_skills": "['ASCP', 'Laboratory Information Systems', 'Protocols', 'Diagnosis', 'Effective Communication', 'Reviews', 'Critical Thinking', 'CPR']"
+  },
+  {
+    "job_name": "Medical Transcriptionist",
+    "required_skills": "['Typing', 'Decision Making', 'Microsoft Office Suite', 'Fluent English', 'Excellent Customer Service', 'Templating', 'Excellent Communication', 'HIPAA']"
+  },
+  {
+    "job_name": "Mental Health Counselor",
+    "required_skills": "['Adherence', 'Interpersonal and Communication', 'English Speaking', 'IN Psychology Bachelors', 'Written Communication', 'Lcdc', 'Diagnosis', 'Degree IN Psychology']"
+  },
+  {
+    "job_name": "Therapist",
+    "required_skills": "['Degree IN Psychology', 'Motivational Interviewing', 'Spanish', 'Interpersonal and Communication', 'Written Communication', 'Diagnosis', 'English', 'CPR']"
+  },
+  {
+    "job_name": "Merchandiser",
+    "required_skills": "['Planogram', 'Excellent Customer Service', 'Excellent Communication', 'Meet Deadlines', 'Conducting', 'Written Communication', 'Brochures', 'VERBAL Communication']"
+  },
+  {
+    "job_name": "Microbiologist",
+    "required_skills": "['EEG', 'Written Communication', 'CPR', 'Collaboration', 'Protocols', 'BCLS', 'LIMS', 'ASCP']"
+  },
+  {
+    "job_name": "Mobile Engineer",
+    "required_skills": "['Ios Development', 'Android Studio', 'Javascript', 'Restful APIS', 'SWIFT', 'ReACT Native', 'Agile Software Development', 'Frameworks']"
+  },
+  {
+    "job_name": "Curator",
+    "required_skills": "['Written Communication', 'Database', 'Spreadsheets', 'Outstanding Communication', 'Microsoft Word', 'Video Encoding', 'Conducting', 'Spanish Speaking']"
+  },
+  {
+    "job_name": "Music Teacher",
+    "required_skills": "['Teaching Experience', 'Piano', 'First Aid', 'English Language', 'CPR', 'WORKING Relationships', 'English Grammar', 'Evacuation']"
+  },
+  {
+    "job_name": "Nanny",
+    "required_skills": "['Excellent Communication', 'Computer Literacy', 'English Language', 'Positive Attitude', 'CPR', 'Leadership', 'CDL', 'Strong WORK Ethic']"
+  },
+  {
+    "job_name": "Naval Architect",
+    "required_skills": "['Quantity Surveying', 'CAD Software', 'AutoCAD', 'Calculations', 'Microsoft EXCEL', 'VERBAL Communication', 'Computer Drafting', 'Pipeline']"
+  },
+  {
+    "job_name": "Nurse Practitioner",
+    "required_skills": "['Excellent Communication', 'Computer Literacy', 'HIPAA', 'Outlook', 'Written Communication', 'ANCC', 'DNP', 'Diagnosis']"
+  },
+  {
+    "job_name": "Web Developer",
+    "required_skills": "['.NET Framework', 'javascript/jquery', 'SQL Server', 'HTML AND CSS', 'Asp.net MVC', 'WebAPI', 'Frameworks', 'ASP Net']"
+  },
+  {
+    "job_name": "Neurologist",
+    "required_skills": "['EEG', 'Traditional', 'BRAIN Tumor', 'English', 'H1b', 'Leadership', 'Consulting', 'Conducting']"
+  },
+  {
+    "job_name": "Front Desk Agent",
+    "required_skills": "['Excellent Customer Service', 'English Language', 'Anger', 'Interpersonal and Communication', 'Calculations', 'WORKING Relationships', 'Microsoft Office', 'Written Communication']"
+  },
+  {
+    "job_name": "Nuclear Engineer",
+    "required_skills": "['Geometry', 'Computer Literacy', 'Relationship-building', 'MS Word', 'CRM', 'Written Communication', 'Powerpoint', 'VMWare Certified Professional']"
+  },
+  {
+    "job_name": "Nuclear Medicine Tech",
+    "required_skills": []
+  },
+  {
+    "job_name": "Nurse Educator",
+    "required_skills": "['Teaching Experience', 'CPR', 'Leadership', 'BLS Certification', 'Collaboration', 'Written Communication', 'Indian', 'CCRN']"
+  },
+  {
+    "job_name": "Nurse Practitioner",
+    "required_skills": "['Excellent Communication', 'Computer Literacy', 'HIPAA', 'Outlook', 'Written Communication', 'ANCC', 'DNP', 'Diagnosis']"
+  },
+  {
+    "job_name": "Certified Nursing Assistant",
+    "required_skills": []
+  },
+  {
+    "job_name": "Nursing Manager",
+    "required_skills": "['CCRN', 'Critical Thinking', 'CPR Certified', 'Excellent Communication', 'Written Communication', 'ICU', 'BLS Certification', 'Cardiopulmonary Resuscitation']"
+  },
+  {
+    "job_name": "Administrative Assistant",
+    "required_skills": "['Office 365', 'Excellent Customer Service', 'Written Communication', 'Microsoft Office Suite', 'Active Directory', 'Attention To Detail', 'Exchange Online', 'PowerShell']"
+  },
+  {
+    "job_name": "File Clerk",
+    "required_skills": "['Excellent Customer Service', 'Microsoft Office Suite', 'Excellent Communication', 'Filing', 'Ability to Multitask', 'Attention To Detail', 'Filing Copying', 'Outlook']"
+  },
+  {
+    "job_name": "Administrative Assistant",
+    "required_skills": "['Microsoft Office Suite', 'Excellent Communication', 'Powerpoint', 'Microsoft Outlook', 'Filing', 'Arrangements', 'MS Office', 'Written Communication']"
+  },
+  {
+    "job_name": "Office Manager",
+    "required_skills": []
+  },
+  {
+    "job_name": "Operations Analyst",
+    "required_skills": "['Operational Excellence', 'EXCEL Spreadsheets', 'Written Communication', 'Powerpoint', 'Continuous Improvement', 'Dashboarding', 'Microsoft Office Suite', 'EXCEL Access']"
+  },
+  {
+    "job_name": "Assistant Operations Analyst",
+    "required_skills": []
+  },
+  {
+    "job_name": "Associate Operations Coordinator",
+    "required_skills": []
+  },
+  {
+    "job_name": "Operations Coordinator",
+    "required_skills": "['Microsoft Office Suite', 'Excellent Customer Service', 'Written Communication', 'Excellent Communication', 'Attention To Detail', 'MS Office', 'VERBAL Communication', 'Powerpoint']"
+  },
+  {
+    "job_name": "Operations Administrator",
+    "required_skills": "['Microsoft Office Suite', 'Excellent Communication', 'Powerpoint', 'Microsoft EXCEL', 'Critical Thinking', 'Attention To Detail', 'Written Communication', 'Exceptional Communication']"
+  },
+  {
+    "job_name": "Order Selector",
+    "required_skills": "['English Language', 'Stick', 'Selecting', 'Speaking', 'Adherence', 'Order Selection', 'Continuous Improvement', 'Racking']"
+  },
+  {
+    "job_name": "Outside Sales",
+    "required_skills": "['Motivated', 'Negotiation', 'Exceptional Communication', 'Excellent Communication', 'Time Management', 'CRM', 'Strong WORK Ethic', 'Microsoft Office Suite']"
+  },
+  {
+    "job_name": "Owner Operator",
+    "required_skills": "['CDL Hazmat', 'CDL', 'English', 'Non CDL', 'Microsoft Office Suite', 'Work Ethic', 'English Language', 'Written Communication']"
+  },
+  {
+    "job_name": "Package Handler",
+    "required_skills": "['English Language', 'English Grammar', 'Load Unload', 'Excellent Communication', 'Box Truck', 'Attention To Detail', 'Urgency', 'GOOD Communication']"
+  },
+  {
+    "job_name": "Painter",
+    "required_skills": "['Varnish', 'Putty', 'Sanding', 'Estimates', 'Masking', 'Strong WORK Ethic', 'Spray Painting', 'English Language']"
+  },
+  {
+    "job_name": "Paraeducator",
+    "required_skills": "['CPR First Aid', 'English Language', 'Writing', 'Professionalism', 'Written Communication', 'Meet Deadlines', 'Braille', 'WORKING Relationships']"
+  },
+  {
+    "job_name": "Paraprofessional",
+    "required_skills": "['Positive Learning', 'Writing', 'First Aid', 'Spanish Speaking', 'Toileting', 'CPR', 'Microsoft Word', 'Excellent Communication']"
+  },
+  {
+    "job_name": "Pastor",
+    "required_skills": "['Associate of Science', 'Excellent Communication', 'Leadership', 'Public Speaking', 'Written Communication', 'Jewish', 'Microsoft Office Suite', 'Writing']"
+  },
+  {
+    "job_name": "Chef",
+    "required_skills": "['Effective Communication', 'Excellent Communication', 'Ability to Multitask', 'Time Management', 'Team Leadership', 'English Language', 'HACCP', 'GXP']"
+  },
+  {
+    "job_name": "Patient Account Representative",
+    "required_skills": "['Typing', 'Calculations', 'Windows XP', 'Excellent Customer Service', 'Effective Communication', 'Outlook', 'Written Communication', 'Critical Thinking']"
+  },
+  {
+    "job_name": "Payroll Specialist",
+    "required_skills": "['Microsoft Office Suite', 'Excellent Organizational', 'Attention To Detail', 'Written Communication', 'Excellent Communication', 'Excellent Customer Service', 'Outlook', 'Microsoft EXCEL']"
+  },
+  {
+    "job_name": "Payroll Specialist",
+    "required_skills": "['Microsoft Office Suite', 'Excellent Organizational', 'Attention To Detail', 'Written Communication', 'Excellent Communication', 'Excellent Customer Service', 'Outlook', 'Microsoft EXCEL']"
+  },
+  {
+    "job_name": "Personal Assistant",
+    "required_skills": "['Diagnosis', 'Adaptability', 'Excellent Customer Service', 'English Language', 'No High School', 'Excellent Communication', 'Work Ethic', 'Attention To Detail']"
+  },
+  {
+    "job_name": "Personal Trainer",
+    "required_skills": "['CPR First Aid', 'Cardiopulmonary Resuscitation', 'External Defibrillator', 'Interpersonal and Communication', 'Exercises', 'Strong WORK Ethic', 'Excellent Communication', 'Excellent Customer Service']"
+  },
+  {
+    "job_name": "Petroleum Engineer",
+    "required_skills": "['Evaluating', 'Conducting', 'Reviews', 'Pipeline', 'Splicing', 'Agile', 'Python', 'Continuous Integration']"
+  },
+  {
+    "job_name": "Clinical Pharmacist Manager",
+    "required_skills": "['Pharmacy Graduate', 'Word Processing', 'Microsoft Office Suite', 'PGY1', 'PharmD', 'ODBC', '3G', 'VERBAL Communication']"
+  },
+  {
+    "job_name": "Pharmacy Technician",
+    "required_skills": "['Speaking', 'English', 'Pulmonary Function', 'Written Communication', 'Calculations', 'Interpersonal and Communication', 'Typing', 'Writing']"
+  },
+  {
+    "job_name": "Phlebotomist",
+    "required_skills": "['Microsoft Office Suite', 'Written Communication', 'Interface', 'Excellent Customer Service', 'Drawing', 'Pathogens', 'ASCP', 'Continuous Improvement']"
+  },
+  {
+    "job_name": "Photographer",
+    "required_skills": "['Excellent Customer Service', 'DSLR', 'Editing', 'Adobe Photoshop', 'Jacket', 'Exceptional Communication', 'Adobe Premiere Pro', 'ReACT']"
+  },
+  {
+    "job_name": "Database Developer",
+    "required_skills": "['Informatica ETL', 'SQL Server Integration', 'Unix Shell Scripting', 'Relational Database', 'Microsoft SQL Server', 'IBM Datastage', 'Database Architecture', 'Ssis']"
+  },
+  {
+    "job_name": "Physical Therapist",
+    "required_skills": "['CPR', 'Excellent Communication', 'Computer Literacy', 'Written Communication', 'Critical Thinking', 'English Language', 'Cardiopulmonary Resuscitation', 'External Defibrillator']"
+  },
+  {
+    "job_name": "Physician",
+    "required_skills": "['Graduate Medical Education', 'Treating', 'Diagnosis', 'English', 'Injections', 'Leadership', 'Interpersonal and Communication', 'Collaboration']"
+  },
+  {
+    "job_name": "Physicist",
+    "required_skills": "['MEMS', 'BSC', 'Test Data', 'PHD', 'Version Control', 'MATLAB', 'MS Office', 'Graduate Degree']"
+  },
+  {
+    "job_name": "Plant Manager",
+    "required_skills": "['Dressing', 'Splicing', 'Military Experience', 'Test Equipment', 'Team Leadership', 'Computer Literacy', 'Professionalism', 'Value Proposition']"
+  },
+  {
+    "job_name": "Plumber",
+    "required_skills": "['Threading', 'Heaters', 'Critical Thinking', 'Excellent Communication', 'VERBAL Communication', 'Ventilation', 'Good Time Management', 'SUPPLIERS']"
+  },
+  {
+    "job_name": "Police Officer",
+    "required_skills": "['Conducting', 'Investigating', 'VOS', 'Views', 'First Aid', 'Excellent Customer Service', 'WORKING Relationships', 'Written Communication']"
+  },
+  {
+    "job_name": "Policy Analyst",
+    "required_skills": "['Graduate Degree', 'Incident Response', 'Security Clearance', 'AML', 'MS EXCEL', 'Interpersonal and Communication', 'Microsoft EXCEL', 'Elk Stack']"
+  },
+  {
+    "job_name": "Delivery Driver",
+    "required_skills": "['Excellent Customer Service', 'CDL Hazmat', 'Box Truck', 'Load Unload', 'Enthusiasm', 'English Language', 'Interpersonal and Communication', 'Self Motivated']"
+  },
+  {
+    "job_name": "Portfolio Manager",
+    "required_skills": "['Cloud', 'Business Units', 'IaaS', 'French Language', 'SaaS', 'Excellent Organizational', 'Influencing', 'Excellent Communication']"
+  },
+  {
+    "job_name": "Practice Manager",
+    "required_skills": "['Cardiopulmonary Resuscitation', 'Microsoft Powerpoint', 'Collaboration', 'ANCC', 'Microsoft Outlook', 'Diagnosis', 'Microsoft EXCEL', 'Interpersonal and Communication']"
+  },
+  {
+    "job_name": "Prep Cook",
+    "required_skills": "['Excellent Customer Service', 'Time Management', 'English Language', 'Interpersonal and Communication', 'Problem Solving', 'Dexterity', 'GOOD Communication', 'Attention To Detail']"
+  },
+  {
+    "job_name": "Preschool Teacher",
+    "required_skills": "['CPR First Aid', 'English', 'Teaching Experience', 'CDA', 'Interpersonal and Communication', 'Toileting', 'English Language', 'Professionalism']"
+  },
+  {
+    "job_name": "President",
+    "required_skills": "['Leadership', 'Programmatic', 'UCAAS', 'Written Communication', 'Sensitive', 'Team Leadership', 'Public Speaking', 'Segments']"
+  },
+  {
+    "job_name": "Pricing Analyst",
+    "required_skills": "['Excellent Communication', 'Microsoft EXCEL', 'Microsoft Office Suite', 'Statistics', 'Strategic Thinking', 'Written Communication', 'Problem Solving', 'Attention To Detail']"
+  },
+  {
+    "job_name": "Principal",
+    "required_skills": []
+  },
+  {
+    "job_name": "Procurement Agent Manager",
+    "required_skills": "['SUPPLIERS', 'Microsoft Office Suite', 'Negotiation', 'Written Communication', 'MS Powerpoint', 'Leadership', 'Microsoft EXCEL', 'Influencing']"
+  },
+  {
+    "job_name": "Procurement Agent",
+    "required_skills": "['Microsoft Office Suite', 'SUPPLIERS', 'Excellent Communication', 'Interpersonal and Communication', 'Powerpoint', 'Negotiation', 'MS Office', 'Problem Solving']"
+  },
+  {
+    "job_name": "Produce Clerk",
+    "required_skills": "['Schedules', 'Sanitize', 'GOOD Communication', 'English Speaking', 'Positive Attitude', 'Written Communication', 'Excellent Communication', 'Excellent Customer Service']"
+  },
+  {
+    "job_name": "Product Designer",
+    "required_skills": "['Adobe Creative Suite', 'UX Design', 'Wireframes', 'Indesign', 'UI UX', 'User Interface', 'Iterative Design', 'Agile Software Development']"
+  },
+  {
+    "job_name": "Product Engineer",
+    "required_skills": "['CAD', 'Systems Development', 'Written Communication', 'Interface', 'Scripting Languages', 'Releases', 'Problem Solving', 'Reviews']"
+  },
+  {
+    "job_name": "Product Owner",
+    "required_skills": "['Agile Software Development', 'Agile Scrum', 'Backlog', 'Jira', 'Releases', 'Written Communication', 'UI UX', 'Frameworks']"
+  },
+  {
+    "job_name": "Graphic Designer",
+    "required_skills": "['Indesign Photoshop', 'Adobe Creative Suite', 'Adobe Creative Cloud', 'HTML AND CSS', 'Microsoft Office Suite', 'Excellent Communication', 'Editing', 'Powerpoint']"
+  },
+  {
+    "job_name": "Production Assistant",
+    "required_skills": "['Excellent Communication', 'Windows Operating Systems', 'Shell Scripting', 'Computer Literate', 'Trouble Shooting', 'Microsoft Word', 'Tolerance', 'MS Office EXCEL']"
+  },
+  {
+    "job_name": "Production Coordinator",
+    "required_skills": "['Excellent Communication', 'Microsoft Office Suite', 'Powerpoint', 'Microsoft Outlook', 'Attention To Detail', 'Editing', 'Time Management', 'Microsoft Word']"
+  },
+  {
+    "job_name": "Production Planner",
+    "required_skills": "['Excellent Communication', 'Microsoft Office Suite', 'Enterprise Resource Planning', 'ERP System', 'Schedules', 'Planning and Scheduling', 'Attention To Detail', 'Apics Certification']"
+  },
+  {
+    "job_name": "Production Manager Supervisor",
+    "required_skills": "['Leadership', 'Excellent Communication', 'Continuous Improvement', 'Microsoft Office Suite', 'Problem Solving', 'Powerpoint', 'Written Communication', 'HACCP']"
+  },
+  {
+    "job_name": "Production Worker",
+    "required_skills": "['Attention To Detail', 'Excellent Customer Service', 'Microsoft Office Suite', 'English', 'Effective Communication', 'Adobe Creative Suite', 'Editing', 'Microsoft Outlook']"
+  },
+  {
+    "job_name": "Program Analyst",
+    "required_skills": "['Responses', 'Microsoft Office Suite', 'Security Clearance', 'Powerpoint', 'Secret Clearance', 'Exceptional Communication', 'EXCEL', 'Evaluating']"
+  },
+  {
+    "job_name": "Assistant Program Manager",
+    "required_skills": "['Programmatic', 'Microsoft Office Suite', 'Written Communication', 'Responses', 'EXCEL', 'Spreadsheets', 'Filing', 'Statistics']"
+  },
+  {
+    "job_name": "Project Analyst",
+    "required_skills": "['Microsoft EXCEL', 'Microsoft Powerpoint', 'Microsoft Office Suite', 'Written Communication', 'Microsoft Project', 'Jd MBA', 'Microsoft Outlook', 'Critical Thinking']"
+  },
+  {
+    "job_name": "Project Manager",
+    "required_skills": "['Excellent Communication', 'Microsoft Office Suite', 'PMP', 'Consulting', 'Agile', 'Leadership', 'Powerpoint', 'Schedules']"
+  },
+  {
+    "job_name": "Property Manager",
+    "required_skills": "['Microsoft Office Suite', 'Excellent Communication', 'Security Clearance', 'Test Equipment', 'NetOps', 'Attenuators', 'Inventorying', 'Antennas']"
+  },
+  {
+    "job_name": "Psychiatrist",
+    "required_skills": "['Graduate Medical Education', 'Reviews', 'Treating', 'English', 'Diagnosis', 'Leadership', 'IN Spanish', 'Onboarding']"
+  },
+  {
+    "job_name": "Psychologist",
+    "required_skills": "['Work Ethic', 'Degree IN Psychology', 'PHD', 'Motivated', 'Diagnosis', 'Filing', 'Leadership', 'Integrator']"
+  },
+  {
+    "job_name": "Public Relations Specialist",
+    "required_skills": "['Mandarin Chinese', 'Bachelors of Arts', 'Russian', 'Excellent Communication', 'Writing', 'Editing', 'Microsoft Office Suite', 'Adobe Creative Suite']"
+  },
+  {
+    "job_name": "Publicist",
+    "required_skills": "['Requests', 'Traditional', 'Releases', 'Excellent Organizational', 'Strong VERBAL', 'Written Communication', 'Interpersonal and Communication', 'Spread']"
+  },
+  {
+    "job_name": "Assistant Purchasing Agent",
+    "required_skills": "['Microsoft Office Suite', 'Excellent Organizational', 'Excellent Communication', 'Powerpoint', 'MS Office Applications', 'Attention To Detail', 'Microsoft EXCEL', 'Outlook']"
+  },
+  {
+    "job_name": "Purchasing Agent Manager",
+    "required_skills": "['Excellent Communication', 'Microsoft Office Suite', 'Powerpoint', 'SUPPLIERS', 'Negotiation', 'Outlook', 'Leadership', 'Fluent English']"
+  },
+  {
+    "job_name": "QA Analyst",
+    "required_skills": "['Test Cases', 'Test Plans', 'Scripting', 'SQL Server', 'Test Scripts', 'Agile Methodologies', 'Selenium', 'Written Communication']"
+  },
+  {
+    "job_name": "QA Engineer",
+    "required_skills": []
+  },
+  {
+    "job_name": "QA Analyst",
+    "required_skills": "['Test Cases', 'Test Plans', 'Scripting', 'SQL Server', 'Test Scripts', 'Agile Methodologies', 'Selenium', 'Written Communication']"
+  },
+  {
+    "job_name": "QC Analyst",
+    "required_skills": "['Agile Software Development', 'Test Cases', 'Test Plans', 'Agile Scrum', 'Written Communication', 'Selenium', 'PL/SQL', 'API Testing']"
+  },
+  {
+    "job_name": "QC Analyst",
+    "required_skills": "['Agile Software Development', 'Test Cases', 'Test Plans', 'Agile Scrum', 'Written Communication', 'Selenium', 'PL/SQL', 'API Testing']"
+  },
+  {
+    "job_name": "Quality Engineer",
+    "required_skills": "['Lean Six Sigma', 'Problem Solving', 'Written Communication', 'Audit', 'APQP', 'ISO 9001', 'Root Cause Analysis', 'Continuous Improvement']"
+  },
+  {
+    "job_name": "Quality Manager",
+    "required_skills": "['Excellent Communication', 'HEDIS', 'Microsoft Office Suite', 'Team Leadership', 'Audit', 'Critical Thinking', 'SAP QM', 'Microsoft EXCEL']"
+  },
+  {
+    "job_name": "Radiation Therapist",
+    "required_skills": "['CPR', 'Brachytherapy', 'Cesium', 'Cardiopulmonary Resuscitation', 'Diagnosis', 'Critical Thinking', 'liNear Accelerators', 'Administering']"
+  },
+  {
+    "job_name": "Radiologic Tech",
+    "required_skills": []
+  },
+  {
+    "job_name": "Ramp Agent",
+    "required_skills": "['English Language', 'Computer Literacy', 'Excellent Customer Service', 'Excellent Communication', 'Load Unload', 'Anger', 'Sensitive', 'Faxing']"
+  },
+  {
+    "job_name": "Realtor",
+    "required_skills": "['Time Management', 'CRM', 'Negotiation', 'Interpersonal and Communication', 'Leases', 'Positive Attitude', 'Written Communication', 'VERBAL Communication']"
+  },
+  {
+    "job_name": "Real Estate Assistant",
+    "required_skills": "['Excellent Customer Service', 'Excellent Communication', 'Microsoft Office', 'MS Office Applications', 'Interpersonal and Communication', 'Adobe Creative Suite', 'Editing', 'Powerpoint']"
+  },
+  {
+    "job_name": "Receiver",
+    "required_skills": "['English Language', 'Excellent Communication', 'Excellent Organizational', 'Attention To Detail', 'Urgency', 'Ability to Collaborate', 'Excellent Customer Service', 'Printed Circuit']"
+  },
+  {
+    "job_name": "Receiver",
+    "required_skills": "['English Language', 'Excellent Communication', 'Excellent Organizational', 'Attention To Detail', 'Urgency', 'Ability to Collaborate', 'Excellent Customer Service', 'Printed Circuit']"
+  },
+  {
+    "job_name": "Receptionist",
+    "required_skills": "['Excellent Customer Service', 'Confidence', 'Microsoft Office Software', 'Windows', 'Faxing', 'Microsoft Office Suite', 'Excellent Communication', 'Computer Literate']"
+  },
+  {
+    "job_name": "Recruiter",
+    "required_skills": "['Microsoft Office Suite', 'Excellent Communication', 'Applicant Tracking System', 'Excellent Customer Service', 'VERBAL Communication', 'Written Communication', 'Outlook', 'Negotiation']"
+  },
+  {
+    "job_name": "Recruiting Coordinator",
+    "required_skills": "['Microsoft Office Suite', 'Applicant Tracking System', 'Excellent Customer Service', 'Onboarding', 'Powerpoint', 'Exceptional Communication', 'Attention To Detail', 'Microsoft Outlook']"
+  },
+  {
+    "job_name": "Recruiting Manager",
+    "required_skills": "['Team Management', 'Written Communication', 'Excellent Communication', 'Self Motivated', 'Operating Systems', 'Microsoft Windows', 'Powerpoint', 'Excellent Organizational']"
+  },
+  {
+    "job_name": "Recruitment Consultant",
+    "required_skills": "['Job Descriptions', 'Consulting', 'Applicant Tracking System', 'Subsidies', 'Strong WORK Ethic', 'Pipeline', 'Time Management', 'Interface']"
+  },
+  {
+    "job_name": "Regional Manager",
+    "required_skills": "['CDL', 'Team Leadership', 'Excellent Communication', 'Microsoft Office Suite', 'Coalitions', 'Written Communication', 'Community Organizing', 'Time Management']"
+  },
+  {
+    "job_name": "Regional Sales Manager",
+    "required_skills": []
+  },
+  {
+    "job_name": "Registered Nurse",
+    "required_skills": "['CCRN', 'Critical Thinking', 'CPR Certified', 'Excellent Communication', 'Written Communication', 'ICU', 'BLS Certification', 'Cardiopulmonary Resuscitation']"
+  },
+  {
+    "job_name": "Registered Nurse Case Manager",
+    "required_skills": "['Critical Thinking', 'Professionalism', 'Excellent Communication', 'CPR', 'Computer Literate', 'Report Writing', 'English Language', 'PDF']"
+  },
+  {
+    "job_name": "Registrar",
+    "required_skills": "['Excellent Customer Service', 'Coding', 'Computer Literate', 'Database', 'Diagnosis', 'Typing', 'Effective Communication', 'GMAIL']"
+  },
+  {
+    "job_name": "Relationship Banker",
+    "required_skills": "['Ability to Multitask', 'Strong WORK Ethic', 'Critical Thinking', 'Confidence', 'Series 63', 'Excellent Communication', 'Product Knowledge', 'Interpersonal and Communication']"
+  },
+  {
+    "job_name": "Relationship Manager",
+    "required_skills": "['Expense Control', 'PharmD', 'Business Plans', 'Business Units', 'Military Experience', 'Pipeline', 'Collaboration', 'Leadership']"
+  },
+  {
+    "job_name": "Reporting Analyst",
+    "required_skills": "['Writing SQL', 'SQL Server', 'Microsoft EXCEL', 'Relational Database', 'Power BI', 'Dashboarding', 'Querying', 'Microsoft Office Suite']"
+  },
+  {
+    "job_name": "Research Analyst",
+    "required_skills": "['Arabic', 'Critical Thinking', 'Network Analysis', 'Turkish', 'Researching', 'Russian', 'Farsi', 'Japanese']"
+  },
+  {
+    "job_name": "Research Assistant",
+    "required_skills": "['Typing', 'Composure', 'Degree IN Psychology', 'Dexterity', 'GOOD Communication', 'EXCEL', 'Keystrokes', 'Meet Deadlines']"
+  },
+  {
+    "job_name": "Residential Assistant",
+    "required_skills": []
+  },
+  {
+    "job_name": "Residential Care Counselor",
+    "required_skills": []
+  },
+  {
+    "job_name": "Respiratory Therapist",
+    "required_skills": "['Cardiopulmonary Resuscitation', 'Ventilation', 'BLS Certification', 'Critical Thinking', 'ICU', 'CPR Certified', 'Pulmonary Function', 'Problem Solving']"
+  },
+  {
+    "job_name": "Restaurant Manager",
+    "required_skills": []
+  },
+  {
+    "job_name": "Server",
+    "required_skills": "['VERBAL Communication', 'Writing', 'Excellent Communication', 'Modifications', 'Requests', 'English Language', 'Excellent Customer Service', 'Positive Attitude']"
+  },
+  {
+    "job_name": "Associate Retail Representative",
+    "required_skills": "['Military Experience', 'Excellent Customer Service', 'Collaboration', 'Willingness to LEARN', 'Adherence', 'Excellent Communication', 'Confidence', 'Sales Process']"
+  },
+  {
+    "job_name": "Retail Merchandiser",
+    "required_skills": "['Computer Literate', 'Planogram', 'Excellent Customer Service', 'Android Mobile', 'SAS', 'Product Knowledge', 'Interpersonal and Communication', 'Urgency']"
+  },
+  {
+    "job_name": "Risk Analyst",
+    "required_skills": "['Audit', 'EXCEL', 'Risk Assessments', 'Written Communication', 'Frameworks', 'Powerpoint', 'CISSP', 'Microsoft Office Suite']"
+  },
+  {
+    "job_name": "Risk Manager",
+    "required_skills": "['Audit', 'Written Communication', 'Microsoft Office Suite', 'Attention To Detail', 'Frameworks', 'Microsoft EXCEL', 'Leadership', 'Microsoft Powerpoint']"
+  },
+  {
+    "job_name": "Roofer",
+    "required_skills": "['Roofs', 'Decks', 'Epdm', 'OSHA 10', 'Strong WORK Ethic', 'Professionalism', 'Ply', 'Willingness to LEARN']"
+  },
+  {
+    "job_name": "Safety Coordinator",
+    "required_skills": "['Microsoft Office Suite', 'Written Communication', 'Business Writing', 'English Language', 'Office Applications', 'EXCEL', 'Prospects', 'WORKING Relationships']"
+  },
+  {
+    "job_name": "Safety Manager",
+    "required_skills": "['Written Communication', 'Metering', 'Microsoft Office Suite', 'Pipeline', 'Prospects', 'Audit', 'Risk Assessments', 'Evaluating']"
+  },
+  {
+    "job_name": "Sales Representative",
+    "required_skills": "['Interpersonal and Communication', 'Excellent Customer Service', 'Good Time Management', 'Microsoft Office Suite', 'Negotiation', 'Motivated', 'Strong WORK Ethic', 'CRM']"
+  },
+  {
+    "job_name": "Sales Analyst",
+    "required_skills": "['Excellent Organizational', 'Written Communication', 'Powerpoint', 'Microsoft EXCEL', 'Powerpoint Presentations', 'Attention To Detail', 'CRM', 'SAP Salesforce']"
+  },
+  {
+    "job_name": "Assistant Sales Representative",
+    "required_skills": "['Microsoft Office Suite', 'Excellent Customer Service', 'Powerpoint', 'Interpersonal and Communication', 'Outlook', 'Attention To Detail', 'Excellent Communication', 'Time Management']"
+  },
+  {
+    "job_name": "Associate Sales Representative",
+    "required_skills": "['English Language', 'Excellent Customer Service', 'Computer Literate', 'Product Knowledge', 'Excellent Communication', 'Enthusiasm', 'Customer Focus', 'Creative Problem Solving']"
+  },
+  {
+    "job_name": "Retail Representative",
+    "required_skills": "['Excellent Customer Service', 'Interpersonal and Communication', 'Spanish Speaking', 'Strong WORK Ethic', 'Outlook', 'Bilingual', 'Written Communication', 'Powerpoint']"
+  },
+  {
+    "job_name": "Sales Representative",
+    "required_skills": "['Interpersonal and Communication', 'Excellent Customer Service', 'Good Time Management', 'Microsoft Office Suite', 'Negotiation', 'Motivated', 'Strong WORK Ethic', 'CRM']"
+  },
+  {
+    "job_name": "Sales Coordinator",
+    "required_skills": "['Microsoft Office Suite', 'Estimates', 'Excellent Customer Service', 'Microsoft Office Software', 'Written Communication', 'Treating', 'Enthusiasm', 'Time Management']"
+  },
+  {
+    "job_name": "Sales Development Representative",
+    "required_skills": "['CRM', 'Prospects', 'Exceptional Communication', 'Strong WORK Ethic', 'Team Oriented', 'SaaS', 'Urgency', 'Ability to Collaborate']"
+  },
+  {
+    "job_name": "Sales Engineer",
+    "required_skills": "['Business Writing', 'Demonstrations', 'Excellent Communication', 'Microsoft Office Suite', 'Debugging', 'Solution Selling', 'Keil', 'Powerpoint']"
+  },
+  {
+    "job_name": "Executive Sales Representative",
+    "required_skills": "['Excellent Communication', 'CRM', 'Pipeline', 'Prospects', 'Negotiation', 'SaaS', 'Sales Process', 'Cloud']"
+  },
+  {
+    "job_name": "Sales Manager",
+    "required_skills": []
+  },
+  {
+    "job_name": "Sales Operations Manager",
+    "required_skills": []
+  },
+  {
+    "job_name": "Sales Representative",
+    "required_skills": "['Microsoft Office Suite', 'Excellent Customer Service', 'Powerpoint', 'Interpersonal and Communication', 'Outlook', 'Attention To Detail', 'Excellent Communication', 'Time Management']"
+  },
+  {
+    "job_name": "Sales Support Staff Member",
+    "required_skills": "['Excellent Communication', 'Microsoft Office Suite', 'Ability to Collaborate', 'Positive Attitude', 'Powerpoint', 'Outlook', 'CRM', 'Excellent Customer Service']"
+  },
+  {
+    "job_name": "Sales Support Staff Member",
+    "required_skills": "['Excellent Communication', 'Microsoft Office Suite', 'Ability to Collaborate', 'Positive Attitude', 'Powerpoint', 'Outlook', 'CRM', 'Excellent Customer Service']"
+  },
+  {
+    "job_name": "Salesforce Developer",
+    "required_skills": "['Microsoft Dynamics CRM', 'Service Cloud', 'Restful APIS', 'D365', 'Javascript', 'Agile Software Development', 'Relational Database', 'CPQ']"
+  },
+  {
+    "job_name": "Salon Manager",
+    "required_skills": "['Self Motivated', 'Excellent Customer Service', 'Highly Organized', 'Excellent Communication', 'Brochures', 'Phone System', 'POS Systems', 'Schedules']"
+  },
+  {
+    "job_name": "Scheduler",
+    "required_skills": "['Microsoft Office Suite', 'Schedules', 'Excellent Customer Service', 'Microsoft Outlook', 'Excellent Communication', 'Computer Literacy', 'Degree IN English', 'Typing']"
+  },
+  {
+    "job_name": "School Bus Driver",
+    "required_skills": "['VERBAL Communication', 'Outstanding Communication', 'Load Unload', 'English Language', 'Non CDL', 'Evacuation', 'CDL', 'Schedules']"
+  },
+  {
+    "job_name": "School Counselor",
+    "required_skills": "['CPR First Aid', 'English Speaking', 'Written Communication', 'MS EXCEL', 'MS Powerpoint', 'Bilingual', 'Microsoft Office Software', 'MS OUTLOOK']"
+  },
+  {
+    "job_name": "School Psychologist",
+    "required_skills": "['Report Writing', 'Degree IN Psychology', 'Reviews', 'Administering', 'Bilingual', 'Conducting', 'Collaboration', 'Screenings']"
+  },
+  {
+    "job_name": "Scrum Master",
+    "required_skills": "['Agile Software Development', 'SAFE Scrum Master', 'Agile Scrum Master', 'Backlog', 'Jira', 'ATDD', 'Excellent Communication', 'CSM']"
+  },
+  {
+    "job_name": "Search Engine Evaluator",
+    "required_skills": "['Google Analytics', 'AdWords', 'Conducting', 'Search Engine', 'Speaking', 'Tag Manager', 'EXCEL', 'Content Management Systems']"
+  },
+  {
+    "job_name": "Secretary",
+    "required_skills": "['Word Processing', 'Microsoft Office Suite', 'Typing', 'Written Communication', 'CPR First Aid', 'Excellent Organizational', 'Spreadsheets', 'Filing']"
+  },
+  {
+    "job_name": "Security Specialist",
+    "required_skills": "['Operating Systems', 'Written Communication', 'Excellent Customer Service', 'Top Secret Clearance', 'O365', 'Security Clearance', 'English Language', 'Schedules']"
+  },
+  {
+    "job_name": "Information Security Analyst",
+    "required_skills": "['Operating Systems', 'Incident Response', 'Intrusion Detection System', 'CISSP', 'SIEM', 'Written Communication', 'Windows', 'Cloud']"
+  },
+  {
+    "job_name": "Information Security Engineer",
+    "required_skills": "['Operating Systems', 'Cloud', 'Windows Server', 'Javascript', 'Routing Protocols', 'Security Clearance', 'Web Application', 'Configuration']"
+  },
+  {
+    "job_name": "Security Officer",
+    "required_skills": "['Excellent Communication', 'Computer Literate', 'Written Communication', 'CPR First Aid', 'Excellent Customer Service', 'English Language', 'Attention To Detail', 'Report Writing']"
+  },
+  {
+    "job_name": "Security Manager",
+    "required_skills": "['Microsoft Office Suite', 'Intrusion Detection System', 'Lean Six Sigma', 'Operating Systems', 'Written Communication', 'Protocols', 'SharePoint', 'Cloud Computing']"
+  },
+  {
+    "job_name": "Security Officer",
+    "required_skills": "['Excellent Communication', 'Computer Literate', 'Written Communication', 'CPR First Aid', 'Excellent Customer Service', 'English Language', 'Attention To Detail', 'Report Writing']"
+  },
+  {
+    "job_name": "Senior Accountant",
+    "required_skills": "['GAAP Accounting', 'Microsoft Office Suite', 'General Ledger', 'Excellent Organizational', 'ERP System', 'Microsoft EXCEL', 'Audit', 'Strong WORK Ethic']"
+  },
+  {
+    "job_name": "SEO Analyst",
+    "required_skills": "['Search Engine', 'Google Analytics', 'HTML AND CSS', 'Website Optimization', 'AdWords', 'Excellent Organizational', 'Tag Manager', 'Optimization']"
+  },
+  {
+    "job_name": "Service Advisor",
+    "required_skills": "['Excellent Customer Service', 'Strong WORK Ethic', 'Interpersonal and Communication', 'Word Processing', 'Excellent Communication', 'Time Management', 'Microsoft Word', 'Spreadsheets']"
+  },
+  {
+    "job_name": "Associate Customer Relations",
+    "required_skills": "['Excellent Customer Service', 'Creative Thinking', 'Business Writing', 'As400', 'Microsoft Office', 'Written Communication', 'Highly Organized', 'Problem Solving']"
+  },
+  {
+    "job_name": "Service Coordinator",
+    "required_skills": "['Excellent Customer Service', 'Microsoft Office Suite', 'Written Communication', 'Excellent Communication', 'Outlook', 'Collaboration', 'Attention To Detail', 'Spanish']"
+  },
+  {
+    "job_name": "Service Manager",
+    "required_skills": "['Effective Communication', 'Liberal Studies', 'Microsoft EXCEL', 'Strong WORK Ethic', 'Computer Literate', 'Customer Driven', 'Leadership', 'Microsoft Word']"
+  },
+  {
+    "job_name": "Service Technician",
+    "required_skills": "['Self Motivated', 'Excellent Communication', 'Excellent Customer Service', 'Requests', 'Confidence', 'Enthusiasm', 'Meet Deadlines', 'Critical Thinking']"
+  },
+  {
+    "job_name": "Service Advisor",
+    "required_skills": "['Excellent Customer Service', 'Strong WORK Ethic', 'Interpersonal and Communication', 'Word Processing', 'Excellent Communication', 'Time Management', 'Microsoft Word', 'Spreadsheets']"
+  },
+  {
+    "job_name": "Lead Shift Manager",
+    "required_skills": []
+  },
+  {
+    "job_name": "Shift Manager",
+    "required_skills": "['Buffing', 'Sanding', 'Masking', 'Dexterity', 'Strong WORK Ethic', 'Written Communication', 'Attention To Detail', 'English']"
+  },
+  {
+    "job_name": "Data Entry Clerk",
+    "required_skills": "['Typing', 'Excellent Communication', 'Microsoft Office Suite', 'Word Processing', 'Attention To Detail', 'Time Management', 'Spreadsheets', 'Database']"
+  },
+  {
+    "job_name": "Maintenance Technician",
+    "required_skills": "['PLC', 'English Language', 'Exhaust Systems', 'Written Communication', 'Excellent Customer Service', 'Windows', 'Exhaust', 'Requests']"
+  },
+  {
+    "job_name": "Social Media Manager Intern",
+    "required_skills": "['Adobe Photoshop', 'Editing', 'Writing', 'Interpersonal and Communication', 'Critical Thinking', 'Copying', 'Dissemination', 'Powerpoint']"
+  },
+  {
+    "job_name": "Social Media Manager",
+    "required_skills": "['Adobe Indesign', 'Photoshop', 'Editing', 'Writing', 'Written Communication', 'Microsoft Office', 'Content Management Systems', 'Critical Thinking']"
+  },
+  {
+    "job_name": "Software Architect",
+    "required_skills": "['MS SQL Server', 'Javascript', 'Drupal', 'Cloud', 'Frameworks', 'Relational Database', 'Coding', 'AWS']"
+  },
+  {
+    "job_name": "Software Developer",
+    "required_skills": "['Javascript', 'SQL Server', 'Restful APIS', 'Relational Database', 'Frameworks', '.NET', 'Python', 'Programming Languages']"
+  },
+  {
+    "job_name": "Software Engineer",
+    "required_skills": "['Javascript', 'HTML AND CSS', 'Node.js', 'Agile Software Development', 'Programming Languages', 'SQL Server', 'NoSQL', '.NET']"
+  },
+  {
+    "job_name": "Enterprise Architect",
+    "required_skills": "['Cloud', 'Cloud Computing', 'AWS', 'API Management', 'Azure Data', 'Javascript', 'Agile Scrum', 'Consulting']"
+  },
+  {
+    "job_name": "Solutions Engineer",
+    "required_skills": "['Cloud Computing', 'Technical Leadership', 'Demonstrations', 'VERBAL Communication', 'Javascript', 'WSUS', 'Puppet', 'SCOM']"
+  },
+  {
+    "job_name": "Sonographer",
+    "required_skills": "['Excellent Communication', 'Protocols', 'Doppler', 'RDMS', 'RDCS', 'Critical Thinking', 'BLS Certification', 'CPR']"
+  },
+  {
+    "job_name": "Chef",
+    "required_skills": "['Effective Communication', 'Excellent Communication', 'Ability to Multitask', 'Time Management', 'Team Leadership', 'English Language', 'HACCP', 'GXP']"
+  },
+  {
+    "job_name": "Speech Language Pathologist",
+    "required_skills": "['Masters Level', 'CPR', 'Excellent Communication', 'Computer Literate', 'Bilingual', 'Effective Communication', 'English Language', 'Critical Thinking']"
+  },
+  {
+    "job_name": "Staff Accountant",
+    "required_skills": "['Microsoft Office Suite', 'Excellent Organizational', 'GAAP', 'General Ledger Reconciliation', 'Microsoft EXCEL', 'ERP System', 'General Ledger', 'Spreadsheets']"
+  },
+  {
+    "job_name": "Statistician",
+    "required_skills": "['Statistics', 'SAS', 'Experimental Design', 'Calculus', 'Responses', 'Probability Theory', 'Natural Language Processing', 'Python']"
+  },
+  {
+    "job_name": "Stock Clerk",
+    "required_skills": "['No High School', 'Excellent Customer Service', 'English Language', 'Effective Communication', 'Dexterity', 'Schedules', 'Positive Attitude', 'VERBAL Communication']"
+  },
+  {
+    "job_name": "Stocker",
+    "required_skills": "['Dexterity', 'Attention To Detail', 'Time Management', 'Load Unload', 'Effective Communication', 'Positive Attitude', 'Judgement', 'Written Communication']"
+  },
+  {
+    "job_name": "Associate Retail Representative",
+    "required_skills": "['Military Experience', 'Excellent Customer Service', 'Collaboration', 'Willingness to LEARN', 'Adherence', 'Excellent Communication', 'Confidence', 'Sales Process']"
+  },
+  {
+    "job_name": "Clerk",
+    "required_skills": "['Excellent Customer Service', 'Effective Communication', 'Computer Literacy', 'Microsoft Office Software', 'Attention To Detail', 'English', 'Filing', 'Written Communication']"
+  },
+  {
+    "job_name": "Store Manager",
+    "required_skills": "['Leadership', 'Good Time Management', 'Solution Selling', 'Excellent Communication', 'Selecting', 'Excellent Organizational', 'Job Descriptions', 'MS Office']"
+  },
+  {
+    "job_name": "Structural Engineer",
+    "required_skills": "['AutoCAD', 'Excellent Communication', 'Microsoft Office Suite', 'Revit', 'Mathcad', 'Staad', 'Steel Design', 'Security Clearance']"
+  },
+  {
+    "job_name": "Student Assistant",
+    "required_skills": "['Filing', 'Microsoft Office Suite', 'Rendering', 'Powerpoint', 'EXCEL', 'Outlook', 'TDD', 'Writing']"
+  },
+  {
+    "job_name": "Substitute Teacher",
+    "required_skills": "['CPR First Aid', 'English Language', 'Degree IN Education', 'Teaching Experience', 'Bilingual', 'Computer Literacy', 'Effective Communication', 'WORKING Relationships']"
+  },
+  {
+    "job_name": "Construction Superintendent",
+    "required_skills": []
+  },
+  {
+    "job_name": "Manager Supervisor",
+    "required_skills": "['Creative Thinking', 'Written Communication', 'Leadership', 'English', 'Bilingual', 'Excellent Organizational', 'Computer Literate', 'Microsoft Office']"
+  },
+  {
+    "job_name": "Supply Chain Analyst",
+    "required_skills": "['Excellent Communication', 'Powerpoint', 'SUPPLIERS', 'Microsoft Office Suite', 'Microsoft Access Database', 'Negotiation', 'Critical Thinking', 'Writing']"
+  },
+  {
+    "job_name": "Supply Chain Manager",
+    "required_skills": "['Bridge Builder', 'MS EXCEL', 'SAP ERP', 'Oracle ERP Cloud', 'Decision Making', 'Powerpoint', 'Data Structures', 'Highly Organized']"
+  },
+  {
+    "job_name": "Surgical Tech",
+    "required_skills": []
+  },
+  {
+    "job_name": "Systems Administrator",
+    "required_skills": "['Windows Server 2012', 'Windows Operating Systems', 'Linux System', 'Operating Systems', 'Active Directory', 'Scripting', 'Configuration', 'Cloud']"
+  },
+  {
+    "job_name": "Systems Analyst",
+    "required_skills": "['Integrator', 'Gathering', 'Portable', 'SQL Server', 'Operating Systems', 'Relational Database', 'Written Communication', 'Interface']"
+  },
+  {
+    "job_name": "Systems Engineer",
+    "required_skills": "['Security Clearance', 'Microsoft Windows', 'Written Communication', 'Configuration', 'Windows Server', 'Linux', 'Scripting', 'Active Directory']"
+  },
+  {
+    "job_name": "Corporate Recruiter",
+    "required_skills": "['Microsoft Office Suite', 'Applicant Tracking System', 'Interpersonal and Communication', 'Onboarding', 'Written Communication', 'Excellent Communication', 'Outlook', 'Attention To Detail']"
+  },
+  {
+    "job_name": "Tax Accountant",
+    "required_skills": "['Excellent Communication', 'Excellent Organizational', 'Problem Solving', 'Microsoft Office Suite', 'Microsoft EXCEL', 'Calculations', 'Responses', 'Attention To Detail']"
+  },
+  {
+    "job_name": "Tax Manager",
+    "required_skills": "['Leadership', 'Deliverables', '.NET', 'Consulting', 'Audit', 'Prosystems', 'Written Communication', 'Excellent Communication']"
+  },
+  {
+    "job_name": "Tax Professional",
+    "required_skills": "['Audit', 'Writing', 'Confidence', 'Schedules', 'Collaboration', 'Calculations', 'Excellent Communication', 'Motivated']"
+  },
+  {
+    "job_name": "Teacher",
+    "required_skills": "['CPR First Aid', 'CDA', 'English', 'Teaching Experience', 'First Aid', 'English Language', 'CPR', 'Interpersonal and Communication']"
+  },
+  {
+    "job_name": "Assistant Teacher",
+    "required_skills": "['CPR First Aid', 'English Language', 'CDA', 'Interpersonal and Communication', 'Teaching Experience', 'Leadership', 'Bilingual', 'Spanish Speaking']"
+  },
+  {
+    "job_name": "Teaching Assistant",
+    "required_skills": "['CPR First Aid', 'Teaching Experience', 'CDA', 'English', 'IN Spanish', 'English Language', 'Written Communication', 'Bilingual']"
+  },
+  {
+    "job_name": "Lead Team Manager",
+    "required_skills": []
+  },
+  {
+    "job_name": "Director Technical Management",
+    "required_skills": "['Switchers', 'Operating Systems', 'Editing', 'Computer Literate', 'DSLR', 'Projectors', 'Excellent Customer Service', 'Technical Leadership']"
+  },
+  {
+    "job_name": "Technical Support Engineer",
+    "required_skills": "['Linux System', 'Operating Systems', 'Scripting Languages', 'Python', 'Windows', 'Javascript', 'MS SQL', 'UNIX Linux']"
+  },
+  {
+    "job_name": "Technical Project Manager",
+    "required_skills": "['Agile Methodologies', 'Agile Scrum', 'PMP', 'Excellent Communication', 'Deliverables', 'Leadership', 'Microsoft Office Suite', 'Written Communication']"
+  },
+  {
+    "job_name": "Technical Recruiter",
+    "required_skills": "['Excellent Communication', 'Diversity Sourcing', 'Strong WORK Ethic', 'Negotiation', 'Talent Sourcing', 'Applicant Tracking System', 'Microsoft Office Suite', 'Pipeline']"
+  },
+  {
+    "job_name": "Technical Support Specialist",
+    "required_skills": "['Microsoft Windows', 'Operating Systems', 'Written Communication', 'Computer Literate', 'Microsoft Office Suite', 'Windows 10', 'Active Directory', 'Configuration']"
+  },
+  {
+    "job_name": "Technical Support Engineer",
+    "required_skills": "['Linux System', 'Operating Systems', 'Scripting Languages', 'Python', 'Windows', 'Javascript', 'MS SQL', 'UNIX Linux']"
+  },
+  {
+    "job_name": "Technical Support Specialist",
+    "required_skills": "['Microsoft Windows', 'Operating Systems', 'Written Communication', 'Computer Literate', 'Microsoft Office Suite', 'Windows 10', 'Active Directory', 'Configuration']"
+  },
+  {
+    "job_name": "Telemarketer",
+    "required_skills": "['Negotiation', 'Microsoft Office Suite', 'VERBAL Communication', 'Excellent Communication', 'CRM', 'Bilingual', 'Excellent Customer Service', 'Spanish']"
+  },
+  {
+    "job_name": "Teller",
+    "required_skills": "['Military Experience', 'Professionalism', 'Multilingual', 'Leadership', 'Fluent English', 'IN Spanish', 'Relationship-building', 'Effective Communication']"
+  },
+  {
+    "job_name": "Test Engineer",
+    "required_skills": "['Test Plans', 'Test Automation', 'Scripting', 'Selenium', 'Test Cases', 'SQL Server', 'Security Clearance', 'Agile']"
+  },
+  {
+    "job_name": "Toxicologist",
+    "required_skills": "['Evaluating', 'PBPK', 'Conducting', 'Responses', 'Selecting', 'Excellent Communication', 'Security Clearance', 'Faxing']"
+  },
+  {
+    "job_name": "Training Specialist",
+    "required_skills": "['Security Clearance', 'Excellent Communication', 'CompTIA Security', 'Microsoft Office Suite', 'Writing', 'PeopleSoft HCM', 'Powerpoint', 'Written Communication']"
+  },
+  {
+    "job_name": "Training Manager",
+    "required_skills": "['Strong WORK Ethic', 'Views', 'Cocoa', 'Team Leadership', 'Excellent Customer Service', 'Pipeline', 'Public Speaking', 'Excellent Communication']"
+  },
+  {
+    "job_name": "Travel Consultant",
+    "required_skills": "['DSL', 'Requests', 'Consulting', 'Operating Systems', 'Arrangements', 'Composure', 'Integrator', 'Excellent Communication']"
+  },
+  {
+    "job_name": "CFO",
+    "required_skills": "['CDL', 'Property Management Accounting', 'Leadership', 'Microsoft Office Suite', 'Masters IN Finance', 'Bachelors IN Finance', 'Due Diligence', 'Negotiation']"
+  },
+  {
+    "job_name": "Tutor",
+    "required_skills": "['Teaching Experience', 'VERBAL Communication', 'Interpersonal and Communication', 'English', 'Schedules', 'Writing', 'Effective Communication', 'Calculus']"
+  },
+  {
+    "job_name": "UX Designer",
+    "required_skills": "['UX Design', 'Adobe Creative Suite', 'Wireframes', 'UI UX', 'User Interface', 'Adobe XD', 'HTML5', 'CSS3']"
+  },
+  {
+    "job_name": "Front End Engineer",
+    "required_skills": "['HTML AND CSS', 'javascript/jquery', 'angular.js', 'Frameworks', 'ReactJS', 'Restful APIS', 'Redux', 'UI UX']"
+  },
+  {
+    "job_name": "Underwriter",
+    "required_skills": "['Excellent Communication', 'Leadership Development Program', 'Microsoft Office Software', 'Problem Solving Ability', 'Banking Experience', 'FileMaker Pro', 'Reviews', 'Requests']"
+  },
+  {
+    "job_name": "Unit Secretary",
+    "required_skills": "['Network Computer', 'Excellent Customer Service', 'Interpersonal and Communication', 'English Language', 'Faxing', 'CPR', 'Filing', 'Dexterity']"
+  },
+  {
+    "job_name": "Universal Banker",
+    "required_skills": "['Client Interaction', 'Problem Resolution', 'Product Knowledge', 'Requests', 'Banking Experience', 'Excellent Customer Service', 'Written Communication', 'Prospects']"
+  },
+  {
+    "job_name": "Urban Planner",
+    "required_skills": "['Excellent Communication', 'Critical Thinking', 'MS OUTLOOK', 'Judgement', 'MQ', 'Top Secret Clearance', 'MS Word', 'Report Writing']"
+  },
+  {
+    "job_name": "Usher",
+    "required_skills": "['DTP', 'English', 'Latin', 'Modifications', 'Excellent Communication', 'Requests', 'Schedules', 'Excellent Customer Service']"
+  },
+  {
+    "job_name": "UX Designer",
+    "required_skills": "['UX Design', 'Adobe Creative Suite', 'Wireframes', 'UI UX', 'User Interface', 'Adobe XD', 'HTML5', 'CSS3']"
+  },
+  {
+    "job_name": "Valet",
+    "required_skills": "['Japanese Speaking', 'English Language', 'Excellent Customer Service', 'Sign Language', 'Stick', 'Schedules', 'Excellent Communication', 'Interpersonal and Communication']"
+  },
+  {
+    "job_name": "Video Editor",
+    "required_skills": "['Editing', 'Adobe Premiere Pro', 'Adobe Creative Suite', 'Final Cut', 'Adobe Photoshop', 'Attention To Detail', 'Meet Deadlines', 'Adobe After Effects']"
+  },
+  {
+    "job_name": "Graphic Designer",
+    "required_skills": "['Indesign Photoshop', 'Adobe Creative Suite', 'Adobe Creative Cloud', 'HTML AND CSS', 'Microsoft Office Suite', 'Excellent Communication', 'Editing', 'Powerpoint']"
+  },
+  {
+    "job_name": "Visual Merchandiser",
+    "required_skills": "['Product Knowledge', 'Javascript', 'Excellent Communication', 'Computer Literacy', 'Time Management', 'SQL Server', 'Collaboration', 'Strong VERBAL']"
+  },
+  {
+    "job_name": "Server",
+    "required_skills": "['VERBAL Communication', 'Writing', 'Excellent Communication', 'Modifications', 'Requests', 'English Language', 'Excellent Customer Service', 'Positive Attitude']"
+  },
+  {
+    "job_name": "Warehouse Worker",
+    "required_skills": "['Urgency', 'Written Communication', 'Attention To Detail', 'English Language', 'Load Unload', 'Computer Literate', 'Picking Packing', 'Excellent Customer Service']"
+  },
+  {
+    "job_name": "Zookeeper",
+    "required_skills": []
+  }
+]

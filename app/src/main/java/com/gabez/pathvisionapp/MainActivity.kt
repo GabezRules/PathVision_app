@@ -1,14 +1,13 @@
 package com.gabez.pathvisionapp
 
-import android.content.res.Resources
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentStatePagerAdapter
 import androidx.viewpager.widget.ViewPager
-import com.gabez.pathvisionapp.app.paths.MainFragment
-import com.gabez.pathvisionapp.app.search.SearchFragment
+import com.gabez.pathvisionapp.app.paths.view.MainFragment
+import com.gabez.pathvisionapp.app.search.view.SearchFragment
 import com.gabez.pathvisionapp.app.settings.SettingsFragment
 import com.iammert.library.AnimatedTabLayout
 

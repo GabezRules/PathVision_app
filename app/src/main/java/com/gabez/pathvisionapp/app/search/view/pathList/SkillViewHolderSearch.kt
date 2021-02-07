@@ -1,4 +1,4 @@
-package com.gabez.pathvisionapp.app.search.pathList
+package com.gabez.pathvisionapp.app.search.view.pathList
 
 import android.content.Context
 import android.view.View

@@ -1,6 +1,5 @@
-package com.gabez.pathvisionapp.app.paths.pathList
+package com.gabez.pathvisionapp.app.paths.view.pathList
 
-import android.content.Context
 import android.view.View
 import android.widget.ImageView
 
@@ -9,11 +8,12 @@ import androidx.core.content.ContextCompat
 import com.gabez.pathvisionapp.R
 import com.gabez.pathvisionapp.app.paths.entities.SkillForView
 import com.gabez.pathvisionapp.app.paths.entities.SkillStatus
+import com.gabez.pathvisionapp.app.paths.view.MainFragment
 
 import com.thoughtbot.expandablerecyclerview.viewholders.ChildViewHolder
 
 
-class SkillViewHolderMain(private var itemViewSkill: View, var context: Context) : ChildViewHolder(itemViewSkill) {
+class SkillViewHolderMain(private var itemViewSkill: View, var callback: MainFragment) : ChildViewHolder(itemViewSkill) {
     private val skillName: TextView = itemViewSkill.findViewById(R.id.skillName)
     private val emptyBtn: ImageView = itemViewSkill.findViewById(R.id.skillPause)
     private val inProgressBtn: ImageView = itemViewSkill.findViewById(R.id.skillInProgress)
@@ -21,6 +21,7 @@ class SkillViewHolderMain(private var itemViewSkill: View, var context: Context)
 
     fun setupSkill(skill: SkillForView) {
         skillName.text = skill.title
+        val context = callback.requireContext()
 
         when(skill.status){
             SkillStatus.EMPTY -> {
@@ -46,7 +47,9 @@ class SkillViewHolderMain(private var itemViewSkill: View, var context: Context)
             }
         }
 
-        //TODO: Set on button click listener
+        emptyBtn.setOnClickListener { callback.changeSkillStatus(skill, SkillStatus.EMPTY) }
+        inProgressBtn.setOnClickListener { callback.changeSkillStatus(skill, SkillStatus.IN_PROGRESS) }
+        doneBtn.setOnClickListener { callback.changeSkillStatus(skill, SkillStatus.DONE) }
     }
 
 }

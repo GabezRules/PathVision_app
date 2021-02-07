@@ -2,7 +2,7 @@ package com.gabez.pathvisionapp.data.localDatabase
 
 import com.gabez.pathvisionapp.data.localDatabase.entities.PathEntity
 
-class DbSkillHolder {
+class DbSkillCountHolder {
     private var skillCountInDb: HashMap<String, Int> = HashMap()
 
     fun isInDb(skill: String): Boolean =  skillCountInDb[skill] != null

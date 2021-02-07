@@ -50,8 +50,6 @@ class SkillViewHolderMain(private var itemViewSkill: View, var callback: MainFra
         emptyBtn.setOnClickListener { callback.changeSkillStatus(skill, SkillStatus.EMPTY) }
         inProgressBtn.setOnClickListener { callback.changeSkillStatus(skill, SkillStatus.IN_PROGRESS) }
         doneBtn.setOnClickListener { callback.changeSkillStatus(skill, SkillStatus.DONE) }
-
-        //TODO: Set on button click listener
     }
 
 }

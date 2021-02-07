@@ -1,7 +1,5 @@
 package com.gabez.pathvisionapp.app.search.entities
 
-
-//TODO: Update objects view after added to database
 val searchMockData = arrayListOf(
     PathForSearch(
         title = "Junior Android Developer",

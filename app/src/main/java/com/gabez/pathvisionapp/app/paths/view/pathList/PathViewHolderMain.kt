@@ -46,13 +46,11 @@ class PathViewHolderMain(itemView: View, private val callback: MainFragment) : G
     }
 
     fun showDeleteDialog(){
-        //TODO: Scale trash can animation
         val mBottomSheetDialog = BottomSheetMaterialDialog.Builder((callback as Fragment).requireActivity())
             .setTitle("Delete?")
             .setMessage("You will loose your skill progress. Are you sure you want to delete this path? ")
             .setCancelable(false)
             .setPositiveButton("Delete", R.drawable.ic_delete) { dialogInterface, _ ->
-                //TODO: delete item
                 Toast.makeText(callback.requireContext(), "Item deleted!", Toast.LENGTH_SHORT).show()
                 dialogInterface.dismiss()
             }

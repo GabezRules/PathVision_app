@@ -2,7 +2,7 @@ package com.gabez.pathvisionapp.data.dataSources
 
 import com.gabez.pathvisionapp.app.paths.entities.SkillStatus
 import com.gabez.pathvisionapp.data.localDatabase.DbPathsHolder
-import com.gabez.pathvisionapp.data.localDatabase.DbSkillHolder
+import com.gabez.pathvisionapp.data.localDatabase.DbSkillCountHolder
 import com.gabez.pathvisionapp.data.localDatabase.dbLogic.LocalDatabase
 import com.gabez.pathvisionapp.data.localDatabase.entities.PathEntity
 import com.gabez.pathvisionapp.data.localDatabase.entities.SkillEntity
@@ -12,7 +12,9 @@ import kotlinx.coroutines.launch
 
 class LocalDatasourceImpl(private val db: LocalDatabase, private val pathsHolder: DbPathsHolder): LocalDatasource {
 
-    var skillHolder = DbSkillHolder()
+    //TODO: Items from MainFragment are not deleting - fix it
+
+    var skillHolder = DbSkillCountHolder()
 
     init {
         GlobalScope.launch(Dispatchers.IO) { refreshPaths() }
@@ -35,8 +37,10 @@ class LocalDatasourceImpl(private val db: LocalDatabase, private val pathsHolder
 
     override suspend fun deletePath(path: PathEntity){
         db.dao().deletePath(path)
+
         for(skill in path.relatedSkills.split(";;")){
-            if(!skillHolder.isInOtherPath(skill)) db.dao().deleteSkill(skill)
+            //TODO: Potential bug here
+            //if(!skillHolder.isInOtherPath(skill)) db.dao().deleteSkill(skill)
         }
 
         refreshPaths()

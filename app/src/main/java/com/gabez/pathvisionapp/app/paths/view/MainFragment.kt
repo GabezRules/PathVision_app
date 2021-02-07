@@ -6,9 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.TextView
-import android.widget.Toast
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.airbnb.lottie.LottieAnimationView
@@ -17,9 +15,6 @@ import com.gabez.pathvisionapp.app.paths.entities.PathForView
 import com.gabez.pathvisionapp.app.paths.entities.SkillForView
 import com.gabez.pathvisionapp.app.paths.entities.SkillStatus
 import com.gabez.pathvisionapp.app.paths.view.pathList.ExpandablePathListAdapterMain
-import com.gabez.pathvisionapp.app.search.entities.PathForSearch
-import com.gabez.pathvisionapp.app.search.entities.PathStatus
-import com.gabez.pathvisionapp.app.search.view.pathList.ExpandablePathListAdapterSearch
 import com.shreyaspatil.MaterialDialog.BottomSheetMaterialDialog
 import org.koin.core.KoinComponent
 import org.koin.core.inject
@@ -49,19 +44,19 @@ class MainFragment : Fragment(), KoinComponent {
 
         adapterMain = ExpandablePathListAdapterMain(ArrayList(), this@MainFragment)
 
-        viewModel.savedPaths.observe(viewLifecycleOwner, Observer{ pathList ->
+        viewModel.savedPaths.observeForever{ pathList ->
             if(pathList.isEmpty()) showEmptyPathAlert()
             else{
                 hidePathAlert()
                 adapterMain = ExpandablePathListAdapterMain(pathList, this@MainFragment)
                 pathListView.adapter = adapterMain
             }
-        })
+        }
 
-        viewModel.isLoading.observe(viewLifecycleOwner, Observer{ isLoading ->
+        viewModel.isLoading.observeForever{  isLoading ->
             if(isLoading) showLoading()
             else hidePathAlert()
-        })
+        }
 
         pathListView.adapter = adapterMain
         pathListView.layoutManager = LinearLayoutManager(requireContext())
@@ -73,12 +68,12 @@ class MainFragment : Fragment(), KoinComponent {
 
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
-        adapterMain.onSaveInstanceState(outState)
+        //adapterMain.onSaveInstanceState(outState)
     }
 
     override fun onViewStateRestored(savedInstanceState: Bundle?) {
         super.onViewStateRestored(savedInstanceState)
-        adapterMain.onRestoreInstanceState(savedInstanceState)
+        //adapterMain.onRestoreInstanceState(savedInstanceState)
     }
 
     private fun showEmptyPathAlert(){

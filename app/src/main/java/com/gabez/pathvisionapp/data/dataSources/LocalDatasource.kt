@@ -11,5 +11,5 @@ interface LocalDatasource {
     suspend fun deletePath(path: PathEntity)
     suspend fun getAllPaths(): List<PathEntity>
     suspend fun getAllSkills(): List<SkillEntity>
-    suspend fun updateSkillStatus(skill: String, newStatus: SkillStatus): List<PathEntity>
+    suspend fun updateSkillStatus(skill: String, newStatus: SkillStatus)
 }

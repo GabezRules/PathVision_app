@@ -20,7 +20,7 @@ class ExpandablePathListAdapterMain(groups: List<ExpandableGroup<*>?>?, private 
 
     override fun onCreateChildViewHolder(parent: ViewGroup, viewType: Int): SkillViewHolderMain {
         val view: View = LayoutInflater.from(parent.context).inflate(R.layout.item_skill, parent, false)
-        return SkillViewHolderMain(view, callback.requireContext())
+        return SkillViewHolderMain(view, callback)
     }
 
     override fun onBindChildViewHolder(holderMain: SkillViewHolderMain, flatPosition: Int, group: ExpandableGroup<*>, childIndex: Int)

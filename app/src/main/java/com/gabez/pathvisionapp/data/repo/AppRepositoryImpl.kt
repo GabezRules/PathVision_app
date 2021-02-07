@@ -16,5 +16,5 @@ class AppRepositoryImpl(private val localSource: LocalDatasource, private val ap
     override suspend fun getLocalPaths() = localSource.getAllPaths()
     override suspend fun getLocalSkills(): List<SkillEntity> = localSource.getAllSkills()
 
-    override suspend fun updateSkillStatus(skill: String, newStatus: SkillStatus): List<PathEntity> = localSource.updateSkillStatus(skill, newStatus)
+    override suspend fun updateSkillStatus(skill: String, newStatus: SkillStatus) = localSource.updateSkillStatus(skill, newStatus)
 }

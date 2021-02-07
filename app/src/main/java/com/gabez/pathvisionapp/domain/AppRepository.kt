@@ -9,5 +9,5 @@ interface AppRepository {
     suspend fun deletePath(path: PathEntity)
     suspend fun getLocalPaths(): List<PathEntity>
     suspend fun getLocalSkills(): List<SkillEntity>
-    suspend fun updateSkillStatus(skill: String, newStatus: SkillStatus): List<PathEntity>
+    suspend fun updateSkillStatus(skill: String, newStatus: SkillStatus)
 }

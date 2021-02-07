@@ -11,6 +11,7 @@ import com.gabez.pathvisionapp.app.paths.entities.SkillForView
 import com.gabez.pathvisionapp.app.paths.entities.SkillStatus
 import com.gabez.pathvisionapp.app.search.entities.PathForSearch
 import com.gabez.pathvisionapp.app.search.entities.PathStatus
+import com.gabez.pathvisionapp.data.localDatabase.DbPathsHolder
 import com.gabez.pathvisionapp.data.localDatabase.entities.PathEntity
 import com.gabez.pathvisionapp.data.localDatabase.entities.SkillEntity
 import com.gabez.pathvisionapp.domain.usecases.DeletePathUsecase
@@ -26,7 +27,8 @@ class MainViewModel(
     private val getSkillsUsecase: GetLocalSkillsUsecase,
     private val updateSkillUsecase: UpdateSkillStatusUsecase,
     private val deletePathUsecase: DeletePathUsecase,
-    private val context: Context
+    private val context: Context,
+    private val allPaths: DbPathsHolder
 ) : ViewModel() {
 
     private val _savedPaths: MutableLiveData<ArrayList<PathForView>> = MutableLiveData(ArrayList())
@@ -37,6 +39,18 @@ class MainViewModel(
 
     init {
         getAllPaths()
+
+        allPaths.allPaths.observeForever {
+            _isLoading.postValue(true)
+            _savedPaths.postValue(
+                createPaths(
+                    allPaths.allSkills.value!!,
+                    allPaths.allPaths.value!!
+                )
+            )
+
+            _isLoading.postValue(false)
+        }
     }
 
     private fun getAllPaths() = GlobalScope.launch(Dispatchers.IO) {
@@ -89,7 +103,7 @@ class MainViewModel(
     }
 
     fun deletePath(path: PathForView) = viewModelScope.launch{ deletePathUsecase.invoke(path) }.invokeOnCompletion {
-        _savedPaths.value!!.map { pathFromList -> if(pathFromList.title == path.title) _savedPaths.value!!.remove(pathFromList) }
+        _savedPaths.value!!.remove(path)
         Toast.makeText(context, "Item deleted!", Toast.LENGTH_SHORT).show()
     }
 

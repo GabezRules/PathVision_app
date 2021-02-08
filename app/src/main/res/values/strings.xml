@@ -16,4 +16,8 @@
     <string name="empty_string"> </string>
     <string name="cancel">CANCEL</string>
     <string name="authentication_description">With set up account you can save your data and restore it on any mobile device with PathVision App after you log in!</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="logout">LOGOUT</string>
+    <string name="settings_nick_desc">"Welcome, "</string>
 </resources>

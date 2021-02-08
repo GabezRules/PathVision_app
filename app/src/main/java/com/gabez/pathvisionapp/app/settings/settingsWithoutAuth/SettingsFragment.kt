@@ -1,4 +1,4 @@
-package com.gabez.pathvisionapp.app.settings
+package com.gabez.pathvisionapp.app.settings.settingsWithoutAuth
 
 import android.os.Bundle
 import android.view.LayoutInflater

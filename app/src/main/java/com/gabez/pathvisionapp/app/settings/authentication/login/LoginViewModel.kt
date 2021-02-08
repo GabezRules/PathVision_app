@@ -6,12 +6,18 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.gabez.pathvisionapp.authentication.AuthErrorHolder
 import com.gabez.pathvisionapp.authentication.AuthLoadingHolder
+import com.gabez.pathvisionapp.authentication.CurrentUserHolder
 import com.gabez.pathvisionapp.authentication.usecases.LoginUsecase
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 
-class LoginViewModel(private val errorHolder: AuthErrorHolder, private val loadingStateHolder: AuthLoadingHolder, private val login: LoginUsecase) :
+class LoginViewModel(
+    private val errorHolder: AuthErrorHolder,
+    private val loadingStateHolder: AuthLoadingHolder,
+    private val userHolder: CurrentUserHolder,
+    private val login: LoginUsecase
+) :
     ViewModel() {
     val authenticationError: LiveData<String?> = errorHolder.authError
 
@@ -23,9 +29,11 @@ class LoginViewModel(private val errorHolder: AuthErrorHolder, private val loadi
 
     val isLoading: LiveData<Boolean> = loadingStateHolder.authenticationInProgress
 
+    val isLoggedIn: LiveData<Boolean> = userHolder.isLoggedIn
+
     fun loginUser(email: String, password: String) {
         if (isEmailValid(email)) {
-            if (!password.isNullOrBlank()) {
+            if (!password.isBlank()) {
                 GlobalScope.launch(Dispatchers.IO) { login.invoke(email, password) }
             } else _loginPasswordError.postValue("Enter a valid password!")
 

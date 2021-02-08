@@ -56,8 +56,11 @@ class RegisterBottomsheetFragment: BottomSheetDialogFragment(), KoinComponent {
             }else{
                 registerContainer.visibility = View.VISIBLE
                 registerLoading.visibility = View.GONE
-                this@RegisterBottomsheetFragment.dismiss()
             }
+        }
+
+        viewModel.isLoggedIn.observeForever { isLoggedIn ->
+            if(isLoggedIn) this@RegisterBottomsheetFragment.dismiss()
         }
 
         return view

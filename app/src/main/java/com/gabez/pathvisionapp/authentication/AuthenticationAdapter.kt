@@ -79,7 +79,7 @@ class AuthenticationAdapter(
     }
 
     private fun getUserFromDb(uid: String) {
-        fDatabase.reference.child("users").child(uid).get().addOnCompleteListener { task ->
+        fDatabase.reference.child(uid).get().addOnCompleteListener { task ->
             userHolder.setCurrentUser(task.result!!.getValue(UserObj::class.java))
         }
     }

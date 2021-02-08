@@ -57,6 +57,10 @@ class LoginBottomsheetFragment: BottomSheetDialogFragment(), KoinComponent {
             }
         }
 
+        viewModel.isLoggedIn.observeForever { isLoggedIn ->
+            if(isLoggedIn) this@LoginBottomsheetFragment.dismiss()
+        }
+
         return view
     }
 

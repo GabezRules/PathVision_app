@@ -1,8 +1,9 @@
 package com.gabez.pathvisionapp
 
+import com.gabez.pathvisionapp.app.MainActivityViewModel
 import com.gabez.pathvisionapp.app.paths.view.MainViewModel
 import com.gabez.pathvisionapp.app.search.view.SearchViewModel
-import com.gabez.pathvisionapp.app.settings.SettingsViewModel
+import com.gabez.pathvisionapp.app.settings.settingsWithoutAuth.SettingsViewModel
 import com.gabez.pathvisionapp.app.settings.authentication.login.LoginViewModel
 import com.gabez.pathvisionapp.app.settings.authentication.register.RegisterViewModel
 import com.gabez.pathvisionapp.authentication.AuthErrorHolder
@@ -28,10 +29,12 @@ val appModule = module {
     viewModel { MainViewModel(get(), get(), get(), get(), get(), get()) }
     viewModel { SearchViewModel(get(), get(), get(), get()) }
 
-    viewModel { SettingsViewModel() }
+    viewModel { SettingsViewModel(get()) }
 
-    viewModel { LoginViewModel(get(), get(), get()) }
-    viewModel { RegisterViewModel(get(), get(), get()) }
+    viewModel { LoginViewModel(get(), get(), get(), get()) }
+    viewModel { RegisterViewModel(get(), get(), get(), get()) }
+
+    viewModel { MainActivityViewModel(get()) }
 
     single { LocalDatabase.getInstance(get()) }
 

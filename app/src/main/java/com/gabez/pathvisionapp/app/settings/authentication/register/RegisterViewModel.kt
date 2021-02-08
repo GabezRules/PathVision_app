@@ -6,6 +6,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.gabez.pathvisionapp.authentication.AuthErrorHolder
 import com.gabez.pathvisionapp.authentication.AuthLoadingHolder
+import com.gabez.pathvisionapp.authentication.CurrentUserHolder
 import com.gabez.pathvisionapp.authentication.usecases.RegisterUsecase
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
@@ -14,6 +15,7 @@ import kotlinx.coroutines.launch
 class RegisterViewModel(
     private val errorHolder: AuthErrorHolder,
     private val loadingStateHolder: AuthLoadingHolder,
+    private val userHolder: CurrentUserHolder,
     private val register: RegisterUsecase
 ) :
     ViewModel() {
@@ -29,6 +31,8 @@ class RegisterViewModel(
     val registerUsernameError: LiveData<String?> = _registerUsernameError
 
     val isLoading: LiveData<Boolean> = loadingStateHolder.authenticationInProgress
+
+    val isLoggedIn: LiveData<Boolean> = userHolder.isLoggedIn
 
     fun registerUser(email: String, login: String, password: String) {
         if (isEmailValid(email)) {

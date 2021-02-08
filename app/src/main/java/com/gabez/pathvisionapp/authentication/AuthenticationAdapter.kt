@@ -11,13 +11,13 @@ import kotlinx.coroutines.launch
 class AuthenticationAdapter(
     private val userHolder: CurrentUserHolder,
     private val fDatabase: FirebaseDatabase,
-    private val authErrorHolder: AuthErrorHolder
+    private val authErrorHolder: AuthErrorHolder,
+    private val authLoadingHolder: AuthLoadingHolder
 ) {
 
     //TODO: Add authentication error an enum class
 
     private val auth: FirebaseAuth = FirebaseAuth.getInstance()
-    private var isInDb: Boolean = false
 
     init {
         if (auth.currentUser != null) {
@@ -25,31 +25,36 @@ class AuthenticationAdapter(
         } else userHolder.setCurrentUser(null)
     }
 
-    suspend fun registerUser(email: String, login: String, password: String) {
+    fun registerUser(email: String, login: String, password: String) {
+        authLoadingHolder.setAuthenticationState(true)
         auth.createUserWithEmailAndPassword(email, password)
             .addOnCompleteListener {
                 addUserToDb(createUser(auth.currentUser!!.uid, email, login))
                 authErrorHolder.setAuthError(null)
+                authLoadingHolder.setAuthenticationState(false)
             }
             .addOnCanceledListener {
-                GlobalScope.launch(Dispatchers.IO) { isUserInDb(email) }.invokeOnCompletion {
-                    if(isInDb) authErrorHolder.setAuthError("User with this email already exists!")
-                    else authErrorHolder.setAuthError("Unknown error. Try again later...")
-                }
+                GlobalScope.launch(Dispatchers.IO) { setupAuthErrorFromDb(email) }.invokeOnCompletion { authLoadingHolder.setAuthenticationState(false) }
             }
     }
 
-    suspend fun loginUser(email: String, password: String) {
+    fun loginUser(email: String, password: String) {
+        authLoadingHolder.setAuthenticationState(true)
         auth.signInWithEmailAndPassword(email, password)
             .addOnCompleteListener {
-                getUserFromDb(auth.currentUser!!.uid)
-                authErrorHolder.setAuthError(null)
+                val user = auth.currentUser
+                if(user!=null){
+                    getUserFromDb(auth.currentUser!!.uid)
+                    authErrorHolder.setAuthError(null)
+                    authLoadingHolder.setAuthenticationState(false)
+                }else {
+                    GlobalScope.launch(Dispatchers.IO) { setupAuthErrorFromDb(email) }
+                        .invokeOnCompletion { authLoadingHolder.setAuthenticationState(false) }
+                }
+
             }
             .addOnCanceledListener {
-                GlobalScope.launch(Dispatchers.IO) { isUserInDb(email) }.invokeOnCompletion {
-                    if(isInDb) authErrorHolder.setAuthError("Wrong password!")
-                    else authErrorHolder.setAuthError("Unknown error. Try again later...")
-                }
+                GlobalScope.launch(Dispatchers.IO) { setupAuthErrorFromDb(email) }.invokeOnCompletion { authLoadingHolder.setAuthenticationState(false) }
             }
     }
 
@@ -82,12 +87,18 @@ class AuthenticationAdapter(
     private fun createUser(uid: String, email: String, login: String): UserObj =
         UserObj(uid, email, login, ArrayList())
 
-    private suspend fun isUserInDb(email: String){
+    private fun setupAuthErrorFromDb(email: String){
+        var isInDb: Boolean = false
         fDatabase.reference.child("users").get().addOnCompleteListener { task ->
-            for(user in task.result!!.children){
-                val userObj = user.getValue(UserObj::class.java)
-                if(userObj!!.email == email) isInDb = true
+            if(task.result != null){
+                for(user in task.result!!.children){
+                    val userObj = user.getValue(UserObj::class.java)
+                    if(userObj!!.email == email) isInDb = true
+                }
             }
+
+            if(isInDb) authErrorHolder.setAuthError("Wrong password!")
+            else authErrorHolder.setAuthError("Unknown error. Try again later...")
         }
     }
 }

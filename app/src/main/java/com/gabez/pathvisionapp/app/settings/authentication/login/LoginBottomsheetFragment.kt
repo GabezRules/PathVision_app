@@ -28,8 +28,6 @@ class LoginBottomsheetFragment: BottomSheetDialogFragment(), KoinComponent {
 
     private val viewModel: LoginViewModel by inject()
 
-
-
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.fragment_bottomsheet_login, container, false)
 

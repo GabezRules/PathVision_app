@@ -31,7 +31,7 @@ val appModule = module {
     viewModel { SettingsViewModel() }
 
     viewModel { LoginViewModel(get(), get(), get()) }
-    viewModel { RegisterViewModel() }
+    viewModel { RegisterViewModel(get(), get(), get()) }
 
     single { LocalDatabase.getInstance(get()) }
 

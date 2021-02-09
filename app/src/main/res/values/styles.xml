@@ -29,6 +29,17 @@
         <item name="boxCornerRadiusTopStart">10dp</item>
     </style>
 
+    <style name="AuthenticationInputTheme" parent="Widget.Design.TextInputLayout">
+        <item name="hintAnimationEnabled">true</item>
+        <item name="boxBackgroundMode">filled</item>
+        <item name="boxBackgroundColor">@android:color/white</item>
+        <item name="backgroundColor">@android:color/white</item>
+        <item name="boxCornerRadiusBottomEnd">10dp</item>
+        <item name="boxCornerRadiusBottomStart">10dp</item>
+        <item name="boxCornerRadiusTopEnd">10dp</item>
+        <item name="boxCornerRadiusTopStart">10dp</item>
+    </style>
+
     <style name="EditTextTheme" parent="Widget.AppCompat.EditText">
         <item name="android:nestedScrollingEnabled" tools:targetApi="lollipop">true</item>
         <item name="android:paddingTop">12dp</item>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "691653127180",
+    "project_id": "pathvision-app",
+    "storage_bucket": "pathvision-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:691653127180:android:4e112d819e9c6ab822d229",
+        "android_client_info": {
+          "package_name": "com.gabez.pathvisionapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "691653127180-9s61a3jbs2ap0dnpdrs9fi0f688th39c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBG6m_wnzqaBjOmyxzhbZUOX3EOeoAuxAs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "691653127180-9s61a3jbs2ap0dnpdrs9fi0f688th39c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

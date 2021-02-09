@@ -1,4 +1,4 @@
-package com.gabez.pathvisionapp.data.remoteFirebaseDatabase
+package com.gabez.pathvisionapp.data.remoteFirebaseDatabase.entities
 
 import com.gabez.pathvisionapp.data.remoteFirebaseDatabase.entities.SkillFirebaseEntity
 

@@ -6,7 +6,7 @@ import com.gabez.pathvisionapp.data.dataSources.FirebaseDatasource
 import com.gabez.pathvisionapp.data.dataSources.LocalDatasource
 import com.gabez.pathvisionapp.data.localDatabase.entities.PathEntity
 import com.gabez.pathvisionapp.data.localDatabase.entities.SkillEntity
-import com.gabez.pathvisionapp.data.remoteFirebaseDatabase.PathFirebaseEntity
+import com.gabez.pathvisionapp.data.remoteFirebaseDatabase.entities.PathFirebaseEntity
 import com.gabez.pathvisionapp.data.remoteFirebaseDatabase.entities.SkillFirebaseEntity
 import com.gabez.pathvisionapp.domain.AppRepository
 import kotlinx.coroutines.flow.Flow
@@ -37,8 +37,8 @@ class AppRepositoryImpl(
     override suspend fun getLocalPaths() = localSource.getAllPaths()
     override suspend fun getLocalSkills(): List<SkillEntity> = localSource.getAllSkills()
 
-    override suspend fun getRemotePaths(): Flow<List<PathFirebaseEntity>> = firebaseSource.getRemotePaths()
-    override suspend fun getRemoteSkills(): Flow<List<SkillFirebaseEntity>> = firebaseSource.getRemoteSkills()
+    override suspend fun getRemotePaths(): Flow<List<PathFirebaseEntity>>? = firebaseSource.getRemotePaths()
+    override suspend fun getRemoteSkills(): Flow<List<SkillFirebaseEntity>>? = firebaseSource.getRemoteSkills()
 
     override suspend fun updateSkillStatus(skill: String, newStatus: SkillStatus) {
         localSource.updateSkillStatus(skill, newStatus)

@@ -4,9 +4,9 @@ import android.util.Patterns
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.gabez.pathvisionapp.authentication.AuthErrorHolder
-import com.gabez.pathvisionapp.authentication.AuthLoadingHolder
-import com.gabez.pathvisionapp.authentication.CurrentUserHolder
+import com.gabez.pathvisionapp.authentication.statusHolders.AuthErrorHolder
+import com.gabez.pathvisionapp.authentication.statusHolders.AuthLoadingHolder
+import com.gabez.pathvisionapp.authentication.statusHolders.CurrentUserHolder
 import com.gabez.pathvisionapp.authentication.usecases.LoginUsecase
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope

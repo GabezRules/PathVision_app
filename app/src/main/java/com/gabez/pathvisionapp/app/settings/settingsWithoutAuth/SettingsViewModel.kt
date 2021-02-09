@@ -1,7 +1,7 @@
 package com.gabez.pathvisionapp.app.settings.settingsWithoutAuth
 
 import androidx.lifecycle.ViewModel
-import com.gabez.pathvisionapp.authentication.CurrentUserHolder
+import com.gabez.pathvisionapp.authentication.statusHolders.CurrentUserHolder
 import com.gabez.pathvisionapp.authentication.usecases.DeleteAccountUsecase
 import com.gabez.pathvisionapp.authentication.usecases.LogoutUsecase
 

@@ -1,6 +1,9 @@
 package com.gabez.pathvisionapp.authentication
 
 import com.gabez.pathvisionapp.authentication.entities.UserObj
+import com.gabez.pathvisionapp.authentication.statusHolders.AuthErrorHolder
+import com.gabez.pathvisionapp.authentication.statusHolders.AuthLoadingHolder
+import com.gabez.pathvisionapp.authentication.statusHolders.CurrentUserHolder
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
 import kotlinx.coroutines.Dispatchers
@@ -73,13 +76,13 @@ class AuthenticationAdapter(
     }
 
     private fun addUserToDb(user: UserObj) {
-        fDatabase.reference.child(user.uid).setValue(user).addOnCompleteListener {
+        fDatabase.reference.child("users").child(user.uid).setValue(user).addOnCompleteListener {
             userHolder.setCurrentUser(user)
         }
     }
 
     private fun getUserFromDb(uid: String) {
-        fDatabase.reference.child(uid).get().addOnCompleteListener { task ->
+        fDatabase.reference.child("users").child(uid).get().addOnCompleteListener { task ->
             userHolder.setCurrentUser(task.result!!.getValue(UserObj::class.java))
         }
     }

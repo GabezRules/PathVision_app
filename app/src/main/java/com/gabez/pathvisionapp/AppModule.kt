@@ -10,7 +10,9 @@ import com.gabez.pathvisionapp.authentication.AuthErrorHolder
 import com.gabez.pathvisionapp.authentication.AuthLoadingHolder
 import com.gabez.pathvisionapp.authentication.AuthenticationAdapter
 import com.gabez.pathvisionapp.authentication.CurrentUserHolder
+import com.gabez.pathvisionapp.authentication.usecases.DeleteAccountUsecase
 import com.gabez.pathvisionapp.authentication.usecases.LoginUsecase
+import com.gabez.pathvisionapp.authentication.usecases.LogoutUsecase
 import com.gabez.pathvisionapp.authentication.usecases.RegisterUsecase
 import com.gabez.pathvisionapp.data.dataSources.ApiDatasource
 import com.gabez.pathvisionapp.data.dataSources.ApiDatasourceImpl
@@ -29,7 +31,7 @@ val appModule = module {
     viewModel { MainViewModel(get(), get(), get(), get(), get(), get()) }
     viewModel { SearchViewModel(get(), get(), get(), get()) }
 
-    viewModel { SettingsViewModel(get()) }
+    viewModel { SettingsViewModel(get(), get(), get()) }
 
     viewModel { LoginViewModel(get(), get(), get(), get()) }
     viewModel { RegisterViewModel(get(), get(), get(), get()) }
@@ -41,7 +43,7 @@ val appModule = module {
     single { ApiDatasourceImpl() as ApiDatasource }
     single { LocalDatasourceImpl(get(), get()) as LocalDatasource }
 
-    single { AppRepositoryImpl(get(), get()) as AppRepository }
+    single { AppRepositoryImpl(get(), get(), get()) as AppRepository }
 
     single { DeletePathUsecase(get()) }
     single { AddPathUsecase(get()) }
@@ -59,6 +61,8 @@ val appModule = module {
 
     single { LoginUsecase(get()) }
     single { RegisterUsecase(get()) }
+    single { LogoutUsecase(get()) }
+    single { DeleteAccountUsecase(get()) }
 
     single { FirebaseDatabase.getInstance() }
 }

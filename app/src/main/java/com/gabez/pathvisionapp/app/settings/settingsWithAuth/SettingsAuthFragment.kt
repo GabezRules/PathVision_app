@@ -15,6 +15,7 @@ import org.koin.core.inject
 class SettingsAuthFragment : Fragment(), KoinComponent {
 
     private lateinit var buttonLogout: MaterialButton
+    private lateinit var buttonDeleteAccount: MaterialButton
     private lateinit var username: TextView
 
     private val viewModel: SettingsViewModel by inject()
@@ -23,6 +24,11 @@ class SettingsAuthFragment : Fragment(), KoinComponent {
         val view = inflater.inflate(R.layout.fragment_settings_auth, container, false)
 
         buttonLogout = view.findViewById(R.id.buttonLogout)
+        buttonLogout.setOnClickListener { viewModel.logout() }
+
+        buttonDeleteAccount = view.findViewById(R.id.buttonDeleteAccount)
+        buttonDeleteAccount.setOnClickListener { viewModel.deleteAccount() }
+
         username = view.findViewById(R.id.username)
 
         viewModel.currentUser.observeForever { if(it!=null) username.text = it.login }

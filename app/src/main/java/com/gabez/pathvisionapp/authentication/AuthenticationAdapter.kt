@@ -58,12 +58,12 @@ class AuthenticationAdapter(
             }
     }
 
-    suspend fun logoutUser(){
+    fun logoutUser(){
         auth.signOut()
         userHolder.setCurrentUser(null)
     }
 
-    suspend fun deleteUser(){
+    fun deleteUser(){
         val uid = auth.currentUser!!.uid
 
         auth.currentUser!!.delete()

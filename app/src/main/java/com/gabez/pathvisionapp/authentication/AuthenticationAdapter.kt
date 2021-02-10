@@ -10,12 +10,12 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 
-
 class AuthenticationAdapter(
     private val userHolder: CurrentUserHolder,
     private val fDatabase: FirebaseDatabase,
     private val authErrorHolder: AuthErrorHolder,
-    private val authLoadingHolder: AuthLoadingHolder
+    private val authLoadingHolder: AuthLoadingHolder,
+    private val compare: PostLoginCompare
 ) {
 
     //TODO: Add authentication error an enum class
@@ -23,6 +23,8 @@ class AuthenticationAdapter(
     private val auth: FirebaseAuth = FirebaseAuth.getInstance()
 
     init {
+        fDatabase.setPersistenceEnabled(true)
+
         if (auth.currentUser != null) {
             getUserFromDb(auth.currentUser!!.uid)
         } else userHolder.setCurrentUser(null)
@@ -32,9 +34,13 @@ class AuthenticationAdapter(
         authLoadingHolder.setAuthenticationState(true)
         auth.createUserWithEmailAndPassword(email, password)
             .addOnCompleteListener {
-                addUserToDb(createUser(auth.currentUser!!.uid, email, login))
-                authErrorHolder.setAuthError(null)
-                authLoadingHolder.setAuthenticationState(false)
+                GlobalScope.launch(Dispatchers.IO) {
+                    addUserToDb(createUser(auth.currentUser!!.uid, email, login))
+                    authErrorHolder.setAuthError(null)
+                    authLoadingHolder.setAuthenticationState(false)
+                }.invokeOnCompletion {
+
+                }
             }
             .addOnCanceledListener {
                 GlobalScope.launch(Dispatchers.IO) { setupAuthErrorFromDb(email) }.invokeOnCompletion { authLoadingHolder.setAuthenticationState(false) }
@@ -47,9 +53,16 @@ class AuthenticationAdapter(
             .addOnCompleteListener {
                 val user = auth.currentUser
                 if(user!=null){
-                    getUserFromDb(auth.currentUser!!.uid)
-                    authErrorHolder.setAuthError(null)
-                    authLoadingHolder.setAuthenticationState(false)
+                    var dataMatch: Boolean = false
+
+                    GlobalScope.launch (Dispatchers.IO) {
+                        dataMatch = compare.areTheSame()
+                    }.invokeOnCompletion {
+                        getUserFromDb(auth.currentUser!!.uid)
+                        authErrorHolder.setAuthError(null)
+                        authLoadingHolder.setAuthenticationState(false)
+                    }
+
                 }else {
                     GlobalScope.launch(Dispatchers.IO) { setupAuthErrorFromDb(email) }
                         .invokeOnCompletion { authLoadingHolder.setAuthenticationState(false) }

@@ -9,6 +9,7 @@ import com.gabez.pathvisionapp.app.settings.authentication.register.RegisterView
 import com.gabez.pathvisionapp.authentication.statusHolders.AuthErrorHolder
 import com.gabez.pathvisionapp.authentication.statusHolders.AuthLoadingHolder
 import com.gabez.pathvisionapp.authentication.AuthenticationAdapter
+import com.gabez.pathvisionapp.authentication.PostLoginCompare
 import com.gabez.pathvisionapp.authentication.statusHolders.CurrentUserHolder
 import com.gabez.pathvisionapp.authentication.usecases.DeleteAccountUsecase
 import com.gabez.pathvisionapp.authentication.usecases.LoginUsecase
@@ -17,6 +18,7 @@ import com.gabez.pathvisionapp.authentication.usecases.RegisterUsecase
 import com.gabez.pathvisionapp.data.dataSources.*
 import com.gabez.pathvisionapp.data.localDatabase.DbPathsHolder
 import com.gabez.pathvisionapp.data.localDatabase.dbLogic.LocalDatabase
+import com.gabez.pathvisionapp.data.remoteFirebaseDatabase.FirebaseDataHolder
 import com.gabez.pathvisionapp.data.remoteFirebaseDatabase.dbLogic.FirebaseDbAdapter
 import com.gabez.pathvisionapp.data.remoteFirebaseDatabase.dbLogic.FirebaseDbAdapterImpl
 import com.gabez.pathvisionapp.data.repo.AppRepositoryImpl
@@ -46,7 +48,7 @@ val appModule = module {
 
     single { AppRepositoryImpl(get(), get(), get()) as AppRepository }
 
-    single { FirebaseDbAdapterImpl(get(), get()) as FirebaseDbAdapter }
+    single { FirebaseDbAdapterImpl(get(), get(), get()) as FirebaseDbAdapter }
 
     single { DeletePathUsecase(get()) }
     single { AddPathUsecase(get()) }
@@ -56,7 +58,7 @@ val appModule = module {
 
     single { DbPathsHolder() }
 
-    single { AuthenticationAdapter(get(), get(), get(), get()) }
+    single { AuthenticationAdapter(get(), get(), get(), get(), get()) }
 
     single { CurrentUserHolder() }
     single { AuthErrorHolder() }
@@ -69,4 +71,7 @@ val appModule = module {
 
     single { FirebaseDatabase.getInstance() }
     single { FirebaseAuth.getInstance() }
+
+    single { PostLoginCompare(get(), get()) }
+    single { FirebaseDataHolder() }
 }

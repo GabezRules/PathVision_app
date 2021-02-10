@@ -13,6 +13,6 @@ interface FirebaseDbAdapter {
 
     fun updateSkillStatus(skill: SkillFirebaseEntity)
 
-    fun getRemotePaths(): Flow<List<PathFirebaseEntity>>
-    fun getRemoteSkills(): Flow<List<SkillFirebaseEntity>>
+    fun getRemotePaths()
+    fun getRemoteSkills()
 }

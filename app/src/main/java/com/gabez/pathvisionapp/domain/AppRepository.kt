@@ -13,6 +13,6 @@ interface AppRepository {
     suspend fun getLocalPaths(): List<PathEntity>
     suspend fun getLocalSkills(): List<SkillEntity>
     suspend fun updateSkillStatus(skill: String, newStatus: SkillStatus)
-    suspend fun getRemotePaths(): Flow<List<PathFirebaseEntity>>?
-    suspend fun getRemoteSkills(): Flow<List<SkillFirebaseEntity>>?
+    suspend fun getRemotePaths()
+    suspend fun getRemoteSkills()
 }

@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
@@ -15,7 +16,10 @@ import com.gabez.pathvisionapp.app.search.entities.PathStatus
 import com.gabez.pathvisionapp.app.search.entities.searchMockData
 import com.gabez.pathvisionapp.app.search.view.pathList.ExpandablePathListAdapterSearch
 import com.gabez.pathvisionapp.app.search.view.pathList.PathCategoryAdapter
+import com.google.android.material.button.MaterialButton
+import com.google.android.material.textfield.TextInputEditText
 import com.shreyaspatil.MaterialDialog.BottomSheetMaterialDialog
+import kotlinx.coroutines.InternalCoroutinesApi
 import org.koin.core.KoinComponent
 import org.koin.core.inject
 
@@ -23,23 +27,61 @@ class SearchFragment : Fragment(), KoinComponent {
 
     private lateinit var adapterSearch: ExpandablePathListAdapterSearch
     private lateinit var pathListView: RecyclerView
+    private lateinit var buttonSearch: MaterialButton
+
+    private lateinit var searchEditText: TextInputEditText
+    private lateinit var errorMessage: TextView
 
     private val viewModel: SearchViewModel by inject()
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    @InternalCoroutinesApi
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
         val view = inflater.inflate(R.layout.fragment_search, container, false)
 
         adapterSearch = ExpandablePathListAdapterSearch(searchMockData, this@SearchFragment)
+        searchEditText = view.findViewById(R.id.searchPath)
+
+        buttonSearch = view.findViewById(R.id.buttonSearch)
+        buttonSearch.setOnClickListener { viewModel.searchPath(searchEditText.text.toString()) }
 
         pathListView = view.findViewById(R.id.searchListView)
         pathListView.adapter = adapterSearch
         pathListView.layoutManager = LinearLayoutManager(requireContext())
 
-        viewModel.searchData.observe(viewLifecycleOwner, Observer{ pathList ->
+        viewModel.searchData.observe(viewLifecycleOwner, Observer { pathList ->
             adapterSearch = ExpandablePathListAdapterSearch(pathList, this@SearchFragment)
             pathListView.adapter = adapterSearch
             pathListView.invalidate()
         })
+
+        errorMessage = view.findViewById(R.id.errorMessage)
+
+        viewModel.error.observeForever { error ->
+            if (error != "") {
+                pathListView.visibility = View.GONE
+                errorMessage.visibility = View.VISIBLE
+                errorMessage.text = error
+            } else {
+                pathListView.visibility = View.VISIBLE
+                errorMessage.visibility = View.GONE
+            }
+        }
+
+        viewModel.isLoading.observeForever { isLoading ->
+            if (isLoading) {
+                pathListView.visibility = View.GONE
+                errorMessage.visibility = View.VISIBLE
+                errorMessage.text = "loading"
+            } else {
+                pathListView.visibility = View.VISIBLE
+                errorMessage.visibility = View.GONE
+            }
+
+        }
 
         return view
     }
@@ -60,7 +102,7 @@ class SearchFragment : Fragment(), KoinComponent {
             SearchFragment()
     }
 
-    fun addPath(path: PathForSearch){
+    fun addPath(path: PathForSearch) {
         viewModel.addPath(path)
 
         val itemPosition = adapterSearch.groups.indexOf(path)
@@ -68,7 +110,7 @@ class SearchFragment : Fragment(), KoinComponent {
         (pathListView.adapter as ExpandablePathListAdapterSearch).notifyItemChanged(itemPosition)
     }
 
-    fun deletePath(path: PathForSearch){
+    fun deletePath(path: PathForSearch) {
         val mBottomSheetDialog = BottomSheetMaterialDialog.Builder(requireActivity())
             .setTitle("Delete?")
             .setMessage("You will loose your skill progress. Are you sure you want to delete this path? ")
@@ -78,7 +120,9 @@ class SearchFragment : Fragment(), KoinComponent {
 
                 val itemPosition = adapterSearch.groups.indexOf(path)
                 (adapterSearch.groups[itemPosition] as PathForSearch).status = PathStatus.NOT_ADDED
-                (pathListView.adapter as ExpandablePathListAdapterSearch).notifyItemChanged(itemPosition)
+                (pathListView.adapter as ExpandablePathListAdapterSearch).notifyItemChanged(
+                    itemPosition
+                )
 
                 dialogInterface.dismiss()
             }

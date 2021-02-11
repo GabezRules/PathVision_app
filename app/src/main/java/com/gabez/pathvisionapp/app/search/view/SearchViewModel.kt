@@ -10,39 +10,58 @@ import com.gabez.pathvisionapp.app.search.entities.PathForSearch
 import com.gabez.pathvisionapp.app.search.entities.PathStatus
 import com.gabez.pathvisionapp.app.search.entities.searchMockData
 import com.gabez.pathvisionapp.data.localDatabase.DbPathsHolder
+import com.gabez.pathvisionapp.data.remoteApiDatabase.ApiPathsHolder
+import com.gabez.pathvisionapp.data.remoteApiDatabase.entities.PathFromServer
 import com.gabez.pathvisionapp.domain.usecases.AddPathUsecase
 import com.gabez.pathvisionapp.domain.usecases.DeletePathUsecase
+import com.gabez.pathvisionapp.domain.usecases.SearchPathUsecase
+import kotlinx.coroutines.InternalCoroutinesApi
+import kotlinx.coroutines.flow.FlowCollector
 import kotlinx.coroutines.launch
 
 class SearchViewModel(
     private val addPathUsecase: AddPathUsecase,
     private val deletePathUsecase: DeletePathUsecase,
+    private val searchPathUsecase: SearchPathUsecase,
     private val context: Context,
-    private val allPaths: DbPathsHolder
+    private val allPathsDb: DbPathsHolder,
+    private val allPathsApi: ApiPathsHolder
 ) : ViewModel() {
 
     private val _mockData: MutableLiveData<ArrayList<PathForSearch>> = MutableLiveData()
     var searchData: LiveData<ArrayList<PathForSearch>> = _mockData
 
+    val error: LiveData<String> = allPathsApi.error
+    val isLoading: LiveData<Boolean> = allPathsApi.isLoading
+
     init {
         _mockData.value = searchMockData
-        allPaths.allPaths.observeForever { refreshMockData() }
+        allPathsDb.allPaths.observeForever { refreshMockData() }
+        allPathsApi.allPaths.observeForever { allPaths -> _mockData.postValue(ArrayList(allPaths.map { path -> path.toPathForSearch() })) }
     }
 
-    fun deletePath(path: PathForSearch) = viewModelScope.launch{ deletePathUsecase.invoke(path.toPathEntity()) }.invokeOnCompletion {
-        refreshMockData()
-        Toast.makeText(context, "Item deleted!", Toast.LENGTH_SHORT).show()
+    @InternalCoroutinesApi
+    fun searchPath(keyword: String) = viewModelScope.launch {
+        _mockData.value!!.clear()
+        searchPathUsecase.invoke(keyword)
     }
 
-    fun addPath(path: PathForSearch) = viewModelScope.launch{ addPathUsecase.invoke(path) }.invokeOnCompletion {
-        refreshMockData()
-        Toast.makeText(context, "Item added!", Toast.LENGTH_SHORT).show()
-    }
+    fun deletePath(path: PathForSearch) =
+        viewModelScope.launch { deletePathUsecase.invoke(path.toPathEntity()) }.invokeOnCompletion {
+            refreshMockData()
+            Toast.makeText(context, "Item deleted!", Toast.LENGTH_SHORT).show()
+        }
 
-    private fun refreshMockData(){
-        for(userPath in allPaths.allPaths.value!!){
-            for(searchPath in _mockData.value!!){
-                if(userPath.name == searchPath.title) searchPath.status = PathStatus.ADDED
+    fun addPath(path: PathForSearch) =
+        viewModelScope.launch { addPathUsecase.invoke(path) }.invokeOnCompletion {
+            refreshMockData()
+            Toast.makeText(context, "Item added!", Toast.LENGTH_SHORT).show()
+        }
+
+    private fun refreshMockData() {
+        for (foundPath in allPathsDb.allPaths.value!!) {
+            for (searchPath in _mockData.value!!) {
+                if (foundPath.name == searchPath.title) searchPath.status = PathStatus.ADDED
                 else searchPath.status = PathStatus.NOT_ADDED
             }
         }

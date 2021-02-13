@@ -18,7 +18,6 @@
 
     <style name="SearchBarTheme" parent="Widget.Design.TextInputLayout">
         <item name="hintAnimationEnabled">true</item>
-        <item name="android:hint">@string/search_by_keyword</item>
         <item name="endIconMode">clear_text</item>
         <item name="boxBackgroundMode">filled</item>
         <item name="boxBackgroundColor">@android:color/white</item>

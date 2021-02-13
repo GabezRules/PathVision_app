@@ -8,21 +8,22 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.gabez.pathvisionapp.app.search.entities.PathForSearch
 import com.gabez.pathvisionapp.app.search.entities.PathStatus
+import com.gabez.pathvisionapp.app.search.entities.SearchType
 import com.gabez.pathvisionapp.app.search.entities.searchMockData
 import com.gabez.pathvisionapp.data.localDatabase.DbPathsHolder
 import com.gabez.pathvisionapp.data.remoteApiDatabase.ApiPathsHolder
-import com.gabez.pathvisionapp.data.remoteApiDatabase.entities.PathFromServer
 import com.gabez.pathvisionapp.domain.usecases.AddPathUsecase
 import com.gabez.pathvisionapp.domain.usecases.DeletePathUsecase
-import com.gabez.pathvisionapp.domain.usecases.SearchPathUsecase
+import com.gabez.pathvisionapp.domain.usecases.SearchPathByKeywordUsecase
+import com.gabez.pathvisionapp.domain.usecases.SearchPathBySkillUsecase
 import kotlinx.coroutines.InternalCoroutinesApi
-import kotlinx.coroutines.flow.FlowCollector
 import kotlinx.coroutines.launch
 
 class SearchViewModel(
     private val addPathUsecase: AddPathUsecase,
     private val deletePathUsecase: DeletePathUsecase,
-    private val searchPathUsecase: SearchPathUsecase,
+    private val searchPathByKeywordUsecase: SearchPathByKeywordUsecase,
+    private val searchPathBySkillUsecase: SearchPathBySkillUsecase,
     private val context: Context,
     private val allPathsDb: DbPathsHolder,
     private val allPathsApi: ApiPathsHolder
@@ -34,6 +35,8 @@ class SearchViewModel(
     val error: LiveData<String> = allPathsApi.error
     val isLoading: LiveData<Boolean> = allPathsApi.isLoading
 
+    val searchType: MutableLiveData<SearchType> = MutableLiveData(SearchType.BY_KEYWORD)
+
     init {
         _mockData.value = searchMockData
         allPathsDb.allPaths.observeForever { refreshMockData() }
@@ -41,10 +44,25 @@ class SearchViewModel(
     }
 
     @InternalCoroutinesApi
-    fun searchPath(keyword: String) = viewModelScope.launch {
-        _mockData.value!!.clear()
-        searchPathUsecase.invoke(keyword)
+    fun searchPath(keyword: String){
+        when(searchType.value!!){
+            SearchType.BY_KEYWORD -> searchPathByKeyword(keyword)
+            SearchType.BY_SKILL -> searchPathBySkill(keyword)
+        }
     }
+
+    @InternalCoroutinesApi
+    private fun searchPathByKeyword(keyword: String) = viewModelScope.launch {
+        _mockData.value!!.clear()
+        searchPathByKeywordUsecase.invoke(keyword)
+    }
+
+    @InternalCoroutinesApi
+    private fun searchPathBySkill(skill: String) = viewModelScope.launch {
+        _mockData.value!!.clear()
+        searchPathBySkillUsecase.invoke(skill)
+    }
+
 
     fun deletePath(path: PathForSearch) =
         viewModelScope.launch { deletePathUsecase.invoke(path.toPathEntity()) }.invokeOnCompletion {

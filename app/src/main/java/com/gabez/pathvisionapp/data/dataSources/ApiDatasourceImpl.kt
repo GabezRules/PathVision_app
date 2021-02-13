@@ -6,5 +6,6 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 
 class ApiDatasourceImpl(private val client: NetworkClient): ApiDatasource {
-    override fun searchPath(keyword: String) = client.searchByKeyword(keyword)
+    override fun searchByKeyword(keyword: String) = client.searchByKeyword(keyword)
+    override fun searchBySkill(skill: String) = client.searchBySkill(skill)
 }

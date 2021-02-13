@@ -33,7 +33,7 @@ import org.koin.dsl.module
 
 val appModule = module {
     viewModel { MainViewModel(get(), get(), get(), get(), get(), get()) }
-    viewModel { SearchViewModel(get(), get(), get(), get(), get(), get()) }
+    viewModel { SearchViewModel(get(), get(), get(), get(), get(), get(), get()) }
 
     viewModel { SettingsViewModel(get(), get(), get()) }
 
@@ -81,5 +81,6 @@ val appModule = module {
 
     single { ApiPathsHolder() }
 
-    single{SearchPathUsecase(get())}
+    single { SearchPathByKeywordUsecase(get()) }
+    single { SearchPathBySkillUsecase(get()) }
 }

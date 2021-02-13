@@ -4,8 +4,8 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.RadioButton
 import android.widget.TextView
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -13,9 +13,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.gabez.pathvisionapp.R
 import com.gabez.pathvisionapp.app.search.entities.PathForSearch
 import com.gabez.pathvisionapp.app.search.entities.PathStatus
+import com.gabez.pathvisionapp.app.search.entities.SearchType
 import com.gabez.pathvisionapp.app.search.entities.searchMockData
 import com.gabez.pathvisionapp.app.search.view.pathList.ExpandablePathListAdapterSearch
-import com.gabez.pathvisionapp.app.search.view.pathList.PathCategoryAdapter
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.textfield.TextInputEditText
 import com.shreyaspatil.MaterialDialog.BottomSheetMaterialDialog
@@ -34,6 +34,9 @@ class SearchFragment : Fragment(), KoinComponent {
 
     private val viewModel: SearchViewModel by inject()
 
+    private lateinit var searchByKeyword: RadioButton
+    private lateinit var searchBySkill: RadioButton
+
     @InternalCoroutinesApi
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -51,6 +54,9 @@ class SearchFragment : Fragment(), KoinComponent {
         pathListView = view.findViewById(R.id.searchListView)
         pathListView.adapter = adapterSearch
         pathListView.layoutManager = LinearLayoutManager(requireContext())
+
+        searchByKeyword = view.findViewById(R.id.byKeyword)
+        searchBySkill = view.findViewById(R.id.bySkills)
 
         viewModel.searchData.observe(viewLifecycleOwner, Observer { pathList ->
             adapterSearch = ExpandablePathListAdapterSearch(pathList, this@SearchFragment)
@@ -81,6 +87,21 @@ class SearchFragment : Fragment(), KoinComponent {
                 errorMessage.visibility = View.GONE
             }
 
+        }
+
+        viewModel.searchType.observeForever { searchType ->
+            when(searchType){
+                SearchType.BY_KEYWORD -> searchEditText.setHint(R.string.search_by_keyword)
+                SearchType.BY_SKILL -> searchEditText.setHint(R.string.search_by_skill)
+            }
+        }
+
+        searchByKeyword.setOnCheckedChangeListener { _, isChecked ->
+            if(isChecked) viewModel.searchType.value = SearchType.BY_KEYWORD
+        }
+
+        searchBySkill.setOnCheckedChangeListener { _, isChecked ->
+            if(isChecked) viewModel.searchType.value = SearchType.BY_SKILL
         }
 
         return view

@@ -17,5 +17,6 @@ interface AppRepository {
     suspend fun updateSkillStatus(skill: String, newStatus: SkillStatus)
     suspend fun getRemotePaths()
     suspend fun getRemoteSkills()
-    suspend fun searchPath(keyword: String)
+    suspend fun searchPathByKeyword(keyword: String)
+    suspend fun searchPathBySkill(skill: String)
 }

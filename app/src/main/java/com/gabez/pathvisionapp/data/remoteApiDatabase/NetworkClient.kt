@@ -21,6 +21,11 @@ class NetworkClient(private val apiDataHolder: ApiPathsHolder) : Callback<List<P
         service.searchByKeyword(keyword.toLowerCase(), TOKEN).enqueue(this@NetworkClient)
     }
 
+    fun searchBySkill(skill: String){
+        apiDataHolder.isLoading.postValue(false)
+        service.searchBySkill(skill.toLowerCase(), TOKEN).enqueue(this@NetworkClient)
+    }
+
     override fun onFailure(call: Call<List<PathFromServer>>, t: Throwable) {
         t.message?.let { apiDataHolder.setError(it) }
     }
@@ -31,6 +36,7 @@ class NetworkClient(private val apiDataHolder: ApiPathsHolder) : Callback<List<P
     ) {
         if (response.isSuccessful) {
             val pathList: List<PathFromServer>? = response.body()
+
             if (pathList != null) {
                 if(pathList.isNotEmpty()){
                     apiDataHolder.setPaths(pathList)

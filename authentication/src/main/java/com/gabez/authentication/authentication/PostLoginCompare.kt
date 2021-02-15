@@ -1,4 +1,4 @@
-package com.gabez.pathvisionapp.authentication
+package com.gabez.authentication.authentication
 
 import com.gabez.pathvisionapp.data.localDatabase.dbLogic.LocalDatabase
 import com.gabez.pathvisionapp.data.remoteFirebaseDatabase.FirebaseDataHolder

@@ -1,9 +1,9 @@
-package com.gabez.pathvisionapp.authentication
+package com.gabez.authentication.authentication
 
-import com.gabez.pathvisionapp.authentication.entities.UserObj
-import com.gabez.pathvisionapp.authentication.statusHolders.AuthErrorHolder
-import com.gabez.pathvisionapp.authentication.statusHolders.AuthLoadingHolder
-import com.gabez.pathvisionapp.authentication.statusHolders.CurrentUserHolder
+import com.gabez.authentication.authentication.entities.UserObj
+import com.gabez.authentication.authentication.statusHolders.AuthErrorHolder
+import com.gabez.authentication.authentication.statusHolders.AuthLoadingHolder
+import com.gabez.authentication.authentication.statusHolders.CurrentUserHolder
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
 import kotlinx.coroutines.Dispatchers

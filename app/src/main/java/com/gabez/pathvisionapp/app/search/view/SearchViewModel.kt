@@ -38,16 +38,20 @@ class SearchViewModel(
     val searchType: MutableLiveData<SearchType> = MutableLiveData(SearchType.BY_KEYWORD)
 
     init {
-        _mockData.value = searchMockData
+        //_mockData.value = searchMockData
         allPathsDb.allPaths.observeForever { refreshMockData() }
         allPathsApi.allPaths.observeForever { allPaths -> _mockData.postValue(ArrayList(allPaths.map { path -> path.toPathForSearch() })) }
     }
 
     @InternalCoroutinesApi
     fun searchPath(keyword: String){
-        when(searchType.value!!){
-            SearchType.BY_KEYWORD -> searchPathByKeyword(keyword)
-            SearchType.BY_SKILL -> searchPathBySkill(keyword)
+        if(keyword.isNotEmpty()){
+            when(searchType.value!!){
+                SearchType.BY_KEYWORD -> searchPathByKeyword(keyword)
+                SearchType.BY_SKILL -> searchPathBySkill(keyword)
+            }
+        }else{
+            searchData.value!!.clear()
         }
     }
 

@@ -52,6 +52,7 @@
         app:layout_constraintTop_toBottomOf="@id/searchPathContainer">
 
         <com.google.android.material.radiobutton.MaterialRadioButton
+            android:checked="true"
             android:id="@+id/byKeyword"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

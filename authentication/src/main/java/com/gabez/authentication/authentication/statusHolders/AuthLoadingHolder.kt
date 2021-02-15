@@ -1,4 +1,4 @@
-package com.gabez.pathvisionapp.authentication.statusHolders
+package com.gabez.authentication.authentication.statusHolders
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

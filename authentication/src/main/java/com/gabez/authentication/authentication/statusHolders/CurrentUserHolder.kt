@@ -1,8 +1,8 @@
-package com.gabez.pathvisionapp.authentication.statusHolders
+package com.gabez.authentication.authentication.statusHolders
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import com.gabez.pathvisionapp.authentication.entities.UserObj
+import com.gabez.authentication.authentication.entities.UserObj
 
 class CurrentUserHolder {
     private val _currentUser: MutableLiveData<UserObj?> = MutableLiveData(null)

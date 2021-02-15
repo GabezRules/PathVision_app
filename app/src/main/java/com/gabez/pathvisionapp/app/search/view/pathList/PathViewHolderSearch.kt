@@ -17,7 +17,7 @@ class PathViewHolderSearch(itemView: View, val callback: SearchFragment) : Group
     private val jobTitle: TextView = itemView.findViewById(R.id.pathJobName)
     private val amountSkills: TextView = itemView.findViewById(R.id.pathAmountSkills)
     private val isAdded: ImageView = itemView.findViewById(R.id.pathAddBtn)
-    val expandBtn: ImageView = itemView.findViewById(R.id.pathExpand)
+    private val expandBtn: ImageView = itemView.findViewById(R.id.pathExpand)
 
     fun setupPathViewHolder(group: ExpandableGroup<*>) {
         jobTitle.text = group.title
@@ -33,11 +33,10 @@ class PathViewHolderSearch(itemView: View, val callback: SearchFragment) : Group
 
     override fun expand() {
         super.expand()
-        //TODO: Fix animation on expand (do not animate when icon clicked)
-        //expandBtn.animate().rotation(180F).start()
+        expandBtn.animate().rotation(180F).start()
     }
 
-    fun setIconEmpty(group: ExpandableGroup<*>){
+    private fun setIconEmpty(group: ExpandableGroup<*>){
         isAdded.setImageResource(R.drawable.ic_add_empty)
         isAdded.setColorFilter(ContextCompat.getColor(callback.requireContext(), R.color.colorGray), android.graphics.PorterDuff.Mode.SRC_IN)
 
@@ -46,7 +45,7 @@ class PathViewHolderSearch(itemView: View, val callback: SearchFragment) : Group
         }
     }
 
-    fun setIconSaved(group: ExpandableGroup<*>){
+    private fun setIconSaved(group: ExpandableGroup<*>){
         isAdded.setImageResource(R.drawable.ic_add_full)
         isAdded.setColorFilter(ContextCompat.getColor(callback.requireContext(), R.color.colorPrimary), android.graphics.PorterDuff.Mode.SRC_IN)
 

@@ -3,7 +3,8 @@
 
     <string name="search_no_path_desc">Find interesting path by keyword or try our category search!</string>
     <string name="search_no_path">No paths found</string>
-    <string name="search_by_keyword">Search by keyword…</string>
+    <string name="search_by_keyword">Search by keyword</string>
+    <string name="search_by_skill">Search by skill</string>
     <string name="search">search</string>
     <string name="observed_categories_desc">Observed categories</string>
     <string name="dark_mode_desc">Dark mode enabled</string>
@@ -16,9 +17,10 @@
     <string name="empty_string"> </string>
     <string name="cancel">CANCEL</string>
     <string name="authentication_description">With set up account you can save your data and restore it on any mobile device with PathVision App after you log in!</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="logout">LOGOUT</string>
     <string name="settings_nick_desc">"Welcome, "</string>
     <string name="delete_account">DELETE ACCOUNT</string>
+    <string name="register_desc">After a successful register, local data from PathVision app will be saved in your account.</string>
+    <string name="search_by_name">Search by name</string>
+    <string name="title_authentication">Authentication</string>
 </resources>

@@ -1,14 +1,15 @@
 package com.gabez.pathvisionapp.data.remoteFirebaseDatabase.dbLogic
 
+import com.gabez.pathvisionapp.data.remoteFirebaseDatabase.FirebaseDataHolder
 import com.gabez.pathvisionapp.data.remoteFirebaseDatabase.entities.PathFirebaseEntity
 import com.gabez.pathvisionapp.data.remoteFirebaseDatabase.entities.SkillFirebaseEntity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
-import kotlinx.coroutines.flow.Flow
 
 class FirebaseDbAdapterImpl(
     private val firebaseDatabase: FirebaseDatabase,
-    private val auth: FirebaseAuth
+    private val auth: FirebaseAuth,
+    private val dataHolder: FirebaseDataHolder
 ) : FirebaseDbAdapter {
 
     override fun addPath(path: PathFirebaseEntity) {
@@ -67,11 +68,35 @@ class FirebaseDbAdapterImpl(
         }
     }
 
-    override fun getRemotePaths(): Flow<List<PathFirebaseEntity>> {
-        TODO("Not yet implemented")
+    override fun getRemotePaths() {
+        auth.currentUser?.let { user ->
+            firebaseDatabase.reference.child("users").child(user.uid).child("paths").get().addOnCompleteListener {
+                task ->
+
+                val allPaths: ArrayList<PathFirebaseEntity> = ArrayList()
+
+                for(snap in task.result!!.children){
+                    allPaths.add(snap.getValue(PathFirebaseEntity::class.java)!!)
+                }
+
+                dataHolder.restoreAllPaths(allPaths)
+            }
+        }
     }
 
-    override fun getRemoteSkills(): Flow<List<SkillFirebaseEntity>> {
-        TODO("Not yet implemented")
+    override fun getRemoteSkills() {
+        auth.currentUser?.let { user ->
+            firebaseDatabase.reference.child("users").child(user.uid).child("skills").get().addOnCompleteListener {
+                    task ->
+
+                val allSkills: ArrayList<SkillFirebaseEntity> = ArrayList()
+
+                for(snap in task.result!!.children){
+                    allSkills.add(snap.getValue(SkillFirebaseEntity::class.java)!!)
+                }
+
+                dataHolder.restoreAllSkills(allSkills)
+            }
+        }
     }
 }

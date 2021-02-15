@@ -4,10 +4,10 @@ import android.util.Patterns
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.gabez.pathvisionapp.authentication.statusHolders.AuthErrorHolder
-import com.gabez.pathvisionapp.authentication.statusHolders.AuthLoadingHolder
-import com.gabez.pathvisionapp.authentication.statusHolders.CurrentUserHolder
-import com.gabez.pathvisionapp.authentication.usecases.LoginUsecase
+import com.gabez.authentication.authentication.statusHolders.AuthErrorHolder
+import com.gabez.authentication.authentication.statusHolders.AuthLoadingHolder
+import com.gabez.authentication.authentication.statusHolders.CurrentUserHolder
+import com.gabez.authentication.authentication.usecases.LoginUsecase
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch

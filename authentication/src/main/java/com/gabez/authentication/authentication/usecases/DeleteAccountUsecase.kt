@@ -1,6 +1,6 @@
-package com.gabez.pathvisionapp.authentication.usecases
+package com.gabez.authentication.authentication.usecases
 
-import com.gabez.pathvisionapp.authentication.AuthenticationAdapter
+import com.gabez.authentication.authentication.AuthenticationAdapter
 
 class DeleteAccountUsecase(private val authAdapter: AuthenticationAdapter) {
     operator fun invoke() = authAdapter.deleteUser()

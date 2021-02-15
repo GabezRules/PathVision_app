@@ -6,8 +6,8 @@ import com.gabez.pathvisionapp.data.dataSources.FirebaseDatasource
 import com.gabez.pathvisionapp.data.dataSources.LocalDatasource
 import com.gabez.pathvisionapp.data.localDatabase.entities.PathEntity
 import com.gabez.pathvisionapp.data.localDatabase.entities.SkillEntity
-import com.gabez.pathvisionapp.data.remoteFirebaseDatabase.entities.PathFirebaseEntity
-import com.gabez.pathvisionapp.data.remoteFirebaseDatabase.entities.SkillFirebaseEntity
+import com.gabez.data.remoteFirebaseDatabase.entities.PathFirebaseEntity
+import com.gabez.data.remoteFirebaseDatabase.entities.SkillFirebaseEntity
 import com.gabez.pathvisionapp.domain.AppRepository
 
 class AppRepositoryImpl(

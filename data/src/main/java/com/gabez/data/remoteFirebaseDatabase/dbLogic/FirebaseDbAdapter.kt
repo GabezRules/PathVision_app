@@ -1,8 +1,7 @@
-package com.gabez.pathvisionapp.data.remoteFirebaseDatabase.dbLogic
+package com.gabez.data.remoteFirebaseDatabase.dbLogic
 
-import com.gabez.pathvisionapp.data.remoteFirebaseDatabase.entities.PathFirebaseEntity
-import com.gabez.pathvisionapp.data.remoteFirebaseDatabase.entities.SkillFirebaseEntity
-import kotlinx.coroutines.flow.Flow
+import com.gabez.data.remoteFirebaseDatabase.entities.PathFirebaseEntity
+import com.gabez.data.remoteFirebaseDatabase.entities.SkillFirebaseEntity
 
 interface FirebaseDbAdapter {
     fun addPath(path: PathFirebaseEntity)

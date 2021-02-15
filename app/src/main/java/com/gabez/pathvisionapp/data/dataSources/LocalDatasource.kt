@@ -1,10 +1,8 @@
 package com.gabez.pathvisionapp.data.dataSources
 
-import com.gabez.pathvisionapp.app.paths.entities.SkillForView
 import com.gabez.pathvisionapp.app.paths.entities.SkillStatus
 import com.gabez.pathvisionapp.data.localDatabase.entities.PathEntity
 import com.gabez.pathvisionapp.data.localDatabase.entities.SkillEntity
-import kotlinx.coroutines.flow.Flow
 
 interface LocalDatasource {
     suspend fun addPath(path: PathEntity)

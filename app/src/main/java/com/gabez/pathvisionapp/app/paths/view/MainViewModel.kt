@@ -9,8 +9,6 @@ import androidx.lifecycle.viewModelScope
 import com.gabez.pathvisionapp.app.paths.entities.PathForView
 import com.gabez.pathvisionapp.app.paths.entities.SkillForView
 import com.gabez.pathvisionapp.app.paths.entities.SkillStatus
-import com.gabez.pathvisionapp.app.search.entities.PathForSearch
-import com.gabez.pathvisionapp.app.search.entities.PathStatus
 import com.gabez.pathvisionapp.data.localDatabase.DbPathsHolder
 import com.gabez.pathvisionapp.data.localDatabase.entities.PathEntity
 import com.gabez.pathvisionapp.data.localDatabase.entities.SkillEntity

@@ -1,8 +1,8 @@
-package com.gabez.pathvisionapp.data.remoteFirebaseDatabase.dbLogic
+package com.gabez.data.remoteFirebaseDatabase.dbLogic
 
-import com.gabez.pathvisionapp.data.remoteFirebaseDatabase.FirebaseDataHolder
-import com.gabez.pathvisionapp.data.remoteFirebaseDatabase.entities.PathFirebaseEntity
-import com.gabez.pathvisionapp.data.remoteFirebaseDatabase.entities.SkillFirebaseEntity
+import com.gabez.data.remoteFirebaseDatabase.FirebaseDataHolder
+import com.gabez.data.remoteFirebaseDatabase.entities.PathFirebaseEntity
+import com.gabez.data.remoteFirebaseDatabase.entities.SkillFirebaseEntity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
 

@@ -1,4 +1,4 @@
-package com.gabez.pathvisionapp.data.remoteApiDatabase.entities
+package com.gabez.data.remoteApiDatabase.entities
 
 import com.gabez.pathvisionapp.app.search.entities.PathForSearch
 import com.gabez.pathvisionapp.app.search.entities.PathStatus

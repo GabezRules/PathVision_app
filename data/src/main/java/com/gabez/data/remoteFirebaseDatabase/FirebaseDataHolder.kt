@@ -1,9 +1,9 @@
-package com.gabez.pathvisionapp.data.remoteFirebaseDatabase
+package com.gabez.data.remoteFirebaseDatabase
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import com.gabez.pathvisionapp.data.remoteFirebaseDatabase.entities.PathFirebaseEntity
-import com.gabez.pathvisionapp.data.remoteFirebaseDatabase.entities.SkillFirebaseEntity
+import com.gabez.data.remoteFirebaseDatabase.entities.PathFirebaseEntity
+import com.gabez.data.remoteFirebaseDatabase.entities.SkillFirebaseEntity
 
 class FirebaseDataHolder {
     private val _allPaths: MutableLiveData<List<PathFirebaseEntity>> = MutableLiveData(ArrayList())

@@ -1,7 +1,6 @@
 package com.gabez.authentication.authentication
 
 import com.gabez.pathvisionapp.data.localDatabase.dbLogic.LocalDatabase
-import com.gabez.pathvisionapp.data.remoteFirebaseDatabase.FirebaseDataHolder
 
 class PostLoginCompare(private var localDb: LocalDatabase, private val remoteDb: FirebaseDataHolder) {
     suspend fun areTheSame(): Boolean{

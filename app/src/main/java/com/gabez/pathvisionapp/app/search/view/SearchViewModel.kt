@@ -6,12 +6,11 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.gabez.pathvisionapp.app.dataHolders.ApiPathsHolder
 import com.gabez.pathvisionapp.app.search.entities.PathForSearch
 import com.gabez.pathvisionapp.app.search.entities.PathStatus
 import com.gabez.pathvisionapp.app.search.entities.SearchType
-import com.gabez.pathvisionapp.app.search.entities.searchMockData
 import com.gabez.pathvisionapp.data.localDatabase.DbPathsHolder
-import com.gabez.pathvisionapp.data.remoteApiDatabase.ApiPathsHolder
 import com.gabez.pathvisionapp.domain.usecases.AddPathUsecase
 import com.gabez.pathvisionapp.domain.usecases.DeletePathUsecase
 import com.gabez.pathvisionapp.domain.usecases.SearchPathByKeywordUsecase
@@ -40,7 +39,7 @@ class SearchViewModel(
     init {
         //_mockData.value = searchMockData
         allPathsDb.allPaths.observeForever { refreshMockData() }
-        allPathsApi.allPaths.observeForever { allPaths -> _mockData.postValue(ArrayList(allPaths.map { path -> path.toPathForSearch() })) }
+        allPathsApi.allPaths.observeForever { allPaths -> _mockData.postValue(ArrayList(allPaths)) }
     }
 
     @InternalCoroutinesApi

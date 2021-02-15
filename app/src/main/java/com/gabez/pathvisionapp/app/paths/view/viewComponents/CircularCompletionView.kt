@@ -1,4 +1,4 @@
-package com.gabez.pathvisionapp.app
+package com.gabez.pathvisionapp.app.paths.view.viewComponents
 
 import android.content.Context
 import android.graphics.*

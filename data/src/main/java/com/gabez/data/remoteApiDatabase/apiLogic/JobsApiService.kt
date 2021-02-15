@@ -1,6 +1,6 @@
-package com.gabez.pathvisionapp.data.remoteApiDatabase
+package com.gabez.data.remoteApiDatabase.apiLogic
 
-import com.gabez.pathvisionapp.data.remoteApiDatabase.entities.PathFromServer
+import com.gabez.data.remoteApiDatabase.entities.PathFromServer
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Query

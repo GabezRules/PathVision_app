@@ -1,6 +1,5 @@
-package com.gabez.pathvisionapp.data.localDatabase
+package com.gabez.pathvisionapp.data.dataHolders
 
-import com.gabez.pathvisionapp.data.localDatabase.entities.PathEntity
 
 class DbSkillCountHolder {
     private var skillCountInDb: HashMap<String, Int> = HashMap()

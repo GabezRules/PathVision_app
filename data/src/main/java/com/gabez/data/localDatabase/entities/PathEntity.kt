@@ -1,4 +1,4 @@
-package com.gabez.pathvisionapp.data.localDatabase.entities
+package com.gabez.data.localDatabase.entities
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

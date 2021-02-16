@@ -1,77 +1,37 @@
 package com.gabez.pathvisionapp.data.dataSources
 
 import com.gabez.pathvisionapp.app.paths.entities.SkillStatus
-import com.gabez.pathvisionapp.data.localDatabase.DbPathsHolder
-import com.gabez.pathvisionapp.data.localDatabase.DbSkillCountHolder
-import com.gabez.pathvisionapp.data.localDatabase.dbLogic.LocalDatabase
-import com.gabez.pathvisionapp.data.localDatabase.entities.PathEntity
-import com.gabez.pathvisionapp.data.localDatabase.entities.SkillEntity
+import com.gabez.pathvisionapp.app.search.entities.PathForSearch
+import com.gabez.pathvisionapp.app.search.entities.SkillForSearch
+import com.gabez.pathvisionapp.data.gateways.LocalDbGateway
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 
-class LocalDatasourceImpl(private val db: LocalDatabase, private val pathsHolder: DbPathsHolder): LocalDatasource {
-
-    //TODO: Items from MainFragment are not deleting - fix it
-
-    var skillHolder = DbSkillCountHolder()
+class LocalDatasourceImpl(private val gateway: LocalDbGateway): LocalDatasource {
 
     init {
         GlobalScope.launch(Dispatchers.IO) { refreshPaths() }
     }
 
-    override suspend fun addPath(path: PathEntity){
-        db.dao().savePath(path)
-
-        for(skill in path.relatedSkills.split(";;")){
-            if(!skillHolder.isInDb(skill)) db.dao().saveSkill(
-                SkillEntity(
-                    name = skill,
-                    status = 0
-                )
-            )
-        }
-
+    override suspend fun addPath(path: PathForSearch){
+        gateway.addPath(path)
         refreshPaths()
     }
 
-    override suspend fun deletePath(path: PathEntity){
-        db.dao().deletePath(path)
-
-        for(skill in path.relatedSkills.split(";;")){
-            //TODO: Potential bug here
-            //if(!skillHolder.isInOtherPath(skill)) db.dao().deleteSkill(skill)
-        }
-
+    override suspend fun deletePath(path: PathForSearch){
+        gateway.deletePath(path)
         refreshPaths()
     }
 
     override suspend fun updateSkillStatus(skill: String, newStatus: SkillStatus) {
-        val intStatus = when(newStatus){
-            SkillStatus.EMPTY -> 0
-            SkillStatus.IN_PROGRESS -> 1
-            SkillStatus.DONE -> 2
-        }
-
-        db.dao().updateSkill(skill, intStatus)
-
+        gateway.updateSkillStatus(skill, newStatus)
         refreshPaths()
     }
 
-    override suspend fun getAllPaths(): List<PathEntity> {
-        val allPaths = db.dao().getAllPaths()
-        skillHolder.refreshSkillHolder(allPaths)
+    override suspend fun getAllPaths(): List<PathForSearch> = gateway.getAllPaths()
 
-        return allPaths
-    }
+    override suspend fun getAllSkills(): List<SkillForSearch> = gateway.getAllSkills()
 
-    override suspend fun getAllSkills(): List<SkillEntity> = db.dao().getAllSkills()
-
-    private suspend fun refreshPaths(){
-        val allPaths = db.dao().getAllPaths()
-        val allSkills = db.dao().getAllSkills()
-
-        skillHolder.refreshSkillHolder(allPaths)
-        pathsHolder.setPaths(allPaths, allSkills)
-    }
+    private suspend fun refreshPaths() = gateway.refreshPaths()
 }

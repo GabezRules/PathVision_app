@@ -47,4 +47,9 @@ dependencies {
     kapt "androidx.room:room-compiler:2.2.6"
     implementation "androidx.room:room-ktx:2.2.6"
 
+
+    //TODO: Remove it
+    //expandable recyclerview
+    implementation 'com.thoughtbot:expandablerecyclerview:1.4'
+
 }

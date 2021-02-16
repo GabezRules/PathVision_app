@@ -1,8 +1,8 @@
-package com.gabez.pathvisionapp.data.localDatabase.dbLogic
+package com.gabez.data.localDatabase.dbLogic
 
 import androidx.room.*
-import com.gabez.pathvisionapp.data.localDatabase.entities.PathEntity
-import com.gabez.pathvisionapp.data.localDatabase.entities.SkillEntity
+import com.gabez.data.localDatabase.entities.PathEntity
+import com.gabez.data.localDatabase.entities.SkillEntity
 
 @Dao
 interface LocalDao {

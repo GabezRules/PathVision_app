@@ -1,4 +1,4 @@
-package com.gabez.pathvisionapp.app.dataHolders
+package com.gabez.pathvisionapp.data.dataHolders
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

@@ -4,10 +4,8 @@ import com.gabez.pathvisionapp.app.paths.entities.SkillStatus
 import com.gabez.pathvisionapp.data.dataSources.ApiDatasource
 import com.gabez.pathvisionapp.data.dataSources.FirebaseDatasource
 import com.gabez.pathvisionapp.data.dataSources.LocalDatasource
-import com.gabez.pathvisionapp.data.localDatabase.entities.PathEntity
-import com.gabez.pathvisionapp.data.localDatabase.entities.SkillEntity
-import com.gabez.data.remoteFirebaseDatabase.entities.PathFirebaseEntity
-import com.gabez.data.remoteFirebaseDatabase.entities.SkillFirebaseEntity
+import com.gabez.pathvisionapp.app.search.entities.PathForSearch
+import com.gabez.pathvisionapp.app.search.entities.SkillForSearch
 import com.gabez.pathvisionapp.domain.AppRepository
 
 class AppRepositoryImpl(
@@ -16,7 +14,7 @@ class AppRepositoryImpl(
     private val firebaseSource: FirebaseDatasource
 ) : AppRepository {
 
-    override suspend fun addPath(path: PathEntity) {
+    override suspend fun addPath(path: PathForSearch) {
         localSource.addPath(path)
         firebaseSource.addPath(
             PathFirebaseEntity(
@@ -28,13 +26,13 @@ class AppRepositoryImpl(
         )
     }
 
-    override suspend fun deletePath(path: PathEntity) {
+    override suspend fun deletePath(path: PathForSearch) {
         localSource.deletePath(path)
-        firebaseSource.deletePath(path.name)
+        firebaseSource.deletePath(path.title)
     }
 
     override suspend fun getLocalPaths() = localSource.getAllPaths()
-    override suspend fun getLocalSkills(): List<SkillEntity> = localSource.getAllSkills()
+    override suspend fun getLocalSkills(): List<SkillForSearch> = localSource.getAllSkills()
 
     override suspend fun getRemotePaths() = firebaseSource.getRemotePaths()
     override suspend fun getRemoteSkills() = firebaseSource.getRemoteSkills()

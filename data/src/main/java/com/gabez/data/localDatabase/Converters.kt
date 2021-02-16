@@ -1,4 +1,4 @@
-package com.gabez.pathvisionapp.data.localDatabase.dbLogic
+package com.gabez.data.localDatabase
 
 import androidx.room.TypeConverter
 

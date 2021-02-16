@@ -1,15 +1,17 @@
 package com.gabez.pathvisionapp.domain
 
 import com.gabez.pathvisionapp.app.paths.entities.SkillStatus
-import com.gabez.pathvisionapp.data.localDatabase.entities.PathEntity
-import com.gabez.pathvisionapp.data.localDatabase.entities.SkillEntity
+import com.gabez.data.localDatabase.entities.PathEntity
+import com.gabez.data.localDatabase.entities.SkillEntity
 import com.gabez.data.remoteApiDatabase.entities.PathFromServer
+import com.gabez.pathvisionapp.app.search.entities.PathForSearch
+import com.gabez.pathvisionapp.app.search.entities.SkillForSearch
 
 interface AppRepository {
-    suspend fun addPath(path: PathEntity)
-    suspend fun deletePath(path: PathEntity)
-    suspend fun getLocalPaths(): List<PathEntity>
-    suspend fun getLocalSkills(): List<SkillEntity>
+    suspend fun addPath(path: PathForSearch)
+    suspend fun deletePath(path: PathForSearch)
+    suspend fun getLocalPaths(): List<PathForSearch>
+    suspend fun getLocalSkills(): List<SkillForSearch>
     suspend fun updateSkillStatus(skill: String, newStatus: SkillStatus)
     suspend fun getRemotePaths()
     suspend fun getRemoteSkills()

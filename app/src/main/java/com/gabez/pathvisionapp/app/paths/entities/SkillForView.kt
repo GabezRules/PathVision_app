@@ -1,7 +1,7 @@
 package com.gabez.pathvisionapp.app.paths.entities
 
 import android.os.Parcelable
-import com.gabez.pathvisionapp.data.localDatabase.entities.SkillEntity
+import com.gabez.data.localDatabase.entities.SkillEntity
 import kotlinx.android.parcel.Parcelize
 
 @Parcelize

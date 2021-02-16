@@ -7,8 +7,7 @@ import com.gabez.pathvisionapp.app.settings.authentication.login.LoginViewModel
 import com.gabez.pathvisionapp.app.settings.authentication.register.RegisterViewModel
 import com.gabez.pathvisionapp.app.settings.settingsWithoutAuth.SettingsViewModel
 import com.gabez.pathvisionapp.data.dataSources.*
-import com.gabez.pathvisionapp.data.localDatabase.DbPathsHolder
-import com.gabez.pathvisionapp.data.localDatabase.dbLogic.LocalDatabase
+import com.gabez.pathvisionapp.data.dataHolders.DbPathsHolder
 import com.gabez.data.remoteApiDatabase.ApiPathsHolder
 import com.gabez.data.remoteApiDatabase.NetworkClient
 import com.gabez.data.remoteFirebaseDatabase.FirebaseDataHolder

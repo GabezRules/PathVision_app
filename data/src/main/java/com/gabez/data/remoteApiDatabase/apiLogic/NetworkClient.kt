@@ -1,6 +1,6 @@
 package com.gabez.data.remoteApiDatabase.apiLogic
 
-import com.gabez.pathvisionapp.app.dataHolders.ApiPathsHolder
+import com.gabez.pathvisionapp.data.dataHolders.ApiPathsHolder
 import com.gabez.data.remoteApiDatabase.entities.PathFromServer
 import retrofit2.Call
 import retrofit2.Callback

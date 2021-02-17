@@ -11,9 +11,9 @@ import com.gabez.pathvisionapp.data.gateways.FirebaseGateway
 class FirebaseGatewayImpl(private val db: FirebaseDbAdapter): FirebaseGateway {
     override fun addPath(path: PathForView) = db.addPath(
         PathFirebaseEntity(
-        name = path.title,
-        skills = ArrayList(path.items.map { skill -> SkillFirebaseEntity(
-            name = skill!!.title,
+        title = path.title,
+        items = ArrayList(path.items.map { skill -> SkillFirebaseEntity(
+            title = skill!!.title,
             status = when(skill.status){
                 SkillStatus.EMPTY -> 0
                 SkillStatus.IN_PROGRESS -> 1

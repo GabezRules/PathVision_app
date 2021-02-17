@@ -10,8 +10,6 @@ import com.gabez.pathvisionapp.app.paths.entities.PathForView
 import com.gabez.pathvisionapp.app.paths.entities.SkillForView
 import com.gabez.pathvisionapp.app.paths.entities.SkillStatus
 import com.gabez.pathvisionapp.data.dataHolders.DbPathsHolder
-import com.gabez.data.localDatabase.entities.PathEntity
-import com.gabez.data.localDatabase.entities.SkillEntity
 import com.gabez.pathvisionapp.domain.usecases.DeletePathUsecase
 import com.gabez.pathvisionapp.domain.usecases.GetLocalPathsUsecase
 import com.gabez.pathvisionapp.domain.usecases.GetLocalSkillsUsecase

@@ -10,7 +10,7 @@ import com.gabez.pathvisionapp.data.dataHolders.DbPathsHolder
 import com.gabez.pathvisionapp.data.dataHolders.DbSkillCountHolder
 import com.gabez.pathvisionapp.data.gateways.LocalDbGateway
 
-class LocalAppGatewayImpl(private val db: LocalDatabase, private val pathsHolder: DbPathsHolder): LocalDbGateway {
+class LocalDbGatewayImpl(private val db: LocalDatabase, private val pathsHolder: DbPathsHolder): LocalDbGateway {
     //TODO: Items from MainFragment are not deleting - fix it
 
     var skillHolder = DbSkillCountHolder()
@@ -20,7 +20,7 @@ class LocalAppGatewayImpl(private val db: LocalDatabase, private val pathsHolder
         for(skill in entity.relatedSkills.split(";;")){
             if(!skillHolder.isInDb(skill)) db.dao().saveSkill(
                 SkillEntity(
-                    name = skill,
+                    title = skill,
                     status = 0
                 )
             )
@@ -42,14 +42,14 @@ class LocalAppGatewayImpl(private val db: LocalDatabase, private val pathsHolder
         skillHolder.refreshSkillHolder(allPaths)
 
         return allPaths.map { entity -> PathForSearch(
-            title = entity.name,
-            items = entity.relatedSkills.split(";;").map { skill -> SkillForSearch(title = skill)},
+            title = entity.title,
+            items = entity.items.split(";;").map { skill -> SkillForSearch(title = skill)},
             status = PathStatus.NOT_ADDED
         ) }
     }
 
     override suspend fun getAllSkills(): List<SkillForSearch> {
-        return db.dao().getAllSkills().map { skillEntity -> SkillForSearch(title = skillEntity.name) }
+        return db.dao().getAllSkills().map { skillEntity -> SkillForSearch(title = skillEntity.title) }
     }
 
     override suspend fun updateSkillStatus(skill: String, newStatus: SkillStatus) {

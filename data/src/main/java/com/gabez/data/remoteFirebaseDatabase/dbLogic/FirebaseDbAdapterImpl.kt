@@ -14,11 +14,11 @@ class FirebaseDbAdapterImpl(
 
     override fun addPath(path: PathFirebaseEntity) {
         auth.currentUser?.let { user ->
-            firebaseDatabase.reference.child("users").child(user.uid).child("paths").child(path.name)
+            firebaseDatabase.reference.child("users").child(user.uid).child("paths").child(path.title)
                 .get().addOnCompleteListener { task ->
                     if (task.result == null) {
                         firebaseDatabase.reference.child("users").child(auth.currentUser!!.uid)
-                            .child(path.name).setValue(path)
+                            .child(path.title).setValue(path)
                     }
                 }
         }
@@ -37,10 +37,10 @@ class FirebaseDbAdapterImpl(
 
     override fun addSkill(skill: SkillFirebaseEntity) {
         auth.currentUser?.let{ user ->
-            firebaseDatabase.reference.child("users").child(user.uid).child("skills").child(skill.name)
+            firebaseDatabase.reference.child("users").child(user.uid).child("skills").child(skill.title)
                 .get().addOnCompleteListener { task ->
                 if(task.result == null){
-                    firebaseDatabase.reference.child("users").child(user.uid).child("skills").child(skill.name).setValue(skill)
+                    firebaseDatabase.reference.child("users").child(user.uid).child("skills").child(skill.title).setValue(skill)
                 }
             }
         }
@@ -48,10 +48,10 @@ class FirebaseDbAdapterImpl(
 
     override fun removeSkill(skill: SkillFirebaseEntity) {
         auth.currentUser?.let{ user ->
-            firebaseDatabase.reference.child("users").child(user.uid).child("skills").child(skill.name)
+            firebaseDatabase.reference.child("users").child(user.uid).child("skills").child(skill.title)
                 .get().addOnCompleteListener { task ->
                     if(task.result != null){
-                        firebaseDatabase.reference.child("users").child(user.uid).child("skills").child(skill.name).removeValue()
+                        firebaseDatabase.reference.child("users").child(user.uid).child("skills").child(skill.title).removeValue()
                     }
                 }
         }
@@ -59,10 +59,10 @@ class FirebaseDbAdapterImpl(
 
     override fun updateSkillStatus(skill: SkillFirebaseEntity) {
         auth.currentUser?.let{ user ->
-            firebaseDatabase.reference.child("users").child(user.uid).child("skills").child(skill.name)
+            firebaseDatabase.reference.child("users").child(user.uid).child("skills").child(skill.title)
                 .get().addOnCompleteListener { task ->
                     if(task.result != null){
-                        firebaseDatabase.reference.child("users").child(user.uid).child("skills").child(skill.name).setValue(skill)
+                        firebaseDatabase.reference.child("users").child(user.uid).child("skills").child(skill.title).setValue(skill)
                     }
                 }
         }

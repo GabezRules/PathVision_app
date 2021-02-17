@@ -1,6 +1,5 @@
 apply plugin: "com.android.dynamic-feature"
 apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 apply plugin: 'com.google.gms.google-services'
 
@@ -40,15 +39,19 @@ dependencies {
     //coroutines
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0"
 
-    //koin
-    api "org.koin:koin-android:2.1.5"
-    api "org.koin:koin-androidx-viewmodel:2.1.5"
-
     //TODO: Move room database out of here
     //room
     implementation "androidx.room:room-runtime:2.2.6"
     kapt "androidx.room:room-compiler:2.2.6"
     implementation "androidx.room:room-ktx:2.2.6"
 
+    //koin
+    api "org.koin:koin-android:2.1.5"
+    api "org.koin:koin-androidx-viewmodel:2.1.5"
+
+    api("io.grpc:grpc-kotlin-stub:1.0.0")
+
+    //expandable recyclerview
+    implementation 'com.thoughtbot:expandablerecyclerview:1.4'
 
 }

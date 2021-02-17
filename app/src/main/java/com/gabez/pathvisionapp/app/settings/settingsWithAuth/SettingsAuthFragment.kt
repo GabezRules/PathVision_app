@@ -31,7 +31,7 @@ class SettingsAuthFragment : Fragment(), KoinComponent {
 
         username = view.findViewById(R.id.username)
 
-        viewModel.currentUser.observeForever { if(it!=null) username.text = it.login }
+        viewModel.currentUser.observeForever { currentUser -> if(currentUser!=null) username.text = currentUser.login }
 
         return view
     }

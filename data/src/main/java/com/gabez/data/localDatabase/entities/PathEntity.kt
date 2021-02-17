@@ -6,7 +6,6 @@ import androidx.room.PrimaryKey
 @Entity(tableName = "path")
 data class PathEntity(
     @PrimaryKey
-    var name: String = "",
-    var category: String = "",
-    var relatedSkills: String = ""
+    var title: String = "",
+    var items: String = ""
 )

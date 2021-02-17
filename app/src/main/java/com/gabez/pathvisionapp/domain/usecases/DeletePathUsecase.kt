@@ -1,6 +1,5 @@
 package com.gabez.pathvisionapp.domain.usecases
 
-import com.gabez.data.localDatabase.entities.PathEntity
 import com.gabez.pathvisionapp.domain.AppRepository
 
 class DeletePathUsecase(private val repo: AppRepository) {

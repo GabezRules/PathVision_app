@@ -1,3 +1,3 @@
 package com.gabez.data.remoteFirebaseDatabase.entities
 
-data class SkillFirebaseEntity(var name: String = "", var status: Int = 0)
+data class SkillFirebaseEntity(var title: String = "", var status: Int = 0)

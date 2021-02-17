@@ -1,9 +1,7 @@
 apply plugin: "com.android.dynamic-feature"
 apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 apply plugin: 'com.google.gms.google-services'
-
 
 android {
     compileSdkVersion 30
@@ -51,5 +49,13 @@ dependencies {
     //TODO: Remove it
     //expandable recyclerview
     implementation 'com.thoughtbot:expandablerecyclerview:1.4'
+
+    //koin
+    api "org.koin:koin-android:2.1.5"
+    api "org.koin:koin-androidx-viewmodel:2.1.5"
+
+    api("io.grpc:grpc-kotlin-stub:1.0.0")
+
+
 
 }

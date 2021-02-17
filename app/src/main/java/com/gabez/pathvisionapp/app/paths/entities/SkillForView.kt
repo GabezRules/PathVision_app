@@ -1,19 +1,9 @@
 package com.gabez.pathvisionapp.app.paths.entities
 
+import android.os.Parcel
 import android.os.Parcelable
-import com.gabez.data.localDatabase.entities.SkillEntity
+import com.gabez.pathvisionapp.entities.SkillObject
 import kotlinx.android.parcel.Parcelize
 
 @Parcelize
-data class SkillForView(val title: String, var status: SkillStatus): Parcelable{
-    fun toSkillEntity(): SkillEntity{
-        return SkillEntity(
-            name = title,
-            status = when(status){
-                SkillStatus.EMPTY -> 0
-                SkillStatus.IN_PROGRESS -> 1
-                SkillStatus.DONE -> 2
-            }
-        )
-    }
-}
+data class SkillForView(override var title: String = "", override var status: SkillStatus = SkillStatus.EMPTY): Parcelable, SkillObject

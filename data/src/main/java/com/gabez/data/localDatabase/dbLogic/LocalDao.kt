@@ -15,7 +15,7 @@ interface LocalDao {
     @Delete
     suspend fun deletePath(path: PathEntity)
 
-    @Query("DELETE FROM skill WHERE name = :skill")
+    @Query("DELETE FROM skill WHERE title = :skill")
     suspend fun deleteSkill(skill: String)
 
     @Query("SELECT * FROM path")
@@ -24,6 +24,6 @@ interface LocalDao {
     @Query("SELECT * FROM skill")
     suspend fun getAllSkills(): List<SkillEntity>
 
-    @Query("UPDATE skill SET status=:newStatus WHERE name = :skillName")
+    @Query("UPDATE skill SET status=:newStatus WHERE title = :skillName")
     suspend fun updateSkill(skillName: String, newStatus: Int)
 }

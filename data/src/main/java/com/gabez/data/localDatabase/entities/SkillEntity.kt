@@ -6,6 +6,6 @@ import androidx.room.PrimaryKey
 @Entity(tableName = "skill")
 data class SkillEntity(
     @PrimaryKey
-    var name: String = "",
+    var title: String = "",
     var status: Int = 0
 )

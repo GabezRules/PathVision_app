@@ -2,8 +2,6 @@ package com.gabez.pathvisionapp.data.dataHolders
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import com.gabez.data.localDatabase.entities.PathEntity
-import com.gabez.data.localDatabase.entities.SkillEntity
 
 class DbPathsHolder {
     private val _allPaths: MutableLiveData<List<PathEntity>> = MutableLiveData(ArrayList())

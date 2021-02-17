@@ -3,7 +3,7 @@ package com.gabez.data.localDatabase.entities
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import com.gabez.pathvisionapp.app.paths.entities.SkillStatus
-import com.gabez.pathvisionapp.entities.SkillObject
+import com.gabez.pathvisionapp.domain.entities.SkillObject
 
 @Entity(tableName = "skill")
 data class SkillEntity(

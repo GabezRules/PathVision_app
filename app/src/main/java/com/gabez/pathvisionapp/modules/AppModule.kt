@@ -1,14 +1,15 @@
 package com.gabez.pathvisionapp.modules
 
+import com.gabez.data.localDatabase.gateway.LocalDbGatewayImpl
+import com.gabez.data.remoteApiDatabase.gateway.ApiGatewayImpl
+import com.gabez.data.remoteFirebaseDatabase.gateway.FirebaseGatewayImpl
 import com.gabez.pathvisionapp.app.MainActivityViewModel
 import com.gabez.pathvisionapp.app.paths.view.MainViewModel
 import com.gabez.pathvisionapp.app.search.view.SearchViewModel
 import com.gabez.pathvisionapp.app.settings.authentication.login.LoginViewModel
 import com.gabez.pathvisionapp.app.settings.authentication.register.RegisterViewModel
 import com.gabez.pathvisionapp.app.settings.settingsWithoutAuth.SettingsViewModel
-import com.gabez.pathvisionapp.data.dataHolders.ApiPathsHolder
-import com.gabez.pathvisionapp.data.dataHolders.DbPathsHolder
-import com.gabez.pathvisionapp.data.dataHolders.FirebaseDataHolder
+import com.gabez.pathvisionapp.app.statusHolders.ApiErrorHolder
 import com.gabez.pathvisionapp.data.dataSources.*
 import com.gabez.pathvisionapp.data.gateways.ApiGateway
 import com.gabez.pathvisionapp.data.gateways.FirebaseGateway
@@ -21,8 +22,8 @@ import org.koin.dsl.module
 
 @InternalCoroutinesApi
 val appModule = module {
-    viewModel { MainViewModel(get(), get(), get(), get(), get(), get()) }
-    viewModel { SearchViewModel(get(), get(), get(), get(), get(), get(), get()) }
+    viewModel { MainViewModel(get(), get(), get(), get(), get()) }
+    viewModel { SearchViewModel(get(), get(), get(), get(), get(), get()) }
     viewModel { SettingsViewModel(get(), get(), get()) }
 
     viewModel { LoginViewModel(get(), get(), get(), get()) }
@@ -37,9 +38,7 @@ val appModule = module {
 
     single { ApiGatewayImpl(get()) as ApiGateway }
     single { FirebaseGatewayImpl(get()) as FirebaseGateway }
-    single { LocalDbGatewayImpl(get(), get()) as LocalDbGateway }
+    single { LocalDbGatewayImpl(get()) as LocalDbGateway }
 
-    single { DbPathsHolder() }
-    single { ApiPathsHolder() }
-    single { FirebaseDataHolder() }
+    single { ApiErrorHolder() }
 }

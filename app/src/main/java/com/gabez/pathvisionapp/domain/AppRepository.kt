@@ -1,16 +1,21 @@
 package com.gabez.pathvisionapp.domain
 
-import com.gabez.pathvisionapp.entities.PathObject
-import com.gabez.pathvisionapp.entities.SkillObject
+import com.gabez.pathvisionapp.domain.entities.PathObject
+import com.gabez.pathvisionapp.domain.entities.SkillObject
+import kotlinx.coroutines.flow.Flow
 
 interface AppRepository {
     suspend fun addPath(path: PathObject)
     suspend fun deletePath(path: PathObject)
-    suspend fun getLocalPaths(): List<PathObject>
-    suspend fun getLocalSkills(): List<SkillObject>
+
+    suspend fun getLocalPaths(): Flow<List<PathObject>>
+    suspend fun getLocalSkills(): Flow<List<SkillObject>>
+
     suspend fun updateSkillStatus(skill: SkillObject)
-    suspend fun getRemotePaths()
-    suspend fun getRemoteSkills()
-    suspend fun searchPathByKeyword(keyword: String)
-    suspend fun searchPathBySkill(skill: String)
+
+    suspend fun getRemotePaths(): Flow<PathObject>
+    suspend fun getRemoteSkills(): Flow<SkillObject>
+
+    suspend fun searchPathByKeyword(keyword: String): Flow<List<PathObject>>
+    suspend fun searchPathBySkill(skill: String): Flow<List<PathObject>>
 }

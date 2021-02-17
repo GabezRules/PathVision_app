@@ -25,6 +25,12 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+
+        debug{
+            minifyEnabled true
+            useProguard true
+            shrinkResources false
+        }
     }
 
     compileOptions {
@@ -91,4 +97,7 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.0"
 
     api("io.grpc:grpc-kotlin-stub:1.0.0")
+
+    implementation project(':data')
+    implementation project(':authentication')
 }

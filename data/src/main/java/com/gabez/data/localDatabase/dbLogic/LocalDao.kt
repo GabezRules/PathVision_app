@@ -3,6 +3,7 @@ package com.gabez.data.localDatabase.dbLogic
 import androidx.room.*
 import com.gabez.data.localDatabase.entities.PathEntity
 import com.gabez.data.localDatabase.entities.SkillEntity
+import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface LocalDao {
@@ -19,10 +20,10 @@ interface LocalDao {
     suspend fun deleteSkill(skill: String)
 
     @Query("SELECT * FROM path")
-    suspend fun getAllPaths(): List<PathEntity>
+    suspend fun getAllPaths(): Flow<List<PathEntity>>
 
     @Query("SELECT * FROM skill")
-    suspend fun getAllSkills(): List<SkillEntity>
+    suspend fun getAllSkills(): Flow<List<SkillEntity>>
 
     @Query("UPDATE skill SET status=:newStatus WHERE title = :skillName")
     suspend fun updateSkill(skillName: String, newStatus: Int)

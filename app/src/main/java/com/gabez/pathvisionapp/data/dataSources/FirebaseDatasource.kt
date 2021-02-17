@@ -1,7 +1,8 @@
 package com.gabez.pathvisionapp.data.dataSources
 
-import com.gabez.pathvisionapp.entities.PathObject
-import com.gabez.pathvisionapp.entities.SkillObject
+import com.gabez.pathvisionapp.domain.entities.PathObject
+import com.gabez.pathvisionapp.domain.entities.SkillObject
+import kotlinx.coroutines.flow.Flow
 
 interface FirebaseDatasource {
     fun addPath(path: PathObject)
@@ -12,6 +13,6 @@ interface FirebaseDatasource {
 
     fun updateSkillStatus(skill: SkillObject)
 
-    fun getRemotePaths()
-    fun getRemoteSkills()
+    fun getRemotePaths(): Flow<PathObject>
+    fun getRemoteSkills(): Flow<SkillObject>
 }

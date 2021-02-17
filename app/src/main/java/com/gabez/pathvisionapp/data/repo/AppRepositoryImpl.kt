@@ -1,12 +1,12 @@
 package com.gabez.pathvisionapp.data.repo
 
-import com.gabez.pathvisionapp.app.paths.entities.SkillStatus
 import com.gabez.pathvisionapp.data.dataSources.ApiDatasource
 import com.gabez.pathvisionapp.data.dataSources.FirebaseDatasource
 import com.gabez.pathvisionapp.data.dataSources.LocalDatasource
 import com.gabez.pathvisionapp.domain.AppRepository
-import com.gabez.pathvisionapp.entities.PathObject
-import com.gabez.pathvisionapp.entities.SkillObject
+import com.gabez.pathvisionapp.domain.entities.PathObject
+import com.gabez.pathvisionapp.domain.entities.SkillObject
+import kotlinx.coroutines.flow.Flow
 
 class AppRepositoryImpl(
     private val localSource: LocalDatasource,
@@ -24,17 +24,17 @@ class AppRepositoryImpl(
         firebaseSource.deletePath(path)
     }
 
-    override suspend fun getLocalPaths() = localSource.getAllPaths()
-    override suspend fun getLocalSkills(): List<SkillObject> = localSource.getAllSkills()
+    override suspend fun getLocalPaths(): Flow<List<PathObject>> = localSource.getAllPaths()
+    override suspend fun getLocalSkills(): Flow<List<SkillObject>> = localSource.getAllSkills()
 
-    override suspend fun getRemotePaths() = firebaseSource.getRemotePaths()
-    override suspend fun getRemoteSkills() = firebaseSource.getRemoteSkills()
+    override suspend fun getRemotePaths(): Flow<PathObject> = firebaseSource.getRemotePaths()
+    override suspend fun getRemoteSkills(): Flow<SkillObject> = firebaseSource.getRemoteSkills()
 
     override suspend fun updateSkillStatus(skill: SkillObject) {
         localSource.updateSkillStatus(skill)
         firebaseSource.updateSkillStatus(skill)
     }
 
-    override suspend fun searchPathByKeyword(keyword: String) = apiSource.searchByKeyword(keyword)
-    override suspend fun searchPathBySkill(skill: String) = apiSource.searchBySkill(skill)
+    override suspend fun searchPathByKeyword(keyword: String): Flow<List<PathObject>>  = apiSource.searchByKeyword(keyword)
+    override suspend fun searchPathBySkill(skill: String): Flow<List<PathObject>>  = apiSource.searchBySkill(skill)
 }

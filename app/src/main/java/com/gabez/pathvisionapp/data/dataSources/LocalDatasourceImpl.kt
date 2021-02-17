@@ -1,10 +1,11 @@
 package com.gabez.pathvisionapp.data.dataSources
 
 import com.gabez.pathvisionapp.data.gateways.LocalDbGateway
-import com.gabez.pathvisionapp.entities.PathObject
-import com.gabez.pathvisionapp.entities.SkillObject
+import com.gabez.pathvisionapp.domain.entities.PathObject
+import com.gabez.pathvisionapp.domain.entities.SkillObject
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.launch
 
 class LocalDatasourceImpl(private val gateway: LocalDbGateway): LocalDatasource {
@@ -28,9 +29,9 @@ class LocalDatasourceImpl(private val gateway: LocalDbGateway): LocalDatasource 
         refreshPaths()
     }
 
-    override suspend fun getAllPaths(): List<PathObject> = gateway.getAllPaths()
+    override suspend fun getAllPaths(): Flow<List<PathObject>> = gateway.getAllPaths()
 
-    override suspend fun getAllSkills(): List<SkillObject> = gateway.getAllSkills()
+    override suspend fun getAllSkills(): Flow<List<SkillObject>> = gateway.getAllSkills()
 
     private suspend fun refreshPaths() = gateway.refreshPaths()
 }

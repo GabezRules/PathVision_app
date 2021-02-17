@@ -1,8 +1,8 @@
-package com.gabez.pathvisionapp.statusHolders
+package com.gabez.pathvisionapp.app.statusHolders
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import com.gabez.pathvisionapp.entities.UserObj
+import com.gabez.pathvisionapp.domain.entities.UserObj
 
 class CurrentUserHolder {
     private val _currentUser: MutableLiveData<UserObj?> = MutableLiveData(null)

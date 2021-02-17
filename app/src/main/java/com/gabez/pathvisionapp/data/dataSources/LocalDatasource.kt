@@ -1,12 +1,13 @@
 package com.gabez.pathvisionapp.data.dataSources
 
-import com.gabez.pathvisionapp.entities.PathObject
-import com.gabez.pathvisionapp.entities.SkillObject
+import com.gabez.pathvisionapp.domain.entities.PathObject
+import com.gabez.pathvisionapp.domain.entities.SkillObject
+import kotlinx.coroutines.flow.Flow
 
 interface LocalDatasource {
     suspend fun addPath(path: PathObject)
     suspend fun deletePath(path: PathObject)
-    suspend fun getAllPaths(): List<PathObject>
-    suspend fun getAllSkills(): List<SkillObject>
+    suspend fun getAllPaths(): Flow<List<PathObject>>
+    suspend fun getAllSkills(): Flow<List<SkillObject>>
     suspend fun updateSkillStatus(skill: SkillObject)
 }

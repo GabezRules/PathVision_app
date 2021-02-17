@@ -1,9 +1,11 @@
 package com.gabez.pathvisionapp.modules
 
+import com.gabez.authentication.authentication.AuthenticationAdapterImpl
+import com.gabez.authentication.authentication.PostLoginCompare
 import com.gabez.pathvisionapp.data.gateways.AuthenticationAdapter
-import com.gabez.pathvisionapp.statusHolders.AuthErrorHolder
-import com.gabez.pathvisionapp.statusHolders.AuthLoadingHolder
-import com.gabez.pathvisionapp.statusHolders.CurrentUserHolder
+import com.gabez.pathvisionapp.app.statusHolders.AuthErrorHolder
+import com.gabez.pathvisionapp.app.statusHolders.AuthLoadingHolder
+import com.gabez.pathvisionapp.app.statusHolders.CurrentUserHolder
 import org.koin.dsl.module
 
 val authenticationModule = module{

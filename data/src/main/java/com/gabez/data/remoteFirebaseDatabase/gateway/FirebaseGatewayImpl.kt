@@ -5,8 +5,9 @@ import com.gabez.data.remoteFirebaseDatabase.entities.PathFirebaseEntity
 import com.gabez.data.remoteFirebaseDatabase.entities.SkillFirebaseEntity
 import com.gabez.pathvisionapp.app.paths.entities.SkillStatus
 import com.gabez.pathvisionapp.data.gateways.FirebaseGateway
-import com.gabez.pathvisionapp.entities.PathObject
-import com.gabez.pathvisionapp.entities.SkillObject
+import com.gabez.pathvisionapp.domain.entities.PathObject
+import com.gabez.pathvisionapp.domain.entities.SkillObject
+import kotlinx.coroutines.flow.Flow
 
 class FirebaseGatewayImpl(private val db: FirebaseDbAdapter) : FirebaseGateway {
     override fun addPath(path: PathObject) = db.addPath(
@@ -60,7 +61,7 @@ class FirebaseGatewayImpl(private val db: FirebaseDbAdapter) : FirebaseGateway {
         )
     )
 
-    override fun getRemotePaths() = db.getRemotePaths()
+    override fun getRemotePaths(): Flow<PathObject> = db.getRemotePaths()
 
-    override fun getRemoteSkills() = db.getRemoteSkills()
+    override fun getRemoteSkills(): Flow<SkillObject> = db.getRemoteSkills()
 }

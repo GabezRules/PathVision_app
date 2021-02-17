@@ -1,7 +1,8 @@
 package com.gabez.pathvisionapp.data.gateways
 
-import com.gabez.pathvisionapp.entities.PathObject
-import com.gabez.pathvisionapp.entities.SkillObject
+import com.gabez.pathvisionapp.domain.entities.PathObject
+import com.gabez.pathvisionapp.domain.entities.SkillObject
+import kotlinx.coroutines.flow.Flow
 
 interface FirebaseGateway {
     fun addPath(path: PathObject)
@@ -9,6 +10,6 @@ interface FirebaseGateway {
     fun addSkill(skill: SkillObject)
     fun deleteskill(skill: SkillObject)
     fun updateSkillStatus(skill: SkillObject)
-    fun getRemotePaths()
-    fun getRemoteSkills()
+    fun getRemotePaths(): Flow<PathObject>
+    fun getRemoteSkills(): Flow<SkillObject>
 }

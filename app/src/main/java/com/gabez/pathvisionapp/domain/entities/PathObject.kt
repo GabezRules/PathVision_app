@@ -1,4 +1,4 @@
-package com.gabez.pathvisionapp.entities
+package com.gabez.pathvisionapp.domain.entities
 
 import com.gabez.pathvisionapp.app.search.entities.PathStatus
 

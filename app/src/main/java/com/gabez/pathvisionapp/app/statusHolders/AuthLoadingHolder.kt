@@ -1,4 +1,4 @@
-package com.gabez.pathvisionapp.statusHolders
+package com.gabez.pathvisionapp.app.statusHolders
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

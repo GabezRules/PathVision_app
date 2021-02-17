@@ -1,10 +1,9 @@
 package com.gabez.pathvisionapp.data.dataSources
 
-import com.gabez.pathvisionapp.app.paths.entities.PathForView
-import com.gabez.pathvisionapp.app.paths.entities.SkillForView
 import com.gabez.pathvisionapp.data.gateways.FirebaseGateway
-import com.gabez.pathvisionapp.entities.PathObject
-import com.gabez.pathvisionapp.entities.SkillObject
+import com.gabez.pathvisionapp.domain.entities.PathObject
+import com.gabez.pathvisionapp.domain.entities.SkillObject
+import kotlinx.coroutines.flow.Flow
 
 class FirebaseDatasourceImpl(private val gateway: FirebaseGateway): FirebaseDatasource {
 
@@ -18,7 +17,7 @@ class FirebaseDatasourceImpl(private val gateway: FirebaseGateway): FirebaseData
 
     override fun updateSkillStatus(skill: SkillObject) = gateway.updateSkillStatus(skill)
 
-    override fun getRemotePaths() = gateway.getRemotePaths()
+    override fun getRemotePaths(): Flow<PathObject> = gateway.getRemotePaths()
 
-    override fun getRemoteSkills() = gateway.getRemoteSkills()
+    override fun getRemoteSkills(): Flow<SkillObject> = gateway.getRemoteSkills()
 }

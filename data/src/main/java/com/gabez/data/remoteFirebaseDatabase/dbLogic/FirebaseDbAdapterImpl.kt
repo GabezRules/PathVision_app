@@ -1,20 +1,26 @@
 package com.gabez.data.remoteFirebaseDatabase.dbLogic
 
-import com.gabez.pathvisionapp.data.dataHolders.FirebaseDataHolder
 import com.gabez.data.remoteFirebaseDatabase.entities.PathFirebaseEntity
 import com.gabez.data.remoteFirebaseDatabase.entities.SkillFirebaseEntity
+import com.gabez.pathvisionapp.domain.entities.PathObject
+import com.gabez.pathvisionapp.domain.entities.SkillObject
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
+import kotlinx.coroutines.ExperimentalCoroutinesApi
+import kotlinx.coroutines.channels.awaitClose
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.callbackFlow
 
+@ExperimentalCoroutinesApi
 class FirebaseDbAdapterImpl(
     private val firebaseDatabase: FirebaseDatabase,
-    private val auth: FirebaseAuth,
-    private val dataHolder: FirebaseDataHolder
+    private val auth: FirebaseAuth
 ) : FirebaseDbAdapter {
 
     override fun addPath(path: PathFirebaseEntity) {
         auth.currentUser?.let { user ->
-            firebaseDatabase.reference.child("users").child(user.uid).child("paths").child(path.title)
+            firebaseDatabase.reference.child("users").child(user.uid).child("paths")
+                .child(path.title)
                 .get().addOnCompleteListener { task ->
                     if (task.result == null) {
                         firebaseDatabase.reference.child("users").child(auth.currentUser!!.uid)
@@ -29,74 +35,80 @@ class FirebaseDbAdapterImpl(
             firebaseDatabase.reference.child("users").child(user.uid).child("paths").child(name)
                 .get().addOnCompleteListener { task ->
                     if (task.result != null) {
-                        firebaseDatabase.reference.child("users").child(user.uid).child(name).removeValue()
+                        firebaseDatabase.reference.child("users").child(user.uid).child(name)
+                            .removeValue()
                     }
                 }
         }
     }
 
     override fun addSkill(skill: SkillFirebaseEntity) {
-        auth.currentUser?.let{ user ->
-            firebaseDatabase.reference.child("users").child(user.uid).child("skills").child(skill.title)
+        auth.currentUser?.let { user ->
+            firebaseDatabase.reference.child("users").child(user.uid).child("skills")
+                .child(skill.title)
                 .get().addOnCompleteListener { task ->
-                if(task.result == null){
-                    firebaseDatabase.reference.child("users").child(user.uid).child("skills").child(skill.title).setValue(skill)
+                    if (task.result == null) {
+                        firebaseDatabase.reference.child("users").child(user.uid).child("skills")
+                            .child(skill.title).setValue(skill)
+                    }
                 }
-            }
         }
     }
 
     override fun deleteSkill(skill: SkillFirebaseEntity) {
-        auth.currentUser?.let{ user ->
-            firebaseDatabase.reference.child("users").child(user.uid).child("skills").child(skill.title)
+        auth.currentUser?.let { user ->
+            firebaseDatabase.reference.child("users").child(user.uid).child("skills")
+                .child(skill.title)
                 .get().addOnCompleteListener { task ->
-                    if(task.result != null){
-                        firebaseDatabase.reference.child("users").child(user.uid).child("skills").child(skill.title).removeValue()
+                    if (task.result != null) {
+                        firebaseDatabase.reference.child("users").child(user.uid).child("skills")
+                            .child(skill.title).removeValue()
                     }
                 }
         }
     }
 
     override fun updateSkillStatus(skill: SkillFirebaseEntity) {
-        auth.currentUser?.let{ user ->
-            firebaseDatabase.reference.child("users").child(user.uid).child("skills").child(skill.title)
+        auth.currentUser?.let { user ->
+            firebaseDatabase.reference.child("users").child(user.uid).child("skills")
+                .child(skill.title)
                 .get().addOnCompleteListener { task ->
-                    if(task.result != null){
-                        firebaseDatabase.reference.child("users").child(user.uid).child("skills").child(skill.title).setValue(skill)
+                    if (task.result != null) {
+                        firebaseDatabase.reference.child("users").child(user.uid).child("skills")
+                            .child(skill.title).setValue(skill)
                     }
                 }
         }
     }
 
-    override fun getRemotePaths() {
+    override fun getRemotePaths(): Flow<PathObject> = callbackFlow {
         auth.currentUser?.let { user ->
-            firebaseDatabase.reference.child("users").child(user.uid).child("paths").get().addOnCompleteListener {
-                task ->
+            awaitClose {
+                firebaseDatabase.reference.child("users").child(user.uid).child("paths").get()
+                    .addOnCompleteListener {
 
-                val allPaths: ArrayList<PathFirebaseEntity> = ArrayList()
+                            task ->
 
-                for(snap in task.result!!.children){
-                    allPaths.add(snap.getValue(PathFirebaseEntity::class.java)!!)
-                }
-
-                dataHolder.restoreAllPaths(allPaths.map { pathEntity -> pathEntity.toPathObject() })
+                        for (snap in task.result!!.children) {
+                            offer(snap.getValue(PathFirebaseEntity::class.java)!!.toPathObject())
+                        }
+                    }
             }
+
         }
     }
 
-    override fun getRemoteSkills() {
+    override fun getRemoteSkills(): Flow<SkillObject> = callbackFlow {
         auth.currentUser?.let { user ->
-            firebaseDatabase.reference.child("users").child(user.uid).child("skills").get().addOnCompleteListener {
-                    task ->
-
-                val allSkills: ArrayList<SkillFirebaseEntity> = ArrayList()
-
-                for(snap in task.result!!.children){
-                    allSkills.add(snap.getValue(SkillFirebaseEntity::class.java)!!)
-                }
-
-                dataHolder.restoreAllSkills(allSkills.map { skillEntity -> skillEntity.toSkillObject() })
+            awaitClose {
+                firebaseDatabase.reference.child("users").child(user.uid).child("skills").get()
+                    .addOnCompleteListener { task ->
+                        for (snap in task.result!!.children) {
+                            offer(snap.getValue(SkillFirebaseEntity::class.java)!!.toSkillObject())
+                        }
+                    }
             }
+
         }
     }
 }

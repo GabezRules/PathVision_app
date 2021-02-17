@@ -1,6 +1,6 @@
-package com.gabez.pathvisionapp.data.dataHolders
+package com.gabez.pathvisionapp.app.statusHolders
 
-import com.gabez.pathvisionapp.entities.PathObject
+import com.gabez.pathvisionapp.domain.entities.PathObject
 
 
 class DbSkillCountHolder {

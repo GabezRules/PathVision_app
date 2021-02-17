@@ -6,16 +6,17 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.gabez.pathvisionapp.data.dataHolders.ApiPathsHolder
+import com.gabez.pathvisionapp.app.statusHolders.ApiErrorHolder
 import com.gabez.pathvisionapp.app.search.entities.PathForSearch
 import com.gabez.pathvisionapp.app.search.entities.PathStatus
 import com.gabez.pathvisionapp.app.search.entities.SearchType
-import com.gabez.pathvisionapp.data.dataHolders.DbPathsHolder
-import com.gabez.pathvisionapp.domain.usecases.AddPathUsecase
-import com.gabez.pathvisionapp.domain.usecases.DeletePathUsecase
-import com.gabez.pathvisionapp.domain.usecases.SearchPathByKeywordUsecase
-import com.gabez.pathvisionapp.domain.usecases.SearchPathBySkillUsecase
+import com.gabez.pathvisionapp.app.search.entities.SkillForSearch
+import com.gabez.pathvisionapp.domain.usecases.*
+import com.gabez.pathvisionapp.domain.entities.PathObject
 import kotlinx.coroutines.InternalCoroutinesApi
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.collect
+import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.launch
 
 class SearchViewModel(
@@ -23,68 +24,87 @@ class SearchViewModel(
     private val deletePathUsecase: DeletePathUsecase,
     private val searchPathByKeywordUsecase: SearchPathByKeywordUsecase,
     private val searchPathBySkillUsecase: SearchPathBySkillUsecase,
+    private val getPathsUsecase: GetLocalPathsUsecase,
     private val context: Context,
-    private val allPathsDb: DbPathsHolder,
-    private val allPathsApi: ApiPathsHolder
+    private val apiError: ApiErrorHolder
 ) : ViewModel() {
 
-    private val _mockData: MutableLiveData<ArrayList<PathForSearch>> = MutableLiveData()
-    var searchData: LiveData<ArrayList<PathForSearch>> = _mockData
+    private val _searchData: MutableLiveData<ArrayList<PathForSearch>> = MutableLiveData()
+    var searchData: LiveData<ArrayList<PathForSearch>> = _searchData
 
-    val error: LiveData<String> = allPathsApi.error
-    val isLoading: LiveData<Boolean> = allPathsApi.isLoading
+    val error: LiveData<String> = apiError.error
+
+    val _isLoading: MutableLiveData<Boolean> = MutableLiveData(false)
+    val isLoading: LiveData<Boolean> = _isLoading
 
     val searchType: MutableLiveData<SearchType> = MutableLiveData(SearchType.BY_KEYWORD)
 
-    init {
-        //_mockData.value = searchMockData
-        allPathsDb.allPaths.observeForever { refreshMockData() }
-        allPathsApi.allPaths.observeForever { allPaths -> _mockData.postValue(ArrayList(allPaths)) }
-    }
-
     @InternalCoroutinesApi
-    fun searchPath(keyword: String){
-        if(keyword.isNotEmpty()){
-            when(searchType.value!!){
+    fun searchPath(keyword: String) {
+        if (keyword.isNotEmpty()) {
+            when (searchType.value!!) {
                 SearchType.BY_KEYWORD -> searchPathByKeyword(keyword)
                 SearchType.BY_SKILL -> searchPathBySkill(keyword)
             }
-        }else{
+        } else {
             searchData.value!!.clear()
         }
     }
 
     @InternalCoroutinesApi
     private fun searchPathByKeyword(keyword: String) = viewModelScope.launch {
-        _mockData.value!!.clear()
-        searchPathByKeywordUsecase.invoke(keyword)
-    }
+        _isLoading.postValue(true)
+        _searchData.value!!.clear()
+
+        setupPathsForSearch(searchPathByKeywordUsecase.invoke(keyword))
+
+    }.invokeOnCompletion { _isLoading.postValue(false) }
 
     @InternalCoroutinesApi
     private fun searchPathBySkill(skill: String) = viewModelScope.launch {
-        _mockData.value!!.clear()
-        searchPathBySkillUsecase.invoke(skill)
-    }
+        _isLoading.postValue(true)
+        _searchData.value!!.clear()
+        setupPathsForSearch(searchPathBySkillUsecase.invoke(skill))
+
+
+    }.invokeOnCompletion { _isLoading.postValue(false) }
 
 
     fun deletePath(path: PathForSearch) =
         viewModelScope.launch { deletePathUsecase.invoke(path.toPathObject()) }.invokeOnCompletion {
-            refreshMockData()
+            val pathIndex = _searchData.value!!.indexOf(path)
+            _searchData.value!![pathIndex].status = PathStatus.NOT_ADDED
             Toast.makeText(context, "Item deleted!", Toast.LENGTH_SHORT).show()
         }
 
     fun addPath(path: PathForSearch) =
         viewModelScope.launch { addPathUsecase.invoke(path.toPathObject()) }.invokeOnCompletion {
-            refreshMockData()
+            val pathIndex = _searchData.value!!.indexOf(path)
+            _searchData.value!![pathIndex].status = PathStatus.ADDED
             Toast.makeText(context, "Item added!", Toast.LENGTH_SHORT).show()
         }
 
-    private fun refreshMockData() {
-        for (foundPath in allPathsDb.allPaths.value!!) {
-            for (searchPath in _mockData.value!!) {
-                if (foundPath.title == searchPath.title) searchPath.status = PathStatus.ADDED
-                else searchPath.status = PathStatus.NOT_ADDED
+    private suspend fun setupPathsForSearch(flow: Flow<List<PathObject>>) {
+        flow.combine(getPathsUsecase.invoke()) { apiPaths, savedPaths ->
+
+            for (savedPath in savedPaths) {
+                for (apiPath in apiPaths) {
+                    if (savedPath.title == apiPath.title) apiPath.status = PathStatus.ADDED
+                    else apiPath.status = PathStatus.NOT_ADDED
+                }
             }
+
+            apiPaths
+
+        }.collect { apiPaths ->
+
+            _searchData.postValue(apiPaths.map { pathObject ->
+                PathForSearch(
+                    title = pathObject.title,
+                    items = pathObject.items!!.map { skillObject -> SkillForSearch(title = skillObject.title) },
+                    status = pathObject.status
+                )
+            } as ArrayList<PathForSearch>?)
         }
     }
 }

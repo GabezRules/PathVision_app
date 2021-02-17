@@ -4,16 +4,14 @@ import com.gabez.data.localDatabase.dbLogic.LocalDatabase
 import com.gabez.data.localDatabase.entities.PathEntity
 import com.gabez.data.localDatabase.entities.SkillEntity
 import com.gabez.pathvisionapp.app.paths.entities.SkillStatus
-import com.gabez.pathvisionapp.app.search.entities.PathForSearch
-import com.gabez.pathvisionapp.app.search.entities.PathStatus
-import com.gabez.pathvisionapp.app.search.entities.SkillForSearch
-import com.gabez.pathvisionapp.data.dataHolders.DbPathsHolder
-import com.gabez.pathvisionapp.data.dataHolders.DbSkillCountHolder
+import com.gabez.pathvisionapp.app.statusHolders.DbSkillCountHolder
 import com.gabez.pathvisionapp.data.gateways.LocalDbGateway
-import com.gabez.pathvisionapp.entities.PathObject
-import com.gabez.pathvisionapp.entities.SkillObject
+import com.gabez.pathvisionapp.domain.entities.PathObject
+import com.gabez.pathvisionapp.domain.entities.SkillObject
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.map
 
-class LocalDbGatewayImpl(private val db: LocalDatabase, private val pathsHolder: DbPathsHolder): LocalDbGateway {
+class LocalDbGatewayImpl(private val db: LocalDatabase): LocalDbGateway {
     //TODO: Items from MainFragment are not deleting - fix it
 
     var skillHolder = DbSkillCountHolder()
@@ -50,20 +48,13 @@ class LocalDbGatewayImpl(private val db: LocalDatabase, private val pathsHolder:
         }
     }
 
-    override suspend fun getAllPaths(): List<PathObject> {
-        val allPaths = db.dao().getAllPaths()
-        skillHolder.refreshSkillHolder(allPaths.map { path -> path.toPathObject() })
+    override suspend fun getAllPaths(): Flow<List<PathObject>> =
+        db.dao().getAllPaths().map { pathList -> pathList.map { pathEntity -> pathEntity.toPathObject() } }
 
-        return allPaths.map { entity -> PathObject(
-            title = entity.title,
-            items = entity.items.split(";;").map { skill -> SkillObject(title = skill) },
-            status = PathStatus.ADDED
-        ) }
-    }
 
-    override suspend fun getAllSkills(): List<SkillObject> {
-        return db.dao().getAllSkills().map { skillEntity -> SkillObject(title = skillEntity.title) }
-    }
+    override suspend fun getAllSkills(): Flow<List<SkillObject>> =
+        db.dao().getAllSkills().map{skillList -> skillList.map { skillEntity -> skillEntity.toSkillObject() }}
+
 
     override suspend fun updateSkillStatus(skill: SkillObject) {
         val intStatus = when(skill.status){
@@ -73,14 +64,6 @@ class LocalDbGatewayImpl(private val db: LocalDatabase, private val pathsHolder:
         }
 
         db.dao().updateSkill(skill.title, intStatus)
-    }
-
-    override suspend fun refreshPaths(){
-        val allPaths = db.dao().getAllPaths()
-        val allSkills = db.dao().getAllSkills()
-
-        skillHolder.refreshSkillHolder(allPaths.map { path -> path.toPathObject() })
-        pathsHolder.setPaths(allPaths.map { path -> path.toPathObject() }, allSkills.map { skill -> skill.toSkillObject() })
     }
 
 }

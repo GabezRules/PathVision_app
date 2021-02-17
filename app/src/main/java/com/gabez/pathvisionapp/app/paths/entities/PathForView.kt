@@ -1,5 +1,5 @@
 package com.gabez.pathvisionapp.app.paths.entities
-import com.gabez.pathvisionapp.entities.PathObject
+import com.gabez.pathvisionapp.domain.entities.PathObject
 import com.thoughtbot.expandablerecyclerview.models.ExpandableGroup
 
 

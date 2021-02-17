@@ -9,24 +9,25 @@ import androidx.lifecycle.viewModelScope
 import com.gabez.pathvisionapp.app.paths.entities.PathForView
 import com.gabez.pathvisionapp.app.paths.entities.SkillForView
 import com.gabez.pathvisionapp.app.paths.entities.SkillStatus
-import com.gabez.pathvisionapp.data.dataHolders.DbPathsHolder
 import com.gabez.pathvisionapp.domain.usecases.DeletePathUsecase
 import com.gabez.pathvisionapp.domain.usecases.GetLocalPathsUsecase
 import com.gabez.pathvisionapp.domain.usecases.GetLocalSkillsUsecase
 import com.gabez.pathvisionapp.domain.usecases.UpdateSkillStatusUsecase
-import com.gabez.pathvisionapp.entities.PathObject
-import com.gabez.pathvisionapp.entities.SkillObject
+import com.gabez.pathvisionapp.domain.entities.PathObject
+import com.gabez.pathvisionapp.domain.entities.SkillObject
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.flow.collect
+import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.runBlocking
 
 class MainViewModel(
     private val getPathsUsecase: GetLocalPathsUsecase,
     private val getSkillsUsecase: GetLocalSkillsUsecase,
     private val updateSkillUsecase: UpdateSkillStatusUsecase,
     private val deletePathUsecase: DeletePathUsecase,
-    private val context: Context,
-    private val allPaths: DbPathsHolder
+    private val context: Context
 ) : ViewModel() {
 
     private val _savedPaths: MutableLiveData<ArrayList<PathForView>> = MutableLiveData(ArrayList())
@@ -35,32 +36,31 @@ class MainViewModel(
     private val _isLoading: MutableLiveData<Boolean> = MutableLiveData(false)
     val isLoading: LiveData<Boolean> = _isLoading
 
-    init {
-        getAllPaths()
-
-        allPaths.allPaths.observeForever {
-            _isLoading.postValue(true)
-            _savedPaths.postValue(
-                createPaths(
-                    allPaths.allSkills.value!!,
-                    allPaths.allPaths.value!!
-                )
-            )
-
-            _isLoading.postValue(false)
-        }
-    }
+    init { getAllPaths() }
 
     private fun getAllPaths() = GlobalScope.launch(Dispatchers.IO) {
         _isLoading.postValue(true)
         _savedPaths.value!!.clear()
 
-        _savedPaths.postValue(
-            createPaths(
-                getSkillsUsecase.invoke(),
-                getPathsUsecase.invoke()
-            )
-        )
+        runBlocking {
+
+            val skillsFlow = getSkillsUsecase.invoke()
+            val pathsFlow = getPathsUsecase.invoke()
+
+            pathsFlow.combine(skillsFlow){ pathObjList, skillObjList ->
+                createPaths(skillObjList, pathObjList)
+            }.collect {
+
+                val pathsForView = it.map { pathObject -> PathForView(
+
+                    title = pathObject.title,
+                    items = pathObject.items!!.map { skillItem -> SkillForView(title = skillItem!!.title, status = skillItem.status)}
+
+                )} as ArrayList<PathForView>?
+
+                _savedPaths.postValue(pathsForView)
+            }
+        }
 
     }.invokeOnCompletion { _isLoading.postValue(false) }
 
@@ -68,27 +68,27 @@ class MainViewModel(
         updateSkillUsecase.invoke(SkillObject(title = skill.title, status = newStatus))
     }.invokeOnCompletion { getAllPaths() }
 
-    private fun createPaths(skillList: List<SkillObject>, pathList: List<PathObject>): ArrayList<PathForView> {
+    private fun createPaths(skillList: List<SkillObject>, pathList: List<PathObject>): ArrayList<PathObject> {
 
-        val pathObjectList: ArrayList<PathForView> = ArrayList()
+        val pathObjectList: ArrayList<PathObject> = ArrayList()
 
-        for (pathEntityItem in pathList) {
-            val itemsList: ArrayList<SkillForView> = ArrayList()
+        for (pathItem in pathList) {
+            val itemsList: ArrayList<SkillObject> = ArrayList()
 
-            for (skillEntityItem in skillList) {
-                var skillTitleList: List<String>? = pathEntityItem.items?.map { skillItem -> skillItem.title }
+            for (skillItem in skillList) {
+                var skillTitleList: List<String>? = pathItem.items?.map { skillItem -> skillItem.title }
 
-                if (skillTitleList?.contains(skillEntityItem.title) == true) itemsList.add(
-                    SkillForView(
-                        title = skillEntityItem.title,
-                        status = skillEntityItem.status
+                if (skillTitleList?.contains(skillItem.title) == true) itemsList.add(
+                    SkillObject(
+                        title = skillItem.title,
+                        status = skillItem.status
                     )
                 )
             }
 
             pathObjectList.add(
-                PathForView(
-                    title = pathEntityItem.title,
+                PathObject(
+                    title = pathItem.title,
                     items = itemsList
                 )
             )
@@ -98,7 +98,7 @@ class MainViewModel(
     }
 
     fun deletePath(path: PathForView) = viewModelScope.launch{ deletePathUsecase.invoke(path.toPathObject()) }.invokeOnCompletion {
-        _savedPaths.value!!.remove(path)
+        getAllPaths()
         Toast.makeText(context, "Item deleted!", Toast.LENGTH_SHORT).show()
     }
 

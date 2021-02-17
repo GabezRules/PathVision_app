@@ -14,6 +14,8 @@ import com.gabez.pathvisionapp.domain.usecases.DeletePathUsecase
 import com.gabez.pathvisionapp.domain.usecases.GetLocalPathsUsecase
 import com.gabez.pathvisionapp.domain.usecases.GetLocalSkillsUsecase
 import com.gabez.pathvisionapp.domain.usecases.UpdateSkillStatusUsecase
+import com.gabez.pathvisionapp.entities.PathObject
+import com.gabez.pathvisionapp.entities.SkillObject
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
@@ -63,10 +65,10 @@ class MainViewModel(
     }.invokeOnCompletion { _isLoading.postValue(false) }
 
     fun updateSkillStatus(skill: SkillForView, newStatus: SkillStatus) = GlobalScope.launch(Dispatchers.IO) {
-        updateSkillUsecase.invoke(skill, newStatus)
+        updateSkillUsecase.invoke(SkillObject(title = skill.title, status = newStatus))
     }.invokeOnCompletion { getAllPaths() }
 
-    private fun createPaths(skillList: List<SkillEntity>, pathList: List<PathEntity>): ArrayList<PathForView> {
+    private fun createPaths(skillList: List<SkillObject>, pathList: List<PathObject>): ArrayList<PathForView> {
 
         val pathObjectList: ArrayList<PathForView> = ArrayList()
 
@@ -74,22 +76,19 @@ class MainViewModel(
             val itemsList: ArrayList<SkillForView> = ArrayList()
 
             for (skillEntityItem in skillList) {
-                if (skillEntityItem.name in pathEntityItem.relatedSkills.split(";;")) itemsList.add(
+                var skillTitleList: List<String>? = pathEntityItem.items?.map { skillItem -> skillItem.title }
+
+                if (skillTitleList?.contains(skillEntityItem.title) == true) itemsList.add(
                     SkillForView(
-                        title = skillEntityItem.name,
-                        status = when (skillEntityItem.status) {
-                            0 -> SkillStatus.EMPTY
-                            1 -> SkillStatus.IN_PROGRESS
-                            2 -> SkillStatus.DONE
-                            else -> SkillStatus.EMPTY
-                        }
+                        title = skillEntityItem.title,
+                        status = skillEntityItem.status
                     )
                 )
             }
 
             pathObjectList.add(
                 PathForView(
-                    title = pathEntityItem.name,
+                    title = pathEntityItem.title,
                     items = itemsList
                 )
             )
@@ -98,7 +97,7 @@ class MainViewModel(
         return pathObjectList
     }
 
-    fun deletePath(path: PathForView) = viewModelScope.launch{ deletePathUsecase.invoke(path.toPathEntity()) }.invokeOnCompletion {
+    fun deletePath(path: PathForView) = viewModelScope.launch{ deletePathUsecase.invoke(path.toPathObject()) }.invokeOnCompletion {
         _savedPaths.value!!.remove(path)
         Toast.makeText(context, "Item deleted!", Toast.LENGTH_SHORT).show()
     }

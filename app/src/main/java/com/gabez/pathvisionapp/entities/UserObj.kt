@@ -1,4 +1,4 @@
-package com.gabez.authentication.authentication.entities
+package com.gabez.pathvisionapp.entities
 
 import com.gabez.pathvisionapp.domain.entities.PathObj
 

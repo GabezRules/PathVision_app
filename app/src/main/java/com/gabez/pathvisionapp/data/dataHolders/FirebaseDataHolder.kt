@@ -5,15 +5,18 @@ import androidx.lifecycle.MutableLiveData
 import com.gabez.pathvisionapp.entities.PathObject
 import com.gabez.pathvisionapp.entities.SkillObject
 
-class DbPathsHolder {
+class FirebaseDataHolder {
     private val _allPaths: MutableLiveData<List<PathObject>> = MutableLiveData(ArrayList())
     val allPaths: LiveData<List<PathObject>> = _allPaths
+
+    fun restoreAllPaths(nList: List<PathObject>){
+        _allPaths.postValue(nList)
+    }
 
     private val _allSkills: MutableLiveData<List<SkillObject>> = MutableLiveData(ArrayList())
     val allSkills: LiveData<List<SkillObject>> = _allSkills
 
-    fun setPaths(paths: List<PathObject>, skills: List<SkillObject>) {
-        _allSkills.postValue(skills)
-        _allPaths.postValue(paths)
+    fun restoreAllSkills(nList: List<SkillObject>){
+        _allSkills.postValue(nList)
     }
 }

@@ -68,13 +68,13 @@ class SearchViewModel(
 
 
     fun deletePath(path: PathForSearch) =
-        viewModelScope.launch { deletePathUsecase.invoke(path.toPathEntity()) }.invokeOnCompletion {
+        viewModelScope.launch { deletePathUsecase.invoke(path.toPathObject()) }.invokeOnCompletion {
             refreshMockData()
             Toast.makeText(context, "Item deleted!", Toast.LENGTH_SHORT).show()
         }
 
     fun addPath(path: PathForSearch) =
-        viewModelScope.launch { addPathUsecase.invoke(path) }.invokeOnCompletion {
+        viewModelScope.launch { addPathUsecase.invoke(path.toPathObject()) }.invokeOnCompletion {
             refreshMockData()
             Toast.makeText(context, "Item added!", Toast.LENGTH_SHORT).show()
         }

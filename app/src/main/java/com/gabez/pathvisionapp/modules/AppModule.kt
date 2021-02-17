@@ -1,9 +1,5 @@
 package com.gabez.pathvisionapp.modules
 
-import com.gabez.data.localDatabase.gateway.LocalDbGatewayImpl
-import com.gabez.data.remoteApiDatabase.gateway.ApiGatewayImpl
-import com.gabez.data.remoteFirebaseDatabase.FirebaseDataHolder
-import com.gabez.data.remoteFirebaseDatabase.gateway.FirebaseGatewayImpl
 import com.gabez.pathvisionapp.app.MainActivityViewModel
 import com.gabez.pathvisionapp.app.paths.view.MainViewModel
 import com.gabez.pathvisionapp.app.search.view.SearchViewModel
@@ -12,6 +8,7 @@ import com.gabez.pathvisionapp.app.settings.authentication.register.RegisterView
 import com.gabez.pathvisionapp.app.settings.settingsWithoutAuth.SettingsViewModel
 import com.gabez.pathvisionapp.data.dataHolders.ApiPathsHolder
 import com.gabez.pathvisionapp.data.dataHolders.DbPathsHolder
+import com.gabez.pathvisionapp.data.dataHolders.FirebaseDataHolder
 import com.gabez.pathvisionapp.data.dataSources.*
 import com.gabez.pathvisionapp.data.gateways.ApiGateway
 import com.gabez.pathvisionapp.data.gateways.FirebaseGateway

@@ -1,6 +1,6 @@
 package com.gabez.data.remoteFirebaseDatabase.dbLogic
 
-import com.gabez.data.remoteFirebaseDatabase.FirebaseDataHolder
+import com.gabez.pathvisionapp.data.dataHolders.FirebaseDataHolder
 import com.gabez.data.remoteFirebaseDatabase.entities.PathFirebaseEntity
 import com.gabez.data.remoteFirebaseDatabase.entities.SkillFirebaseEntity
 import com.google.firebase.auth.FirebaseAuth
@@ -46,7 +46,7 @@ class FirebaseDbAdapterImpl(
         }
     }
 
-    override fun removeSkill(skill: SkillFirebaseEntity) {
+    override fun deleteSkill(skill: SkillFirebaseEntity) {
         auth.currentUser?.let{ user ->
             firebaseDatabase.reference.child("users").child(user.uid).child("skills").child(skill.title)
                 .get().addOnCompleteListener { task ->
@@ -79,7 +79,7 @@ class FirebaseDbAdapterImpl(
                     allPaths.add(snap.getValue(PathFirebaseEntity::class.java)!!)
                 }
 
-                dataHolder.restoreAllPaths(allPaths)
+                dataHolder.restoreAllPaths(allPaths.map { pathEntity -> pathEntity.toPathObject() })
             }
         }
     }
@@ -95,7 +95,7 @@ class FirebaseDbAdapterImpl(
                     allSkills.add(snap.getValue(SkillFirebaseEntity::class.java)!!)
                 }
 
-                dataHolder.restoreAllSkills(allSkills)
+                dataHolder.restoreAllSkills(allSkills.map { skillEntity -> skillEntity.toSkillObject() })
             }
         }
     }

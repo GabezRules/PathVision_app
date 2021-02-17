@@ -14,7 +14,6 @@ import com.gabez.pathvisionapp.R
 import com.gabez.pathvisionapp.app.search.entities.PathForSearch
 import com.gabez.pathvisionapp.app.search.entities.PathStatus
 import com.gabez.pathvisionapp.app.search.entities.SearchType
-import com.gabez.pathvisionapp.app.search.entities.searchMockData
 import com.gabez.pathvisionapp.app.search.view.pathList.ExpandablePathListAdapterSearch
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.textfield.TextInputEditText
@@ -45,7 +44,7 @@ class SearchFragment : Fragment(), KoinComponent {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_search, container, false)
 
-        adapterSearch = ExpandablePathListAdapterSearch(searchMockData, this@SearchFragment)
+        adapterSearch = ExpandablePathListAdapterSearch(ArrayList(), this@SearchFragment)
         searchEditText = view.findViewById(R.id.searchPath)
 
         buttonSearch = view.findViewById(R.id.buttonSearch)

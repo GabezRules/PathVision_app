@@ -8,7 +8,7 @@ interface FirebaseDbAdapter {
     fun deletePath(name: String)
 
     fun addSkill(skill: SkillFirebaseEntity)
-    fun removeSkill(skill: SkillFirebaseEntity)
+    fun deleteSkill(skill: SkillFirebaseEntity)
 
     fun updateSkillStatus(skill: SkillFirebaseEntity)
 

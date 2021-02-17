@@ -1,4 +1,4 @@
-package com.gabez.authentication.authentication.usecases
+package com.gabez.pathvisionapp.domain.usecases
 
 import com.gabez.authentication.authentication.AuthenticationAdapter
 

@@ -1,5 +1,7 @@
 package com.gabez.pathvisionapp.data.dataHolders
 
+import com.gabez.pathvisionapp.entities.PathObject
+
 
 class DbSkillCountHolder {
     private var skillCountInDb: HashMap<String, Int> = HashMap()
@@ -7,13 +9,13 @@ class DbSkillCountHolder {
     fun isInDb(skill: String): Boolean =  skillCountInDb[skill] != null
     fun isInOtherPath(skill: String) = skillCountInDb[skill]!! > 1
 
-    fun refreshSkillHolder(pathList: List<PathEntity>){
+    fun refreshSkillHolder(pathList: List<PathObject>){
         skillCountInDb = HashMap()
 
         for(item in pathList){
-            for(skill in item.relatedSkills.split(";;")){
-                if(skillCountInDb[skill] == null) skillCountInDb[skill] = 1
-                else skillCountInDb[skill]?.plus(1)
+            for(skill in item.items!!){
+                if(skillCountInDb[skill.title] == null) skillCountInDb[skill.title] = 1
+                else skillCountInDb[skill.title]?.plus(1)
             }
         }
     }

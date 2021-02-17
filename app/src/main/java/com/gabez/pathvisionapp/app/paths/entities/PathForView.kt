@@ -3,4 +3,9 @@ import com.gabez.pathvisionapp.entities.PathObject
 import com.thoughtbot.expandablerecyclerview.models.ExpandableGroup
 
 
-class PathForView(override var title: String?, override var items: List<SkillForView?>? = ArrayList()) : ExpandableGroup<SkillForView?>(title, items), PathObject
+class PathForView(title: String?, items: List<SkillForView?>? = ArrayList()) : ExpandableGroup<SkillForView?>(title, items){
+    fun toPathObject(): PathObject = PathObject(
+        title = title,
+        items = items.map{skillForView -> skillForView!!.toSkillObject()}
+    )
+}

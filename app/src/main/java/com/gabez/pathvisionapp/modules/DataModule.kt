@@ -1,9 +1,5 @@
 package com.gabez.pathvisionapp.modules
 
-import com.gabez.data.localDatabase.dbLogic.LocalDatabase
-import com.gabez.data.remoteApiDatabase.apiLogic.NetworkClient
-import com.gabez.data.remoteFirebaseDatabase.dbLogic.FirebaseDbAdapter
-import com.gabez.data.remoteFirebaseDatabase.dbLogic.FirebaseDbAdapterImpl
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
 import org.koin.dsl.module

@@ -82,7 +82,7 @@ class SearchViewModel(
     private fun refreshMockData() {
         for (foundPath in allPathsDb.allPaths.value!!) {
             for (searchPath in _mockData.value!!) {
-                if (foundPath.name == searchPath.title) searchPath.status = PathStatus.ADDED
+                if (foundPath.title == searchPath.title) searchPath.status = PathStatus.ADDED
                 else searchPath.status = PathStatus.NOT_ADDED
             }
         }

@@ -1,23 +1,23 @@
 package com.gabez.authentication.authentication
 
+import com.gabez.pathvisionapp.data.gateways.AuthenticationAdapter
 import com.gabez.pathvisionapp.entities.UserObj
 import com.gabez.pathvisionapp.statusHolders.AuthErrorHolder
 import com.gabez.pathvisionapp.statusHolders.AuthLoadingHolder
 import com.gabez.pathvisionapp.statusHolders.CurrentUserHolder
-import com.gabez.pathvisionapp.PostLoginCompare
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 
-class AuthenticationAdapter(
+class AuthenticationAdapterImpl(
     private val userHolder: CurrentUserHolder,
     private val fDatabase: FirebaseDatabase,
     private val authErrorHolder: AuthErrorHolder,
     private val authLoadingHolder: AuthLoadingHolder,
     private val compare: PostLoginCompare
-) {
+): AuthenticationAdapter {
 
     //TODO: Add authentication error an enum class
 
@@ -31,7 +31,7 @@ class AuthenticationAdapter(
         } else userHolder.setCurrentUser(null)
     }
 
-    fun registerUser(email: String, login: String, password: String) {
+    override fun registerUser(email: String, login: String, password: String) {
         authLoadingHolder.setAuthenticationState(true)
         auth.createUserWithEmailAndPassword(email, password)
             .addOnCompleteListener {
@@ -48,7 +48,7 @@ class AuthenticationAdapter(
             }
     }
 
-    fun loginUser(email: String, password: String) {
+    override fun loginUser(email: String, password: String) {
         authLoadingHolder.setAuthenticationState(true)
         auth.signInWithEmailAndPassword(email, password)
             .addOnCompleteListener {
@@ -75,12 +75,12 @@ class AuthenticationAdapter(
             }
     }
 
-    fun logoutUser(){
+    override fun logoutUser(){
         auth.signOut()
         userHolder.setCurrentUser(null)
     }
 
-    fun deleteUser(){
+    override fun deleteUser(){
         val uid = auth.currentUser!!.uid
 
         auth.currentUser!!.delete()

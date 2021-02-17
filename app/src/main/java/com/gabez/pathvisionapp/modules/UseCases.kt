@@ -1,9 +1,5 @@
 package com.gabez.pathvisionapp.modules
 
-import com.gabez.authentication.authentication.usecases.DeleteAccountUsecase
-import com.gabez.authentication.authentication.usecases.LoginUsecase
-import com.gabez.authentication.authentication.usecases.LogoutUsecase
-import com.gabez.authentication.authentication.usecases.RegisterUsecase
 import com.gabez.pathvisionapp.domain.usecases.*
 import org.koin.dsl.module
 

@@ -18,69 +18,86 @@ class NetworkClient(val apiErrorHolder: ApiErrorHolder) {
         .addConverterFactory(GsonConverterFactory.create())
         .build()
 
-    private val service: JobsApiService by lazy { retrofit.create(
-        JobsApiService::class.java) }
+    private val service: JobsApiService by lazy {
+        retrofit.create(
+            JobsApiService::class.java
+        )
+    }
 
     @ExperimentalCoroutinesApi
     fun searchByKeyword(keyword: String): Flow<List<PathObject>> = callbackFlow {
-        apiErrorHolder.isLoading.postValue(false)
-        service.searchByKeyword(keyword.toLowerCase(),
-            TOKEN
-        ).enqueue(object: Callback<List<PathFromServer>>{
-            override fun onResponse(call: Call<List<PathFromServer>>, response: Response<List<PathFromServer>>) {
-                if (response.isSuccessful) {
-                    val pathList: List<PathFromServer>? = response.body()
+        if (keyword.length > 1) {
+            apiErrorHolder.isLoading.postValue(true)
+            service.searchByKeyword(
+                keyword.toLowerCase(),
+                TOKEN
+            ).enqueue(object : Callback<List<PathFromServer>> {
+                override fun onResponse(
+                    call: Call<List<PathFromServer>>,
+                    response: Response<List<PathFromServer>>
+                ) {
+                    if (response.isSuccessful) {
+                        val pathList: List<PathFromServer>? = response.body()
 
-                    if (pathList != null) {
-                        if(pathList.isNotEmpty()){
-                            offer(pathList.map { pathItem -> pathItem.toPathObject() })
+                        if (pathList != null) {
+                            if (pathList.isNotEmpty()) {
+                                offer(pathList.map { pathItem -> pathItem.toPathObject() })
 
-                            apiErrorHolder.setError("")
-                            apiErrorHolder.isLoading.postValue(false)
+                                apiErrorHolder.setError("")
+                                apiErrorHolder.isLoading.postValue(false)
+                            } else apiErrorHolder.setError("Nothing found!")
+
                         } else apiErrorHolder.setError("Nothing found!")
-
-                    } else apiErrorHolder.setError("Nothing found!")
-                } else {
-                    apiErrorHolder.setError(response.errorBody().toString())
+                    } else {
+                        apiErrorHolder.setError(response.errorBody().toString())
+                    }
                 }
-            }
 
-            override fun onFailure(call: Call<List<PathFromServer>>, t: Throwable) {
-                t.message?.let { apiErrorHolder.setError(it) }
-            }
+                override fun onFailure(call: Call<List<PathFromServer>>, t: Throwable) {
+                    t.message?.let { apiErrorHolder.setError(it) }
+                }
 
-        })
+            })
+        }else offer(ArrayList<PathObject>())
+
     }
 
     @ExperimentalCoroutinesApi
     fun searchBySkill(skill: String): Flow<List<PathObject>> = callbackFlow {
-        apiErrorHolder.isLoading.postValue(false)
+        if(skill.length > 1){
+            apiErrorHolder.isLoading.postValue(false)
 
-        service.searchBySkill(skill.toLowerCase(),
-            TOKEN
-        ).enqueue(object: Callback<List<PathFromServer>>{
-            override fun onResponse(call: Call<List<PathFromServer>>, response: Response<List<PathFromServer>>) {
-                if (response.isSuccessful) {
-                    val pathList: List<PathFromServer>? = response.body()
+            service.searchBySkill(
+                skill.toLowerCase(),
+                TOKEN
+            ).enqueue(object : Callback<List<PathFromServer>> {
+                override fun onResponse(
+                    call: Call<List<PathFromServer>>,
+                    response: Response<List<PathFromServer>>
+                ) {
+                    if (response.isSuccessful) {
+                        val pathList: List<PathFromServer>? = response.body()
 
-                    if (pathList != null) {
-                        if(pathList.isNotEmpty()){
-                            offer(pathList.map { pathItem -> pathItem.toPathObject() })
+                        if (pathList != null) {
+                            if (pathList.isNotEmpty()) {
+                                offer(pathList.map { pathItem -> pathItem.toPathObject() })
 
-                            apiErrorHolder.setError("")
-                            apiErrorHolder.isLoading.postValue(false)
+                                apiErrorHolder.setError("")
+                                apiErrorHolder.isLoading.postValue(false)
+                            } else apiErrorHolder.setError("Nothing found!")
+
                         } else apiErrorHolder.setError("Nothing found!")
-
-                    } else apiErrorHolder.setError("Nothing found!")
-                } else {
-                    apiErrorHolder.setError(response.errorBody().toString())
+                    } else {
+                        apiErrorHolder.setError(response.errorBody().toString())
+                    }
                 }
-            }
 
-            override fun onFailure(call: Call<List<PathFromServer>>, t: Throwable) {
-                t.message?.let { apiErrorHolder.setError(it) }
-            }
+                override fun onFailure(call: Call<List<PathFromServer>>, t: Throwable) {
+                    t.message?.let { apiErrorHolder.setError(it) }
+                }
 
-        })
+            })
+        }else offer(ArrayList<PathObject>())
+
     }
 }

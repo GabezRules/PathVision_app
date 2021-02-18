@@ -15,6 +15,7 @@ import com.gabez.pathvisionapp.dataModule.localDatabase.entities.SkillEntity
 abstract class LocalDatabase: RoomDatabase() {
     abstract fun dao(): LocalDao
 
+
     companion object {
         fun getInstance(appContext: Context): LocalDatabase {
             return Room.databaseBuilder(appContext, LocalDatabase::class.java, LocalDatabase::class.simpleName!!)

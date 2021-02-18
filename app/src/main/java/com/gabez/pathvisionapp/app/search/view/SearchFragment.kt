@@ -92,6 +92,7 @@ class SearchFragment : Fragment(), KoinComponent {
             when(searchType){
                 SearchType.BY_KEYWORD -> searchEditText.setHint(R.string.search_by_keyword)
                 SearchType.BY_SKILL -> searchEditText.setHint(R.string.search_by_skill)
+                else -> searchEditText.setHint(R.string.search_by_keyword)
             }
         }
 

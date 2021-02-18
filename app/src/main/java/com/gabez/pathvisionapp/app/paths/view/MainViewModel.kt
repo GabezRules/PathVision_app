@@ -54,7 +54,7 @@ class MainViewModel(
                 val pathsForView = it.map { pathObject -> PathForView(
 
                     title = pathObject.title,
-                    items = pathObject.items!!.map { skillItem -> SkillForView(title = skillItem!!.title, status = skillItem.status)}
+                    items = pathObject.items!!.map { skillItem -> SkillForView(title = skillItem.title, status = skillItem.status)}
 
                 )} as ArrayList<PathForView>?
 
@@ -76,7 +76,7 @@ class MainViewModel(
             val itemsList: ArrayList<SkillObject> = ArrayList()
 
             for (skillItem in skillList) {
-                var skillTitleList: List<String>? = pathItem.items?.map { skillItem -> skillItem.title }
+                var skillTitleList: List<String>? = pathItem.items?.map { mSkillItem -> mSkillItem.title }
 
                 if (skillTitleList?.contains(skillItem.title) == true) itemsList.add(
                     SkillObject(

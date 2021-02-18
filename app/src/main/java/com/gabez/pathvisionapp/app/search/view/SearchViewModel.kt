@@ -6,7 +6,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.gabez.pathvisionapp.app.statusHolders.ApiErrorHolder
+import com.gabez.pathvisionapp.dataModule.remoteApiDatabase.statusHolders.ApiErrorHolder
 import com.gabez.pathvisionapp.app.search.entities.PathForSearch
 import com.gabez.pathvisionapp.app.search.entities.PathStatus
 import com.gabez.pathvisionapp.app.search.entities.SearchType

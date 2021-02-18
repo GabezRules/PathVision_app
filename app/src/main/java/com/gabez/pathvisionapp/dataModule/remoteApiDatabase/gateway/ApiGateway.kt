@@ -1,6 +1,6 @@
 package com.gabez.pathvisionapp.dataModule.remoteApiDatabase.gateway
 
-import com.gabez.pathvisionapp.domain.entities.PathObject
+import com.gabez.pathvisionapp.app.domain.entities.PathObject
 import kotlinx.coroutines.flow.Flow
 
 interface ApiGateway {

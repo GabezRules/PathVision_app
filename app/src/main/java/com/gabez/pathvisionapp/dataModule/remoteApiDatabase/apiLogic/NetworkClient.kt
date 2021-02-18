@@ -2,7 +2,7 @@ package com.gabez.pathvisionapp.dataModule.remoteApiDatabase.apiLogic
 
 import com.gabez.pathvisionapp.dataModule.remoteApiDatabase.statusHolders.ApiErrorHolder
 import com.gabez.pathvisionapp.dataModule.remoteApiDatabase.entities.PathFromServer
-import com.gabez.pathvisionapp.domain.entities.PathObject
+import com.gabez.pathvisionapp.app.domain.entities.PathObject
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.callbackFlow
@@ -12,8 +12,7 @@ import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-
-class NetworkClient(private val apiErrorHolder: ApiErrorHolder) {
+class NetworkClient(val apiErrorHolder: ApiErrorHolder) {
     private var retrofit: Retrofit = Retrofit.Builder()
         .baseUrl(BASE_URL)
         .addConverterFactory(GsonConverterFactory.create())

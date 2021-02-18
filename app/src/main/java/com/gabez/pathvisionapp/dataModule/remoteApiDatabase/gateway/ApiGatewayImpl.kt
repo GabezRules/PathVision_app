@@ -1,8 +1,7 @@
 package com.gabez.pathvisionapp.dataModule.remoteApiDatabase.gateway
 
 import com.gabez.pathvisionapp.dataModule.remoteApiDatabase.apiLogic.NetworkClient
-import com.gabez.pathvisionapp.dataModule.remoteApiDatabase.gateway.ApiGateway
-import com.gabez.pathvisionapp.domain.entities.PathObject
+import com.gabez.pathvisionapp.app.domain.entities.PathObject
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.InternalCoroutinesApi
 import kotlinx.coroutines.flow.Flow

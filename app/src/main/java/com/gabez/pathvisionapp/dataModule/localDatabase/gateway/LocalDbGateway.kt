@@ -1,7 +1,7 @@
 package com.gabez.pathvisionapp.dataModule.localDatabase.gateway
 
-import com.gabez.pathvisionapp.domain.entities.PathObject
-import com.gabez.pathvisionapp.domain.entities.SkillObject
+import com.gabez.pathvisionapp.app.domain.entities.PathObject
+import com.gabez.pathvisionapp.app.domain.entities.SkillObject
 import kotlinx.coroutines.flow.Flow
 
 interface LocalDbGateway {

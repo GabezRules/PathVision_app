@@ -3,9 +3,9 @@ package com.gabez.pathvisionapp.dataModule.remoteFirebaseDatabase.gateway
 import com.gabez.pathvisionapp.dataModule.remoteFirebaseDatabase.dbLogic.FirebaseDbAdapter
 import com.gabez.pathvisionapp.dataModule.remoteFirebaseDatabase.entities.PathFirebaseEntity
 import com.gabez.pathvisionapp.dataModule.remoteFirebaseDatabase.entities.SkillFirebaseEntity
-import com.gabez.pathvisionapp.app.paths.entities.SkillStatus
-import com.gabez.pathvisionapp.domain.entities.PathObject
-import com.gabez.pathvisionapp.domain.entities.SkillObject
+import com.gabez.pathvisionapp.app.view.paths.entities.SkillStatus
+import com.gabez.pathvisionapp.app.domain.entities.PathObject
+import com.gabez.pathvisionapp.app.domain.entities.SkillObject
 import kotlinx.coroutines.flow.Flow
 
 class FirebaseGatewayImpl(private val db: FirebaseDbAdapter) : FirebaseGateway {

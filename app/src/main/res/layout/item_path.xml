@@ -15,7 +15,7 @@
         android:paddingTop="8dp"
         android:paddingBottom="8dp">
 
-        <com.gabez.pathvisionapp.app.paths.view.viewComponents.CircularCompletionView
+        <com.gabez.pathvisionapp.app.view.paths.view.viewComponents.CircularCompletionView
             android:id="@+id/pathCompletionPercent"
             android:layout_width="52dp"
             android:layout_height="52dp"

@@ -3,10 +3,10 @@ package com.gabez.pathvisionapp.dataModule.localDatabase.gateway
 import com.gabez.pathvisionapp.dataModule.localDatabase.dbLogic.LocalDatabase
 import com.gabez.pathvisionapp.dataModule.localDatabase.entities.PathEntity
 import com.gabez.pathvisionapp.dataModule.localDatabase.entities.SkillEntity
-import com.gabez.pathvisionapp.app.paths.entities.SkillStatus
-import com.gabez.pathvisionapp.app.statusHolders.DbSkillCountHolder
-import com.gabez.pathvisionapp.domain.entities.PathObject
-import com.gabez.pathvisionapp.domain.entities.SkillObject
+import com.gabez.pathvisionapp.app.view.paths.entities.SkillStatus
+import com.gabez.pathvisionapp.app.view.statusHolders.DbSkillCountHolder
+import com.gabez.pathvisionapp.app.domain.entities.PathObject
+import com.gabez.pathvisionapp.app.domain.entities.SkillObject
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 

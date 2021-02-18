@@ -2,7 +2,7 @@ package com.gabez.pathvisionapp
 
 import android.app.Application
 import android.content.Context
-import com.gabez.pathvisionapp.modules.appModule
+import com.gabez.pathvisionapp.app.modules.appModule
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.InternalCoroutinesApi
 import org.koin.android.ext.koin.androidContext

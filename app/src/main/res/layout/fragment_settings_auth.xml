@@ -7,7 +7,7 @@
     android:paddingStart="24dp"
     android:paddingTop="24dp"
     android:paddingEnd="24dp"
-    tools:context=".app.settings.settingsWithoutAuth.SettingsFragment">
+    tools:context=".app.view.settings.settingsWithoutAuth.SettingsFragment">
 
     <TextView
         android:id="@+id/settingsNickDesc"

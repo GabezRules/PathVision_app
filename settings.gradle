@@ -1,3 +1,4 @@
+include ':data'
 include ':authentication'
 include ':app'
 rootProject.name = "PathVision app"

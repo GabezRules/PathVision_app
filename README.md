@@ -23,6 +23,7 @@ Used technologies and approaches:
 
 Future plans:
 * Add landscape views
+* Add caching
 * Add support for TalkBack (accessibility) 
 * Cloud messaging (send push notification when a new dataset in API is available)
 * Merging data from internal Room database and Firebase database after user authenticates

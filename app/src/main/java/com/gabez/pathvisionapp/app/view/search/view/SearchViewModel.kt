@@ -39,7 +39,6 @@ class SearchViewModel(
 
     val searchType: MutableLiveData<SearchType> = MutableLiveData(SearchType.BY_KEYWORD)
 
-    @InternalCoroutinesApi
     fun searchPath(keyword: String) {
         if (keyword.isNotEmpty()) {
             when (searchType.value!!) {
@@ -51,7 +50,6 @@ class SearchViewModel(
         }
     }
 
-    @InternalCoroutinesApi
     private fun searchPathByKeyword(keyword: String) = viewModelScope.launch {
         _isLoading.postValue(true)
         _searchData.value!!.clear()
@@ -60,7 +58,6 @@ class SearchViewModel(
 
     }.invokeOnCompletion { _isLoading.postValue(false) }
 
-    @InternalCoroutinesApi
     private fun searchPathBySkill(skill: String) = viewModelScope.launch {
         _isLoading.postValue(true)
         _searchData.value!!.clear()

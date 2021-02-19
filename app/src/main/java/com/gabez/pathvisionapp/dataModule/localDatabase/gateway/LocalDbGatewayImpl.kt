@@ -11,8 +11,6 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 
 class LocalDbGatewayImpl(private val db: LocalDatabase) : LocalDbGateway {
-    //TODO: Items from MainFragment are not deleting - fix it
-
     var skillHolder = DbSkillCountHolder()
 
     override suspend fun addPath(path: PathObject) {

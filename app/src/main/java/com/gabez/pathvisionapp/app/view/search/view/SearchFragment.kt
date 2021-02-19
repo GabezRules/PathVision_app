@@ -36,7 +36,6 @@ class SearchFragment : Fragment(), KoinComponent {
     private lateinit var searchByKeyword: RadioButton
     private lateinit var searchBySkill: RadioButton
 
-    @InternalCoroutinesApi
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,

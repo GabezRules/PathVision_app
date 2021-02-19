@@ -12,6 +12,8 @@ import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
+//TODO: Add response wrapper
+
 class NetworkClient(val apiErrorHolder: ApiErrorHolder) {
     private var retrofit: Retrofit = Retrofit.Builder()
         .baseUrl(BASE_URL)
